@@ -24,9 +24,9 @@
     <description>🌿 I. Creating the Vue App § Tạo Vue App(được khởi tạo một lần, tất cả đều config ở đây). const app = Vue.createApp({ // Heart of the Vue App data() { // data option return { product: &#039;Socks&#039; } } }) Mount App to DOM - như ví dụ ở dưới, mount tới div tag có id là app, tất cả DOM element bao trong div đó sẽ có thể truy cập tới Vue App.</description>
     <pubDate>Sat, 24 Dec 2022 00:00:00 GMT</pubDate>
   </item><item>
-    <title>🌱 What is Vue?</title>
-    <link>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.02-Vuejs/What-is-Vue?</link>
-    <guid>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.02-Vuejs/What-is-Vue?</guid>
+    <title>🌱 What is Vue</title>
+    <link>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.02-Vuejs/What-is-Vue</link>
+    <guid>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.02-Vuejs/What-is-Vue</guid>
     <description>🌿 What is Vue? § Vuejs là một open source Javascript framework hướng tới việc xây dựng giao diện người dùng(UI), được tạo ra bởi Evan You. Như trên Landing page có giới thiệu, Vuejs là một phiên bản cấp tiến của Javascript framework với những đặc điểm nổi bật như dễ tiếp cận, linh hoạt và hiệu quả.</description>
     <pubDate>Sat, 24 Dec 2022 00:00:00 GMT</pubDate>
   </item><item>

@@ -11,8 +11,52 @@
             "id": "b986fa719e5ec4dc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "50 til/51 Code/04 Rails/Syntax mới cho QueryMethods select.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9ffbc8cf7a6be47f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40123345 posts/44 Finance/05 Báo cáo tài chính/Tổng quan Báo cáo tài chính.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2b25a9152345879e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40123345 posts/44 Finance/05 Báo cáo tài chính/Báo cáo kết quả kinh doanh.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7b489bf12d77479b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40123345 posts/44 Finance/04 Macroeconomics/Liên hệ tình hình vĩ mô và tài sản tài chính.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -45,7 +89,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "hardcode",
+                "query": "?",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -83,6 +127,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "50 til/51 Code/04 Rails/Syntax mới cho QueryMethods select.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -150,7 +195,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "50 til/51 Code/04 Rails/Syntax mới cho QueryMethods select.md"
+              }
             }
           },
           {
@@ -176,6 +223,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "50 til/51 Code/04 Rails/Syntax mới cho QueryMethods select.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,13 +240,13 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "50 til/51 Code/04 Rails/Syntax mới cho QueryMethods select.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -218,32 +266,38 @@
   },
   "active": "b986fa719e5ec4dc",
   "lastOpenFiles": [
-    "_index.md",
-    "README.md",
-    "50 til/52 Journey/52.02 Other/Khám phá Văn hóa & Nghệ thuật.md",
-    "50 til/52 Journey/52.02 Other/Cách phân biệt rượu giả.md",
-    "50 til/51 Code/11 Golang/Slice in Golang.md",
-    "50 til/51 Code/11 Golang/Race Condition.md",
-    "50 til/51 Code/11 Golang/Method and Interface.md",
-    "50 til/51 Code/11 Golang/Goroutines.md",
-    "50 til/51 Code/11 Golang/Generic.md",
-    "50 til/51 Code/11 Golang/Basic.md",
-    "50 til/51 Code/10 React/State in React.md",
-    "50 til/51 Code/10 React/Props in React.md",
-    "50 til/51 Code/09 Docker/What is mean the tag suffix of an image on docker hub?.md",
-    "50 til/51 Code/09 Docker/Dockerfile.md",
-    "50 til/51 Code/09 Docker/Docker.md",
-    "50 til/51 Code/09 Docker/Docker Network.md",
-    "50 til/51 Code/09 Docker/Docker Compose.md",
-    "50 til/51 Code/09 Docker/Best practice when build Dockerfile.md",
-    "50 til/51 Code/08 System Design/Why is Redis so Fast?.md",
-    "50 til/51 Code/08 System Design/Why is RAM access faster than hard disk drive?.md",
-    "50 til/51 Code/08 System Design/System Identification Link.md",
-    "50 til/51 Code/08 System Design/Store passwords safely in the database?.md",
-    "50 til/51 Code/08 System Design/Single Sign-On(SSO).md",
-    "50 til/51 Code/08 System Design/Sequence Diagram là gì?.md",
-    "50 til/51 Code/08 System Design/Same-origin policy.md",
-    "50 til/51 Code/08 System Design/Robustness Diagram.md",
+    "20 Excalidraw/Why is RAM access faster than hard disk drive acess.md",
+    "40123345 posts/44 Finance/What is the Financial Freedom?.md",
+    "40123345 posts/44 Finance/01 Wealth/Tiếp cận tự do tài chính.md",
+    "40123345 posts/44 Finance/01 Wealth/The 4% Rule.md",
+    "10 Daily/2022-11-19.md",
+    "50 til/51 Code/04 Rails/Syntax mới cho QueryMethods select.md",
+    "50 til/51 Code/04 Rails/Why is must run bundle exec before any command.md",
+    "10 Daily/2023-01-15.md",
+    "40123345 posts/44 Finance/01 Wealth/What is the Financial Freedom.md",
+    "40123345 posts/44 Finance/Nguồn  xem thông tin.md",
+    "50 til/51 Code/09 Docker/What is mean the tag suffix of an image on docker hub.md",
+    "50 til/51 Code/04 Rails/What happens when add acts_as into model.md",
+    "50 til/51 Code/04 Rails/How to safely remove a column in Rails.md",
+    "40123345 posts/44 Finance/04 Macroeconomics/Đối tác chiến lược toàn diện, tiềm năng phát triển trong tương lai.md",
+    "50 til/51 Code/08 System Design/Sequence Diagram là gì.md",
+    "50 til/51 Code/06 Servers/Bastion Host là gì.md",
+    "50 til/55 Math/Đạo hàm để làm gì.md",
+    "50 til/55 Math/Hàm số đường thẳng y=ax+b.md",
+    "40123345 posts/42 Code/42.02 Vuejs/What is Vue.md",
+    "40123345 posts/44 Finance/05 Báo cáo tài chính/Bảng cân đối kế toán.md",
+    "40123345 posts/44 Finance/04 Macroeconomics/Liên hệ tình hình vĩ mô và tài sản tài chính.md",
+    "40123345 posts/44 Finance/04 Macroeconomics/Interest rate - Lãi suất.md",
+    "40123345 posts/44 Finance/04 Macroeconomics/Inflation - Lạm phát.md",
+    "50 til/51 Code/03 Operating System/Why must run apt update before install any lib for Linux.md",
+    "10 Daily/2022-10-10.md",
+    "10 Daily/2022-10-07.md",
+    "00 Meta/01 Attachments/Pasted image 20230920110202.png",
+    "00 Meta/01 Attachments/Pasted image 20230920105746.png",
+    "00 Meta/01 Attachments/Pasted image 20230920104844.png",
+    "00 Meta/01 Attachments/Pasted image 20230920103645.png",
+    "00 Meta/01 Attachments/Pasted image 20230920102354.png",
+    "40123345 posts/44 Finance/05 Báo cáo tài chính",
     "50 til/52 Journey/52.02 Other",
     "50 til/51 Code/11 Golang",
     "50 til/51 Code/10 React",
@@ -253,17 +307,11 @@
     "50 til/51 Code/06 Servers",
     "50 til/51 Code/05 Ruby",
     "50 til/51 Code/04 Rails",
-    "50 til/51 Code/03 Operating System",
     "00 Meta/01 Attachments/tu-duy-nhanh-va-cham.png",
     "00 Meta/01 Attachments/cach-xay-dung-thap-tai-san-hieu-qua.jpg",
     "00 Meta/01 Attachments/Why is RAM access faster than hard disk drive acess.png",
     "00 Meta/01 Attachments/Single Sign-On.png",
     "00 Meta/01 Attachments/Single Responsibility Principle.png",
-    "00 Meta/01 Attachments/Sequence Diagram chức năng đăng nhập.excalidraw.png",
-    "00 Meta/01 Attachments/Screenshot 2023-03-31 at 15.08.15.png",
-    "00 Meta/01 Attachments/Screenshot 2023-03-16 at 16.12.24.png",
-    "00 Meta/01 Attachments/Screenshot 2023-03-06 at 17.40.10.png",
-    "00 Meta/01 Attachments/Screenshot 2023-03-06 at 16.47.30.png",
     "50 til/51 Code/51.03 Operating System/Untitled.canvas",
     "50 til/51 Code/51.01 Style/Untitled.canvas",
     "Untitled 1.canvas"

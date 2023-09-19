@@ -1,8 +1,10 @@
 ---
-title: "🌱 New syntax of ActiveRecord::QueryMethods#select"
-tags: [til, rails]
+title: 🌱 New syntax of ActiveRecord::QueryMethods Select
+tags:
+  - til
+  - rails
 date: 2023-05-30
-alias: [activeRecord::querymethods#select]
+aliases: []
 ---
 
 🌿 Before:

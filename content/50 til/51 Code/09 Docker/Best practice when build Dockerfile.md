@@ -253,7 +253,7 @@ FROM ruby:3.1.2-alpine
 CMD ruby -e "puts 1 + 2"
 ```
 
-- Base Image có nhiều version(chủ yếu khác nhau về base OS), chúng ta nên lựa chọn phù hợp với nhu cầu sử dụng. Mọi người có thể xem thêm ở [[50 til/51 Code/09 Docker/What is mean the tag suffix of an image on docker hub?|đây]]
+- Base Image có nhiều version(chủ yếu khác nhau về base OS), chúng ta nên lựa chọn phù hợp với nhu cầu sử dụng. Mọi người có thể xem thêm ở [[50 til/51 Code/09 Docker/What is mean the tag suffix of an image on docker hub|đây]]
 - Khi lựa chọn Image base từ OS thu gọn, cần để ý:
 	- Phải có package manager và các gói có sẵn.
 	- Xem OS đó sử dụng Shell gì.

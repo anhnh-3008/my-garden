@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html><head><title>🌱 Vue3 - Essentials</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="🌱 Vue3 - Essentials"/><meta property="og:description" content="🌿 I. Creating the Vue App § Tạo Vue App(được khởi tạo một lần, tất cả đều config ở đây). const app = Vue.createApp({ // Heart of the Vue App data() { // data option return { product: &amp;#039;Socks&amp;#039; } } }) Mount App to DOM - như ví dụ ở dưới, mount tới div tag có id là app, tất cả DOM element bao trong div đó sẽ có thể truy cập tới Vue App."/><meta property="og:image" content="https://https://anhhn.netlify.app//static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🌿 I. Creating the Vue App § Tạo Vue App(được khởi tạo một lần, tất cả đều config ở đây). const app = Vue.createApp({ // Heart of the Vue App data() { // data option return { product: &amp;#039;Socks&amp;#039; } } }) Mount App to DOM - như ví dụ ở dưới, mount tới div tag có id là app, tất cả DOM element bao trong div đó sẽ có thể truy cập tới Vue App."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Dancing Script:wght@400;700&amp;family=Signika Negative:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="40123345-posts/42-Code/42.02-Vuejs/Vue3---Essentials"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="../../..">🪴 HA's Garden</a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#-i-creating-the-vue-app" data-for="-i-creating-the-vue-app">🌿 I. Creating the Vue App</a></li><li class="depth-0"><a href="#-ii-template-syntax" data-for="-ii-template-syntax">🌿 II. Template syntax</a></li><li class="depth-0"><a href="#-iii-condition-rendering" data-for="-iii-condition-rendering">🌿 III. Condition rendering</a></li><li class="depth-0"><a href="#-iv-list-rendering" data-for="-iv-list-rendering">🌿 IV. List rendering</a></li><li class="depth-0"><a href="#-v-event-handling" data-for="-v-event-handling">🌿 V. Event handling</a></li><li class="depth-0"><a href="#-vi-class--style-binding" data-for="-vi-class--style-binding">🌿 VI. Class &amp; Style binding</a></li><li class="depth-1"><a href="#-class-binding" data-for="-class-binding">🌱 Class binding</a></li><li class="depth-1"><a href="#-style-binding" data-for="-style-binding">🌱 Style binding</a></li><li class="depth-0"><a href="#-vii-computed-properties" data-for="-vii-computed-properties">🌿 VII. Computed Properties</a></li><li class="depth-1"><a href="#-best-practice" data-for="-best-practice">🌱 Best practice</a></li><li class="depth-0"><a href="#-viii-component-basic" data-for="-viii-component-basic">🌿 VIII. Component basic</a></li><li class="depth-1"><a href="#-components" data-for="-components">🌱 Components</a></li><li class="depth-1"><a href="#-props" data-for="-props">🌱 Props</a></li><li class="depth-1"><a href="#-communicating-events" data-for="-communicating-events">🌱 Communicating events</a></li><li class="depth-0"><a href="#-x-form-input-bindings" data-for="-x-form-input-bindings">🌿 X. Form Input Bindings</a></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">🌱 Vue3 - Essentials</h1><p class="content-meta">Dec 24, 2022, 9 min read</p><ul class="tags"><li><a href="../../../tags/vuejs" class="internal tag-link">#vuejs</a></li></ul></div></div><article class="popover-hint"><h2 id="-i-creating-the-vue-app">🌿 I. Creating the Vue App<a aria-hidden="true" tabindex="-1" href="#-i-creating-the-vue-app" class="internal"> §</a></h2>
+<ul>
+<li>Tạo Vue App(được khởi tạo một lần, tất cả đều config ở đây).</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">app</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">Vue</span><span style="color:var(--shiki-token-function);">.createApp</span><span style="color:var(--shiki-color-text);">({ </span><span style="color:var(--shiki-token-comment);">// Heart of the Vue App</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-function);">data</span><span style="color:var(--shiki-color-text);">() { </span><span style="color:var(--shiki-token-comment);">// data option</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      product</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">'Socks'</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">})</span></span></code></pre></div>
+<ul>
+<li>Mount App to DOM - như ví dụ ở dưới, mount tới div tag có id là app, tất cả DOM element bao trong div đó sẽ có thể truy cập tới Vue App.</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">script</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">mountedApp</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">app</span><span style="color:var(--shiki-token-function);">.mount</span><span style="color:var(--shiki-color-text);">(</span><span style="color:var(--shiki-token-string-expression);">'#app'</span><span style="color:var(--shiki-color-text);">)</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;/</span><span style="color:var(--shiki-token-string-expression);">script</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ul>
+<li>Sử dụng <a href="https://vuejs.org/guide/essentials/template-syntax.html" class="external">Mustache Syntax</a> để call dữ liệu từ Vue App.</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">h1</span><span style="color:var(--shiki-color-text);">>{{ product }}&lt;/</span><span style="color:var(--shiki-token-string-expression);">h1</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ul>
+<li>Multiple application instances</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">app1</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">createApp</span><span style="color:var(--shiki-color-text);">({</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-comment);">/* ... */</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">})</span></span>
+<span data-line><span style="color:var(--shiki-token-constant);">app1</span><span style="color:var(--shiki-token-function);">.mount</span><span style="color:var(--shiki-color-text);">(</span><span style="color:var(--shiki-token-string-expression);">'#container-1'</span><span style="color:var(--shiki-color-text);">)</span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">app2</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">createApp</span><span style="color:var(--shiki-color-text);">({</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-comment);">/* ... */</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">})</span></span>
+<span data-line><span style="color:var(--shiki-token-constant);">app2</span><span style="color:var(--shiki-token-function);">.mount</span><span style="color:var(--shiki-color-text);">(</span><span style="color:var(--shiki-token-string-expression);">'#container-2'</span><span style="color:var(--shiki-color-text);">)</span></span></code></pre></div>
+<ul>
+<li>doc: <a href="https://vuejs.org/guide/essentials/application.html" class="external">https://vuejs.org/guide/essentials/application.html</a></li>
+<li>pull <a href="https://github.com/anhnh-3008/Vue3/pull/1" class="external">https://github.com/anhnh-3008/Vue3/pull/1</a></li>
+</ul>
+<h2 id="-ii-template-syntax">🌿 II. Template syntax<a aria-hidden="true" tabindex="-1" href="#-ii-template-syntax" class="internal"> §</a></h2>
+<ol>
+<li>Muốn call dữ liệu cho các attribute của DOM element, sử dụng <strong>v-bind</strong>.</li>
+</ol>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">img</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">v-bind:src</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;image&quot;</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- Shorthand: --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">img</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">:src</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;image&quot;</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- Use cases: --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">img</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">:alt</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;description&quot;</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">a</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">:href</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;link&quot;</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">:class</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;isActive&quot;</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">span</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">:style</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;isActive&quot;</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ol start="2">
+<li>Dynamically Binding Multiple Attributes</li>
+</ol>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span data-line><span style="color:var(--shiki-token-function);">data</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    objectOfAttrs</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      id</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">'container'</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      class</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">'wrapper'</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      disabled</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">'false'</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">v-bind</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;objectOfAttrs&quot;</span><span style="color:var(--shiki-color-text);">>&lt;/</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- &lt;div id=&quot;container&quot; class=&quot;wrapper&quot; disabled=&quot;false&quot;>&lt;/div> --></span></span></code></pre></div>
+<ol start="3">
+<li>Calling functions</li>
+</ol>
+<ul>
+<li>Có thể gọi function trong <strong>v-bind</strong>, function chỉ được một lần khi init component nên không sử dụng cho những case cần data động như changing data hoặc triggering asynchronous operations.</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">span</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">:title</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;toTitleDate(date)&quot;</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  {{ formatDate(date) }}</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;/</span><span style="color:var(--shiki-token-string-expression);">span</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ol start="4">
+<li>Dynamic Arguments</li>
+</ol>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">a</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">:[someAttr]</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;value&quot;</span><span style="color:var(--shiki-color-text);">> ... &lt;/</span><span style="color:var(--shiki-token-string-expression);">a</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ul>
+<li><strong>someAttr</strong> - giá trị thay đổi theo data mount từ Vue App, với những giá trị phức tạp, có thể sử dụng <strong>computed properties</strong>, xem thêm ở mục VIII.</li>
+</ul>
+<ol start="5">
+<li>Modifiers</li>
+</ol>
+<ul>
+<li>Khái niệm hiểu như trong JQuery. Vd <strong>.prevent</strong> có nghĩa là <code>v-on</code> sẽ call <code>event.preventDefault()</code> trong quá trình trigger sự kiện.</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">form</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">@submit.prevent</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;onSubmit&quot;</span><span style="color:var(--shiki-color-text);">>...&lt;/</span><span style="color:var(--shiki-token-string-expression);">form</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<p><img src="../../../00-Meta/01-Attachments/Pasted-image-20221225223906.png" width="auto" height="auto"/></p>
+<ul>
+<li>doc: <a href="https://vuejs.org/guide/essentials/template-syntax.html" class="external">https://vuejs.org/guide/essentials/template-syntax.html</a></li>
+<li>pull <a href="https://github.com/anhnh-3008/Vue3/pull/2" class="external">https://github.com/anhnh-3008/Vue3/pull/2</a></li>
+</ul>
+<h2 id="-iii-condition-rendering">🌿 III. Condition rendering<a aria-hidden="true" tabindex="-1" href="#-iii-condition-rendering" class="internal"> §</a></h2>
+<ul>
+<li><strong>v-show</strong>: luôn render DOM element, condition chỉ toggle <code>display</code> CSS property</li>
+<li><strong>v-if</strong> - <strong>v-eles-if</strong> - <strong>v-else</strong>: đúng condition thì mới render DOM, logic giống với các ngôn ngữ lập trình khác.</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">v-if</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;condition&quot;</span><span style="color:var(--shiki-color-text);">>Condition is true&lt;/</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">v-else</span><span style="color:var(--shiki-color-text);">>Condition is false&lt;/</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ul>
+<li>So sánh <strong>v-if</strong> và <strong>v-show</strong>:</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th><strong>v-if</strong></th><th><strong>v-show</strong></th></tr></thead><tbody><tr><td>Là chuẩn conditional rendering vì nó đảm bảo sẽ xóa và render lại toàn bộ listener events or components nằm trong block khi toggles điều kiện</td><td>Toggle điều kiện thì chỉ thay đổi duy nhất <code>display: none</code> thôi</td></tr><tr><td>Lazy - chỉ render DOM khi condition == true</td><td>Luôn render DOM</td></tr><tr><td>higher toggle costs - dùng với những điều kiện ít thay đổi</td><td>higher initial render costs - dùng với những element cần toggle điều kiện thường xuyên</td></tr></tbody></table>
+<ul>
+<li>
+<p>Khi <strong>v-if</strong> và <strong>v-for</strong> được sử dụng trên cùng một object, <strong>v-if</strong> sẽ được gọi đầu tiên.</p>
+</li>
+<li>
+<p>doc: <a href="https://vuejs.org/guide/essentials/conditional.html" class="external">https://vuejs.org/guide/essentials/conditional.html</a></p>
+</li>
+<li>
+<p>pull <a href="https://github.com/anhnh-3008/Vue3/pull/3" class="external">https://github.com/anhnh-3008/Vue3/pull/3</a></p>
+</li>
+</ul>
+<h2 id="-iv-list-rendering">🌿 IV. List rendering<a aria-hidden="true" tabindex="-1" href="#-iv-list-rendering" class="internal"> §</a></h2>
+<ol>
+<li><strong>v-for</strong>: lặp một mảng.</li>
+</ol>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">ul</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  &lt;</span><span style="color:var(--shiki-token-string-expression);">li</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">v-for</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;user in users&quot;</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    &lt;</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">>{{user.id}}&lt;/</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    &lt;</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">>{{user.name}}&lt;/</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  &lt;/</span><span style="color:var(--shiki-token-string-expression);">li</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;/</span><span style="color:var(--shiki-token-string-expression);">ul</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ol start="2">
+<li>Nested loop:</li>
+</ol>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">li</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">v-for</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;item in items&quot;</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  &lt;</span><span style="color:var(--shiki-token-string-expression);">span</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">v-for</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;childItem in item.children&quot;</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    {{ item.message }} {{ childItem }}</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  &lt;/</span><span style="color:var(--shiki-token-string-expression);">span</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;/</span><span style="color:var(--shiki-token-string-expression);">li</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ol start="3">
+<li>Có thể dùng <strong>of</strong> thay <strong>in</strong>.</li>
+</ol>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">v-for</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;item of items&quot;</span><span style="color:var(--shiki-color-text);">>&lt;/</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ol start="4">
+<li>Ngoài mảng, có thể lặp Object, cơ chế lặp qua các keys base theo <strong>Object.keys()</strong>.</li>
+</ol>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span data-line><span style="color:var(--shiki-token-function);">data</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    myObject</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      title</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">'How to do lists in Vue'</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      author</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">'Jane Doe'</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      publishedAt</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">'2016-04-10'</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">ul</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  &lt;</span><span style="color:var(--shiki-token-string-expression);">li</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">v-for</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;value in myObject&quot;</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    {{ value }}</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  &lt;/</span><span style="color:var(--shiki-token-string-expression);">li</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;/</span><span style="color:var(--shiki-token-string-expression);">ul</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ol start="5">
+<li>for with a range</li>
+</ol>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">span</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">v-for</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;n in 10&quot;</span><span style="color:var(--shiki-color-text);">>{{ n }}&lt;/</span><span style="color:var(--shiki-token-string-expression);">span</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ul>
+<li>doc: <a href="https://vuejs.org/guide/essentials/list.html" class="external">https://vuejs.org/guide/essentials/list.html</a></li>
+<li>pull <a href="https://github.com/anhnh-3008/Vue3/pull/4" class="external">https://github.com/anhnh-3008/Vue3/pull/4</a></li>
+</ul>
+<h2 id="-v-event-handling">🌿 V. Event handling<a aria-hidden="true" tabindex="-1" href="#-v-event-handling" class="internal"> §</a></h2>
+<ul>
+<li><strong>v-on:event</strong>: bắt sự kiện</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- shorthand: @event --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">v-for</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;variant in variants&quot;</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">:key</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;variant.id&quot;</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">@mouseover</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;updateImage(variant.image)&quot;</span><span style="color:var(--shiki-color-text);">>{{ variant.color }}&lt;/</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">class</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;button&quot;</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">@click</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;addToCart&quot;</span><span style="color:var(--shiki-color-text);">>Add to Cart&lt;/</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ol>
+<li>Inline handlers</li>
+</ol>
+<ul>
+<li>Với logic ngắn, đơn giản có thể truyền thẳng.</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span data-line><span style="color:var(--shiki-token-function);">data</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    count</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">0</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">@click</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;count++&quot;</span><span style="color:var(--shiki-color-text);">>Increase&lt;/</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">>Count is: {{ count }}&lt;/</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ol start="2">
+<li>Method handlers</li>
+</ol>
+<ul>
+<li>Logic dài + phức tạp thì có thể xử lý thông qua method</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span data-line><span style="color:var(--shiki-token-function);">data</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    count</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">0</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">methods</span><span style="color:var(--shiki-token-punctuation);">:</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-function);">alertCount</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">if</span><span style="color:var(--shiki-color-text);"> (count </span><span style="color:var(--shiki-token-keyword);">></span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">0</span><span style="color:var(--shiki-color-text);">) {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-function);">alert</span><span style="color:var(--shiki-color-text);">(</span><span style="color:var(--shiki-token-string-expression);">'Count is positive'</span><span style="color:var(--shiki-color-text);">);</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    } </span><span style="color:var(--shiki-token-keyword);">else</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-function);">alert</span><span style="color:var(--shiki-color-text);">(</span><span style="color:var(--shiki-token-string-expression);">'Count is negative'</span><span style="color:var(--shiki-color-text);">);</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">@click</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;alertCount&quot;</span><span style="color:var(--shiki-color-text);">>Alert&lt;/</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ol start="3">
+<li>Event Modifiers</li>
+</ol>
+<ul>
+<li>Chúng ta thường xuyên phải sử dụng event modifiers(chỉ định những common event ví dụ như không reload khi submit form, …). Có thể định nghĩa  Event Modifiers trong method nhưng theo quan điểm của Vue, method chỉ để xử lý logic thôi. Nên trong Vue, chúng ta có thể chỉ định trực tiếp như sau:</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- the click event's propagation will be stopped --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">a</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">@click.stop</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;doThis&quot;</span><span style="color:var(--shiki-color-text);">>&lt;/</span><span style="color:var(--shiki-token-string-expression);">a</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- the submit event will no longer reload the page --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">form</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">@submit.prevent</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;onSubmit&quot;</span><span style="color:var(--shiki-color-text);">>&lt;/</span><span style="color:var(--shiki-token-string-expression);">form</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- modifiers can be chained --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">a</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">@click.stop.prevent</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;doThat&quot;</span><span style="color:var(--shiki-color-text);">>&lt;/</span><span style="color:var(--shiki-token-string-expression);">a</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- just the modifier --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">form</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">@submit.prevent</span><span style="color:var(--shiki-color-text);">>&lt;/</span><span style="color:var(--shiki-token-string-expression);">form</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- only trigger handler if event.target is the element itself --></span></span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- i.e. not from a child element --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">@click.self</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;doThat&quot;</span><span style="color:var(--shiki-color-text);">>...&lt;/</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ol start="4">
+<li>Key Modifiers</li>
+</ol>
+<ul>
+<li>Khi xử lý event theo các keys đặc biệt, Vue cho phép chỉ định nhanh như sau:</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">&lt;!--</span><span style="color:var(--shiki-color-text);"> only call </span><span style="color:var(--shiki-token-string-expression);">`submit`</span><span style="color:var(--shiki-color-text);"> when the </span><span style="color:var(--shiki-token-string-expression);">`key`</span><span style="color:var(--shiki-color-text);"> is </span><span style="color:var(--shiki-token-string-expression);">`Enter`</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">--></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">input</span><span style="color:var(--shiki-color-text);"> @keyup.enter=&quot;submit&quot; /></span></span></code></pre></div>
+<ul>
+<li>Với TH xử lý combo(vd: Ctrl + Enter), Vue cho phép thực hiện thông qua 4 keys bắt đầu :
+<ul>
+<li><code>.ctrl</code></li>
+<li><code>.alt</code></li>
+<li><code>.shift</code></li>
+<li><code>.meta</code></li>
+</ul>
+</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- Alt + Enter --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">input</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">@keyup.alt.enter</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;clear&quot;</span><span style="color:var(--shiki-color-text);"> /></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- Ctrl + Click, mặc định sẽ + với click --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">@click.ctrl</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;doSomething&quot;</span><span style="color:var(--shiki-color-text);">>Do something&lt;/</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ul>
+<li><code>exact</code> - xem vd</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- chỉ cần có ấn ctrl (có thể là ctrl + shift) method sẽ được gọi --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">@click.ctrl</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;onClick&quot;</span><span style="color:var(--shiki-color-text);">>A&lt;/</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- chỉ gọi method khi hệ thống nhận duy nhất key ctrl --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">@click.ctrl.exact</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;onCtrlClick&quot;</span><span style="color:var(--shiki-color-text);">>A&lt;/</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- chỉ gọi method khi hệ thống không có event modifiers nào --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">@click.exact</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;onClick&quot;</span><span style="color:var(--shiki-color-text);">>A&lt;/</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ul>
+<li>doc: <a href="https://vuejs.org/guide/essentials/event-handling.html" class="external">https://vuejs.org/guide/essentials/event-handling.html</a></li>
+<li>pull <a href="https://github.com/anhnh-3008/Vue3/pull/5" class="external">https://github.com/anhnh-3008/Vue3/pull/5</a></li>
+</ul>
+<h2 id="-vi-class--style-binding">🌿 VI. Class &amp; Style binding<a aria-hidden="true" tabindex="-1" href="#-vi-class--style-binding" class="internal"> §</a></h2>
+<h3 id="-class-binding">🌱 Class binding<a aria-hidden="true" tabindex="-1" href="#-class-binding" class="internal"> §</a></h3>
+<ul>
+<li><strong>:class</strong>: xử lý tên class</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">class</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;button&quot;</span></span>
+<span data-line><span style="color:var(--shiki-token-function);">:class</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;{ disabledButton: inventories &lt;= 0 }&quot;</span></span>
+<span data-line><span style="color:var(--shiki-token-function);">:disable</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;inventories &lt;= 0&quot;</span><span style="color:var(--shiki-color-text);">>Add to Cart&lt;/</span><span style="color:var(--shiki-token-string-expression);">button</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ol>
+<li>Binding to Object</li>
+</ol>
+<ul>
+<li>Ngoài cách truyền điều kiện boolean như trên, có thể truyền object để dễ quản lý.</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">classObject</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">reactive</span><span style="color:var(--shiki-color-text);">({</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  active</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">true</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-string-expression);">'text-danger'</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">false</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">})</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">:class</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;classObject&quot;</span><span style="color:var(--shiki-color-text);">>&lt;/</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- render --></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">class</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;active text-danger&quot;</span><span style="color:var(--shiki-color-text);">>&lt;/</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ol start="2">
+<li>Binding to Array</li>
+</ol>
+<ul>
+<li>Truyền một mảng, kết quả cũng giống bên trên.</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">activeClass</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">ref</span><span style="color:var(--shiki-color-text);">(</span><span style="color:var(--shiki-token-string-expression);">'active'</span><span style="color:var(--shiki-color-text);">)</span></span>
+<span data-line><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">errorClass</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">ref</span><span style="color:var(--shiki-color-text);">(</span><span style="color:var(--shiki-token-string-expression);">'text-danger'</span><span style="color:var(--shiki-color-text);">)</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">:class</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;[activeClass, errorClass]&quot;</span><span style="color:var(--shiki-color-text);">>&lt;/</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<blockquote class="callout" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="2" x2="22" y2="6"></line><path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path></svg></div>
+                  <div class="callout-title-inner"><p>Note </p></div>
+                  
+                </div>
+<p>Trong doc có giới thiệu inline handle nhưng mình thấy không hợp lý lắm, có gì cần xử lý logic cứ nhét hết vào file Js, trong HTML để biến boolean thôi.</p>
+</blockquote>
+<ol start="3">
+<li>With Components</li>
+</ol>
+<ul>
+<li>Chỉ định <code>:class</code> cho component sẽ merge cho những class của child DOMs trong component(những DOM có define class)</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- child component template --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">class</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;foo bar&quot;</span><span style="color:var(--shiki-color-text);">>Hi!&lt;/</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- when using the component --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">MyComponent</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">class</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;baz boo&quot;</span><span style="color:var(--shiki-color-text);"> /></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- child rendered will be --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">class</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;foo bar baz boo&quot;</span><span style="color:var(--shiki-color-text);">>Hi&lt;/</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ul>
+<li><code>class</code> của component được lưu trong biến <code>$attrs</code>, có thể chỉ định trực tiếp cho child DOM:</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- child component template --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">:class</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;$attrs.class&quot;</span><span style="color:var(--shiki-color-text);">>Hi!&lt;/</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- when using the component --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">MyComponent</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">class</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;baz&quot;</span><span style="color:var(--shiki-color-text);"> /></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- child rendered will be --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">class</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;baz&quot;</span><span style="color:var(--shiki-color-text);">>Hi&lt;/</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<h3 id="-style-binding">🌱 Style binding<a aria-hidden="true" tabindex="-1" href="#-style-binding" class="internal"> §</a></h3>
+<ul>
+<li><strong>:style</strong>: xử lý style</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">div</span></span>
+<span data-line><span style="color:var(--shiki-token-function);">class</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;color-circle&quot;</span></span>
+<span data-line><span style="color:var(--shiki-token-function);">:style</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;{ backgroundColor: variant.color }&quot;</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">>&lt;/</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ol>
+<li>Giống với Class, cũng nhận Object và Array</li>
+<li>Support cả camelCase và kebab-cases(để trong nháy kép)</li>
+</ol>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- camelCase --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">:style</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;{ color: activeColor, fontSize: fontSize + 'px' }&quot;</span><span style="color:var(--shiki-color-text);">>&lt;/</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- kebab-cases --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">:style</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;{ 'font-size': fontSize + 'px' }&quot;</span><span style="color:var(--shiki-color-text);">>&lt;/</span><span style="color:var(--shiki-token-string-expression);">div</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ul>
+<li>doc: <a href="https://vuejs.org/guide/essentials/class-and-style.html" class="external">https://vuejs.org/guide/essentials/class-and-style.html</a></li>
+<li>pull: <a href="https://github.com/anhnh-3008/Vue3/pull/6" class="external">https://github.com/anhnh-3008/Vue3/pull/6</a></li>
+</ul>
+<h2 id="-vii-computed-properties">🌿 VII. Computed Properties<a aria-hidden="true" tabindex="-1" href="#-vii-computed-properties" class="internal"> §</a></h2>
+<ul>
+<li>Các thuộc tính cần dùng thêm logic để tính toán, khai báo trong <strong>computed</strong>.</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">app</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">Vue</span><span style="color:var(--shiki-token-function);">.createApp</span><span style="color:var(--shiki-color-text);">({</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-function);">data</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      product</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">'Socks'</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  computed</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-function);">productWithBrandTilte</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">'Brand Vue - '</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">+</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">this</span><span style="color:var(--shiki-color-text);">.product </span><span style="color:var(--shiki-token-comment);">// Brand Vue - Socks</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">})</span></span></code></pre></div>
+<ul>
+<li>Tại sao không dùng function mà phải dùng computed làm gì?</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Computed property</th><th>Function</th></tr></thead><tbody><tr><td>cache dựa trên <strong>reactive dependencies</strong>, như vd trên nếu product không thay đổi khi gọi lại sẽ return ngay lập tức</td><td>không cache, luôn gọi lại getter</td></tr></tbody></table>
+<h3 id="-best-practice">🌱 Best practice<a aria-hidden="true" tabindex="-1" href="#-best-practice" class="internal"> §</a></h3>
+<ol>
+<li>Chỉ nên tính toán, xử lý trả về giá trị, đừng có nhét cả logic thay đổi DOM hay gọi bất đồng bộ lấy dữ liêu, … Trách nhiệm duy nhất của computed chính là tính toán và trả về giá trị - S(Single Responsibility Principle) in SOLID.</li>
+<li>Tránh trực tiếp thay đổi giá trị computed. Chỉ nên thay đổi những variables nằm trong logic xử lý của computed property.</li>
+</ol>
+<ul>
+<li>doc: <a href="https://vuejs.org/guide/essentials/computed.html" class="external">https://vuejs.org/guide/essentials/computed.html</a></li>
+<li>pull: <a href="https://github.com/anhnh-3008/Vue3/pull/7" class="external">https://github.com/anhnh-3008/Vue3/pull/7</a></li>
+</ul>
+<h2 id="-viii-component-basic">🌿 VIII. Component basic<a aria-hidden="true" tabindex="-1" href="#-viii-component-basic" class="internal"> §</a></h2>
+<h3 id="-components">🌱 Components<a aria-hidden="true" tabindex="-1" href="#-components" class="internal"> §</a></h3>
+<ul>
+<li>Cho phép chia UI thành những phần nhỏ độc lập, có khả năng tái sử dụng, dễ quản lý hơn.</li>
+<li>Không chỉ nhóm các DOM elments, Vue còn cho phép đóng gói dữ liệu, logic cho từng <strong>component</strong>.</li>
+</ul>
+<p><img src="../../../00-Meta/01-Attachments/Pasted-image-20230103092932.png" width="auto" height="auto"/></p>
+<ul>
+<li>Defining a component:</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span data-line><span style="color:var(--shiki-token-constant);">app</span><span style="color:var(--shiki-token-function);">.component</span><span style="color:var(--shiki-color-text);">(</span><span style="color:var(--shiki-token-string-expression);">'product-detail'</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-comment);">// options</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  template</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-comment);">// define DOM elements</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-function);">data</span><span style="color:var(--shiki-color-text);">() {</span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> {} }</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-comment);">// define data</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  methods {}</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-comment);">// define methods</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  computed {}</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-comment);">// define computed properties</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">})</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">product-display</span><span style="color:var(--shiki-color-text);">>&lt;/</span><span style="color:var(--shiki-token-string-expression);">product-display</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- Import Component --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">script</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">src</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;./components/ProductDisplay.js&quot;</span><span style="color:var(--shiki-color-text);">>&lt;/</span><span style="color:var(--shiki-token-string-expression);">script</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<ul>
+<li>Có thể sử dụng lại nhiều lần một <strong>component</strong>, mỗi khi một <strong>component</strong> được khởi tạo, toàn bộ data, computed properties sẽ được tạo mới, độc lập không liên quan gì đến nhau. Nếu muốn trigger đến một biến chung cho những <strong>components</strong> con, hãy define <strong>variable</strong> ở <strong>component</strong> cha và truyền vào <strong>component</strong> con thông qua <strong>props</strong>.</li>
+</ul>
+<h3 id="-props">🌱 Props<a aria-hidden="true" tabindex="-1" href="#-props" class="internal"> §</a></h3>
+<ul>
+<li><strong>Props</strong> - Là option chỉ định những tham số nhận từ thằng cha vào <strong>component</strong>.</li>
+<li>Ví dụ một trang web bán hàng có nhiều sản phẩm, nếu sản phẩm được gắn <strong>premium</strong> thì sẽ free ship ngược là phí ship sẽ là 2.99$. Biến <strong>premium</strong> sẽ dùng chung cho nhiều sản phẩm cùng category nên chúng ta sẽ define <strong>premium</strong> riêng và truyền vào <strong>component</strong> sản phẩm.</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span data-line><span style="color:var(--shiki-token-keyword);">const</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">app</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">Vue</span><span style="color:var(--shiki-token-function);">.createApp</span><span style="color:var(--shiki-color-text);">({</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-function);">data</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      premium</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">false</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">})</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">product-display</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">:premium</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;premium&quot;</span><span style="color:var(--shiki-color-text);">>&lt;/</span><span style="color:var(--shiki-token-string-expression);">product-display</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- Import Component --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">script</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">src</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;./components/ProductDisplay.js&quot;</span><span style="color:var(--shiki-color-text);">>&lt;/</span><span style="color:var(--shiki-token-string-expression);">script</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span data-line><span style="color:var(--shiki-token-constant);">app</span><span style="color:var(--shiki-token-function);">.component</span><span style="color:var(--shiki-color-text);">(</span><span style="color:var(--shiki-token-string-expression);">'product-detail'</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-comment);">// define property recieve from parent component</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  props</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    premium</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      type</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> Boolean</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      required</span><span style="color:var(--shiki-token-keyword);">:</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">true</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  template:</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-comment);">// define DOM elements</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-function);">data</span><span style="color:var(--shiki-color-text);">() {</span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> {} }</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-comment);">// define data</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  methods {}</span><span style="color:var(--shiki-token-punctuation);">,</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-comment);">// define methods</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  computed {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-function);">shipping</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-keyword);">if</span><span style="color:var(--shiki-color-text);"> (</span><span style="color:var(--shiki-token-constant);">this</span><span style="color:var(--shiki-color-text);">.premium) </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">'free'</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span></span>
+<span data-line><span style="color:var(--shiki-color-text);">      </span><span style="color:var(--shiki-token-keyword);">return</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-string-expression);">'2.99$'</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">})</span></span></code></pre></div>
+<ul>
+<li>doc: <a href="https://vuejs.org/guide/essentials/component-basics.html" class="external">https://vuejs.org/guide/essentials/component-basics.html</a></li>
+<li>pull: <a href="https://github.com/anhnh-3008/Vue3/pull/8" class="external">https://github.com/anhnh-3008/Vue3/pull/8</a></li>
+</ul>
+<h3 id="-communicating-events">🌱 Communicating events<a aria-hidden="true" tabindex="-1" href="#-communicating-events" class="internal"> §</a></h3>
+<ul>
+<li>Trong quá trình phát triển, TH chúng ta muốn method trong <strong>component</strong> con tương tác được với varibale define trong <strong>component</strong> cha, có thể giao tiếp thông qua <code>$emit</code>.</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- index.html --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">product-display</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">@add-to-cart</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;updateCart&quot;</span><span style="color:var(--shiki-color-text);">>&lt;/</span><span style="color:var(--shiki-token-string-expression);">product-display</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line> </span>
+<span data-line><span style="color:var(--shiki-token-comment);">&lt;!-- Import Component --></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">script</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">src</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;./components/ProductDisplay.js&quot;</span><span style="color:var(--shiki-color-text);">>&lt;/</span><span style="color:var(--shiki-token-string-expression);">script</span><span style="color:var(--shiki-color-text);">></span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span data-line><span style="color:var(--shiki-token-comment);">// main.js</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">methods</span><span style="color:var(--shiki-token-punctuation);">:</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-function);">updateCart</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-constant);">this</span><span style="color:var(--shiki-color-text);">.cart </span><span style="color:var(--shiki-token-keyword);">+=</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-constant);">1</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span></code></pre></div>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="js" data-theme="default"><code data-language="js" data-theme="default"><span data-line><span style="color:var(--shiki-token-comment);">// ProductDisplay.js</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">template</span><span style="color:var(--shiki-token-punctuation);">:</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-comment);">/*html*/</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-string-expression);">`&lt;button</span></span>
+<span data-line><span style="color:var(--shiki-token-string-expression);">  class=&quot;button&quot;</span></span>
+<span data-line><span style="color:var(--shiki-token-string-expression);">  @click=&quot;addToCart&quot;></span></span>
+<span data-line><span style="color:var(--shiki-token-string-expression);">  Add to Cart</span></span>
+<span data-line><span style="color:var(--shiki-token-string-expression);">  &lt;/button>`</span><span style="color:var(--shiki-token-punctuation);">,</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">methods</span><span style="color:var(--shiki-token-punctuation);">:</span><span style="color:var(--shiki-color-text);"> {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  </span><span style="color:var(--shiki-token-function);">addToCart</span><span style="color:var(--shiki-color-text);">() {</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-constant);">this</span><span style="color:var(--shiki-token-function);">.$emit</span><span style="color:var(--shiki-color-text);">(</span><span style="color:var(--shiki-token-string-expression);">'add-to-cart'</span><span style="color:var(--shiki-color-text);">)</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">    </span><span style="color:var(--shiki-token-comment);">// this.$emit('add-to-cart', params)</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">  }</span></span>
+<span data-line><span style="color:var(--shiki-color-text);">}</span></span></code></pre></div>
+<ul>
+<li>doc: <a href="https://vuejs.org/guide/essentials/component-basics.html#listening-to-events" class="external">https://vuejs.org/guide/essentials/component-basics.html#listening-to-events</a></li>
+<li>pull: <a href="https://github.com/anhnh-3008/Vue3/pull/9" class="external">https://github.com/anhnh-3008/Vue3/pull/9</a></li>
+</ul>
+<h2 id="-x-form-input-bindings">🌿 X. Form Input Bindings<a aria-hidden="true" tabindex="-1" href="#-x-form-input-bindings" class="internal"> §</a></h2>
+<ul>
+<li><strong>v-model</strong> - liên kết element trong form tới các biến trong data.</li>
+</ul>
+<div data-rehype-pretty-code-fragment><pre style="background-color:var(--shiki-color-background);" tabindex="0" data-language="html" data-theme="default"><code data-language="html" data-theme="default"><span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">>Message is: {{ message }}&lt;/</span><span style="color:var(--shiki-token-string-expression);">p</span><span style="color:var(--shiki-color-text);">></span></span>
+<span data-line><span style="color:var(--shiki-color-text);">&lt;</span><span style="color:var(--shiki-token-string-expression);">input</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">v-model</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;message&quot;</span><span style="color:var(--shiki-color-text);"> </span><span style="color:var(--shiki-token-function);">placeholder</span><span style="color:var(--shiki-token-keyword);">=</span><span style="color:var(--shiki-token-string-expression);">&quot;edit me&quot;</span><span style="color:var(--shiki-color-text);"> /></span></span></code></pre></div>
+<ul>
+<li>doc: <a href="https://vuejs.org/guide/essentials/forms.html" class="external">https://vuejs.org/guide/essentials/forms.html</a></li>
+<li>pull: <a href="https://github.com/anhnh-3008/Vue3/pull/10" class="external">https://github.com/anhnh-3008/Vue3/pull/10</a></li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1}"></div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xmlSpace="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1}"></div></div></div><div class="backlinks"><h3>Backlinks</h3><ul class="overflow"><li>No backlinks found</li></ul></div></div></div><footer><hr/><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.10</a>, © 2023</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+          import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+          const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+          mermaid.initialize({
+            startOnLoad: false,
+            securityLevel: 'loose',
+            theme: darkMode ? 'dark' : 'default'
+          });
+          document.addEventListener('nav', async () => {
+            await mermaid.run({
+              querySelector: '.mermaid'
+            })
+          });
+          </script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">
+          const socket = new WebSocket('ws://localhost:3001')
+          socket.addEventListener('message', () => document.location.reload())
+        </script><script src="../../../postscript.js" type="module"></script></html>

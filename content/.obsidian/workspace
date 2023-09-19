@@ -1,0 +1,144 @@
+{
+  "main": {
+    "id": "7d60b416b0500f7b",
+    "type": "split",
+    "children": [
+      {
+        "id": "1b7693403d10f373",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "05 posts/10 Psychology/Tư duy nhanh và chậm.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "559924b70ae1703b",
+    "type": "split",
+    "children": [
+      {
+        "id": "97534041993df514",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9cff7a0f8ff13b80",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "06b42d29634b36dc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3f87f7f9d6bf4084",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "94777942d7cba9d7",
+    "type": "split",
+    "children": [
+      {
+        "id": "6a60b4a683623544",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a9aa9271dfe4bca8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "05 posts/10 Psychology/Tư duy nhanh và chậm.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8437043ecd38c32e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "05 posts/10 Psychology/Tư duy nhanh và chậm.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "e84aa0ab630c0499",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0bbebd050b40acf3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "05 posts/10 Psychology/Tư duy nhanh và chậm.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "1b7693403d10f373",
+  "lastOpenFiles": [
+    "02 Daily/2022-10-14.md",
+    "05 posts/10 Psychology/Tư duy nhanh và chậm.md",
+    "00.md",
+    "_index.md",
+    "06 til/07 Coding/SOLID.md",
+    "06 til/13 Ruby/Check prefix of string.md",
+    "02 Daily/2022-10-13.md",
+    "06 til/16 Utils/Training Road.md",
+    "Ruby/Awesome-Ruby Repository.md",
+    "README.md"
+  ]
+}

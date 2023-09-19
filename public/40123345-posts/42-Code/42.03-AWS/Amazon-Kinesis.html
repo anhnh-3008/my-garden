@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html><head><title>🌱 Amazon Kinesis</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="🌱 Amazon Kinesis"/><meta property="og:description" content="🌿 What? § Là dịch vụ giúp chúng ta đơn giản hóa việc thu thập, xử lý cũng như là phân tích luồng dữ liệu một cách realtime. Có 4 loại: Kinesis Data Streams: capture, xử lý và lưu trữ data streams."/><meta property="og:image" content="https://https://anhhn.netlify.app//static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🌿 What? § Là dịch vụ giúp chúng ta đơn giản hóa việc thu thập, xử lý cũng như là phân tích luồng dữ liệu một cách realtime. Có 4 loại: Kinesis Data Streams: capture, xử lý và lưu trữ data streams."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Dancing Script:wght@400;700&amp;family=Signika Negative:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="40123345-posts/42-Code/42.03-AWS/Amazon-Kinesis"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="../../..">🪴 HA's Garden</a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#-what" data-for="-what">🌿 What?</a></li><li class="depth-0"><a href="#--kinesis-data-streams" data-for="--kinesis-data-streams">🌿  Kinesis Data Streams</a></li><li class="depth-1"><a href="#-capacity-modes" data-for="-capacity-modes">🍃 Capacity modes</a></li><li class="depth-0"><a href="#-kinesis-data-firehose" data-for="-kinesis-data-firehose">🌿 Kinesis Data Firehose</a></li><li class="depth-0"><a href="#-ordering-data" data-for="-ordering-data">🌿 Ordering data</a></li><li class="depth-0"><a href="#-kinesis-vs-sqs-ordering" data-for="-kinesis-vs-sqs-ordering">🌿 Kinesis vs SQS ordering</a></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">🌱 Amazon Kinesis</h1><p class="content-meta">Mar 25, 2023, 3 min read</p><ul class="tags"><li><a href="../../../tags/aws" class="internal tag-link">#aws</a></li></ul></div></div><article class="popover-hint"><h2 id="-what">🌿 What?<a aria-hidden="true" tabindex="-1" href="#-what" class="internal"> §</a></h2>
+<ul>
+<li>
+<p>Là dịch vụ giúp chúng ta đơn giản hóa việc <strong>thu thập, xử lý cũng như là phân tích</strong> luồng dữ liệu một cách realtime.</p>
+</li>
+<li>
+<p>Có 4 loại:</p>
+<ul>
+<li><strong>Kinesis Data Streams:</strong> capture, xử lý và lưu trữ data streams.</li>
+<li><strong>Kinesis Data Firehose:</strong> load data streams vào các dịch vụ lưu trữ của AWS.</li>
+<li><strong>Kinesis Data Analytics:</strong> phân tích data streams cùng với SQL hoặc Apache Flick</li>
+<li><strong>Kinesis Video Streams:</strong> capture, xử lý và lưu trữ video streams.
+<img src="../../../00-Meta/01-Attachments/Pasted-image-20230325212843.png" width="auto" height="auto"/></li>
+</ul>
+</li>
+</ul>
+<h2 id="--kinesis-data-streams">🌿  Kinesis Data Streams<a aria-hidden="true" tabindex="-1" href="#--kinesis-data-streams" class="internal"> §</a></h2>
+<p><img src="../../../00-Meta/01-Attachments/Pasted-image-20230325213658.png" width="auto" height="auto"/></p>
+<ul>
+<li>Giữ lại dữ liệu từ 1 -> 365 ngày.</li>
+<li>Có khả năng xử lý lại dữ liệu.</li>
+<li>Một khi dữ liệu được inserted vào Kinesis thì sẽ không thể xóa.</li>
+<li>Data được chia sẻ chung một partition thì sẽ vào chung một shard.</li>
+<li>Producers: AWS SDK, Kinesis Producer(KPL)</li>
+<li>Consumers:
+<ul>
+<li>KCL - Kinesis Client Library, AWS SDK</li>
+<li>AWS Lambda, Kinesis Data Firehose, Kinesis Data Analytics.</li>
+</ul>
+</li>
+</ul>
+<h3 id="-capacity-modes">🍃 Capacity modes<a aria-hidden="true" tabindex="-1" href="#-capacity-modes" class="internal"> §</a></h3>
+<ul>
+<li>
+<p><strong>Provisioned mode</strong></p>
+<ul>
+<li>Chúng ta được chọn số lượng shards, scale thủ công hoặc sử dụng API</li>
+<li>Mỗi shard là 1MB/s in (1000 records mỗi giây)</li>
+<li>Mỗi shard là 2MB/s out.</li>
+<li>Thanh toán cho từng shard theo giờ.</li>
+</ul>
+</li>
+<li>
+<p><strong>On-demand mode</strong></p>
+<ul>
+<li>Không cần khả năng cung cấp hoặc quản lý.</li>
+<li>Mặc định 4MB/s</li>
+<li>Tự động scale dựa vào thông lượng được quan sát trong 30 ngày gần nhất.</li>
+<li>Trả tiền theo giờ từng stream, dữ liệu in/out per GB</li>
+</ul>
+</li>
+<li>
+<p>Nếu không có yêu cầu gì đặc biệt thì chọn <strong>on-demand mode</strong> dùng cho thuận tiện.</p>
+</li>
+</ul>
+<h2 id="-kinesis-data-firehose">🌿 Kinesis Data Firehose<a aria-hidden="true" tabindex="-1" href="#-kinesis-data-firehose" class="internal"> §</a></h2>
+<p><img src="../../../00-Meta/01-Attachments/Pasted-image-20230325215757.png" width="auto" height="auto"/></p>
+<ul>
+<li>Dịch vụ toàn quyền sử lý, khong admin, tự động scale, serverless, giúp chuyển dữ liệu lớn vào storage tier.</li>
+<li>Trả tiền theo dữ liệu được truyền đến Firehose.</li>
+<li><strong>Gần real time.</strong></li>
+<li>Không lưu trữ dữ liệu.</li>
+<li>Không hỗ trợ khả năng replay.</li>
+</ul>
+<h2 id="-ordering-data">🌿 Ordering data<a aria-hidden="true" tabindex="-1" href="#-ordering-data" class="internal"> §</a></h2>
+<ul>
+<li>Giả sử app của chúng ta cần thực hiện check vị trí của các xe tải. Số lượng xe tải ngày càng tăng nếu tất cả dữ liệu được đổ vào các shards khác nhau trên Kinesis -> Mất dữ liệu hoặc mất thời gian để truy vấn dữ liệu.</li>
+<li>Giải pháp: Trong Kinesis, muốn dữ liệu được sắp xếp có thứ tự, sử dụng <strong>partition key</strong>. Vd keys là trunk_1, trunk_2, …</li>
+<li>Các dữ liệu cùng key sẽ được stream trong cùng shard -> dễ dàng tìm kiếm hơn, tránh bị lack mất dữ liệu
+<img src="../../../00-Meta/01-Attachments/Pasted-image-20230326081953.png" width="auto" height="auto"/></li>
+</ul>
+<h2 id="-kinesis-vs-sqs-ordering">🌿 Kinesis vs SQS ordering<a aria-hidden="true" tabindex="-1" href="#-kinesis-vs-sqs-ordering" class="internal"> §</a></h2>
+<ul>
+<li>Giả sử chúng ta có 100 trucks, 5 shards và 1 SQS FIFO</li>
+<li>Với Kinesis Data Streams:
+<ul>
+<li>Trung bình mỗi shard sẽ chứa dữ liệu của 20 trucks</li>
+<li>Các trucks sẽ được sắp xếp trong mỗi shard.</li>
+<li>Tối đa có thể có 5 consumers chạy đồng thời.</li>
+<li>Có thể nhận được dữ liệu lên tới 5MB/s</li>
+</ul>
+</li>
+<li>SQS FIFO:
+<ul>
+<li>Chỉ có một Queue</li>
+<li>Có 100 Group ID</li>
+<li>Tối đa có thể có 100 consumers</li>
+<li>Có thể nhận được 300 messages mỗi giây(hoặc 3000 nếu kết hợp sử dụng batching)</li>
+</ul>
+</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1}"></div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xmlSpace="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1}"></div></div></div><div class="backlinks"><h3>Backlinks</h3><ul class="overflow"><li><a href="../../../40123345-posts/42-Code/42.03-AWS/Big-Data-Ingestion-Pipeline" class="internal">🌱 Big Data Ingestion Pipeline</a></li><li><a href="../../../40123345-posts/42-Code/42.03-AWS/Monitoring/Amazon-CloudWatch" class="internal">🌱 Amazon CloudWatch</a></li></ul></div></div></div><footer><hr/><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.10</a>, © 2023</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+          import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+          const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+          mermaid.initialize({
+            startOnLoad: false,
+            securityLevel: 'loose',
+            theme: darkMode ? 'dark' : 'default'
+          });
+          document.addEventListener('nav', async () => {
+            await mermaid.run({
+              querySelector: '.mermaid'
+            })
+          });
+          </script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">
+          const socket = new WebSocket('ws://localhost:3001')
+          socket.addEventListener('message', () => document.location.reload())
+        </script><script src="../../../postscript.js" type="module"></script></html>

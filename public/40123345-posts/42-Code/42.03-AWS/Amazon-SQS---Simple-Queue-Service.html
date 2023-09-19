@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html><head><title>🌱 Amazon SQS - Simple Queue Service</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="🌱 Amazon SQS - Simple Queue Service"/><meta property="og:description" content="🌿 What? § Là dịch vụ lâu đời nhất của AWS - hơn 10 năm. Dịch vụ lưu trữ messages, sử dụng để tách biệt các ứng dụng của chúng ta. Attrubutes: Không giới hạn thông lượng, không giới hạn số lượng messages trong queue."/><meta property="og:image" content="https://https://anhhn.netlify.app//static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🌿 What? § Là dịch vụ lâu đời nhất của AWS - hơn 10 năm. Dịch vụ lưu trữ messages, sử dụng để tách biệt các ứng dụng của chúng ta. Attrubutes: Không giới hạn thông lượng, không giới hạn số lượng messages trong queue."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Dancing Script:wght@400;700&amp;family=Signika Negative:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="40123345-posts/42-Code/42.03-AWS/Amazon-SQS---Simple-Queue-Service"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="../../..">🪴 HA's Garden</a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#-what" data-for="-what">🌿 What?</a></li><li class="depth-0"><a href="#-producing-messages" data-for="-producing-messages">🌿 Producing Messages</a></li><li class="depth-0"><a href="#-consuming-messages" data-for="-consuming-messages">🌿 Consuming Messages</a></li><li class="depth-0"><a href="#-kiến-trúc-phổ-biến" data-for="-kiến-trúc-phổ-biến">🌿 Kiến trúc phổ biến</a></li><li class="depth-0"><a href="#-security" data-for="-security">🌿 Security</a></li><li class="depth-0"><a href="#-message-visibility-timeout" data-for="-message-visibility-timeout">🌿 Message visibility timeout</a></li><li class="depth-0"><a href="#-long-polling" data-for="-long-polling">🌿 Long Polling</a></li><li class="depth-0"><a href="#-fifo-queue" data-for="-fifo-queue">🌿 FIFO Queue</a></li><li class="depth-1"><a href="#-ordering-data" data-for="-ordering-data">🍃 Ordering data</a></li><li class="depth-0"><a href="#-integrate-with-auto-scaling-group" data-for="-integrate-with-auto-scaling-group">🌿 Integrate with Auto Scaling Group</a></li><li class="depth-1"><a href="#-kiến-trúc-sử-dụng-queue-làm-buffer-khi-ghi-dữ-liệu-lớn-vào-database" data-for="-kiến-trúc-sử-dụng-queue-làm-buffer-khi-ghi-dữ-liệu-lớn-vào-database">🌿 Kiến trúc sử dụng Queue làm buffer khi ghi dữ liệu lớn vào database</a></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">🌱 Amazon SQS - Simple Queue Service</h1><p class="content-meta">Mar 25, 2023, 5 min read</p><ul class="tags"><li><a href="../../../tags/aws" class="internal tag-link">#aws</a></li></ul></div></div><article class="popover-hint"><h2 id="-what">🌿 What?<a aria-hidden="true" tabindex="-1" href="#-what" class="internal"> §</a></h2>
+<p><img src="../../../00-Meta/01-Attachments/Pasted-image-20230325150553.png" width="auto" height="auto"/></p>
+<ul>
+<li>Là dịch vụ lâu đời nhất của AWS - hơn 10 năm.</li>
+<li>Dịch vụ lưu trữ messages, <strong>sử dụng để tách biệt các ứng dụng</strong> của chúng ta.</li>
+<li>Attrubutes:
+<ul>
+<li>Không giới hạn thông lượng, không giới hạn số lượng messages trong queue.</li>
+<li>Mặc định tin nhắn sẽ được giữ lại trong 4 ngày, lâu nhất là 14 ngày.</li>
+<li>Độ trễ thấp</li>
+<li>Mỗi message chỉ được gửi tối đa 265Kb.</li>
+</ul>
+</li>
+<li>Có thể sẽ nhận được tin nhắn bị duplicate</li>
+<li>Có thể có order messages.</li>
+</ul>
+<h2 id="-producing-messages">🌿 Producing Messages<a aria-hidden="true" tabindex="-1" href="#-producing-messages" class="internal"> §</a></h2>
+<p><img src="../../../00-Meta/01-Attachments/Pasted-image-20230325150528.png" width="auto" height="auto"/></p>
+<ul>
+<li>Gửi messages đến Queue(use SendMessage API)</li>
+<li>Messages tồn tại trong Queue đến khi Consumer xóa</li>
+<li>Mặc định giữ lại 4 ngày, nhiều nhất là 14 ngày.</li>
+</ul>
+<h2 id="-consuming-messages">🌿 Consuming Messages<a aria-hidden="true" tabindex="-1" href="#-consuming-messages" class="internal"> §</a></h2>
+<p><img src="../../../00-Meta/01-Attachments/Pasted-image-20230325150626.png" width="auto" height="auto"/></p>
+<ul>
+<li>Nhận Messages từ Queue(nhận được 10 messages một lần)</li>
+<li>Consumers có thể là EC2 Instance, AWS Lambda, hay server on-premises, …</li>
+<li>Khi nhận message sẽ tiếp tục xử lý(ở code của chúng ta)</li>
+<li>Sau khi nhận xong thì sẽ gọi API xóa message trong Queue(DeleteMessage API)</li>
+</ul>
+<h2 id="-kiến-trúc-phổ-biến">🌿 Kiến trúc phổ biến<a aria-hidden="true" tabindex="-1" href="#-kiến-trúc-phổ-biến" class="internal"> §</a></h2>
+<p><img src="../../../00-Meta/01-Attachments/Pasted-image-20230325151657.png" width="auto" height="auto"/></p>
+<ul>
+<li>Hiểu đơn giản SQS là một nơi lưu trữ các job để xử lý bất đồng bộ cho hệ thống của chúng ta.</li>
+<li>Ví dụ, hệ thống cần chỉnh sửa video, nhưng tác vụ chỉnh sửa sẽ mất thời gian ở phía backend, để tăng trải nghiệm của người dùng, chúng ta chuyển tác vụ chỉnh sửa vào Queue để chạy bất đồng bộ, người dùng có thể tiếp tục thao tác mà không cần phải ngồi đợi chỉnh sửa video xong.</li>
+<li>Hoàn toàn tách biệt các tầng của hệ thống
+<ul>
+<li>Tầng Front-End</li>
+<li>Tầng Back-End</li>
+<li>Tầng Database</li>
+</ul>
+</li>
+<li>Kết hợp với Auto-Scaling để tự động mở rộng đáp ứng với nhu cầu sử dụng của Queue.</li>
+</ul>
+<h2 id="-security">🌿 Security<a aria-hidden="true" tabindex="-1" href="#-security" class="internal"> §</a></h2>
+<ul>
+<li><strong>Encryption:</strong>
+<ul>
+<li>In-flight encryption using - HTTPS API</li>
+<li>Mã hóa phần còn lại với KMS Keys</li>
+<li>Client-side encryption nếu clients muốn tự thực hiện mã hóa/giải mã.</li>
+</ul>
+</li>
+<li><strong>Access Controls:</strong> IAM policies</li>
+<li><strong>SQS Access Policies:</strong>(giống cái S3 bucket polices)
+<ul>
+<li>Hữu ích khi muốn truy cập chéo account</li>
+<li>Hữu ích khi cho phép những services khác(SNS, S3, …) được quyền ghi.</li>
+</ul>
+</li>
+</ul>
+<h2 id="-message-visibility-timeout">🌿 Message visibility timeout<a aria-hidden="true" tabindex="-1" href="#-message-visibility-timeout" class="internal"> §</a></h2>
+<p><img src="../../../00-Meta/01-Attachments/Pasted-image-20230325155057.png" width="auto" height="auto"/></p>
+<ul>
+<li>Là khoảng thời gian cooldown sau khi có một consumer nhận được message, các consumers khác không thể nhận được message. Cái này sẽ tránh việc 2 consumers nhận 1 message và thực hiện logic.</li>
+<li>Mặc định, timeout là 30s</li>
+<li>Hết thời gian timeout, các consumers khác sẽ có thể nhận được messages, nếu trong thời gian đó nó chưa được xóa.</li>
+<li>Nhưng trên thực tế, có thể consumer sẽ cần nhiều hơn 30s để thực hiện logic với message. Để cần thêm thời gian timeout, consumer có thể call <strong>ChangeMessageVisibility API</strong>.</li>
+<li>Lưu ý không nên set timeout quá dài hoặc ngắn vì:
+<ul>
+<li>Nếu thời gian timeout quá dài(hàng giờ liền), consumer nhận message bị crashes vì một lý do nào đó, hệ thống sẽ phải đợi hàng để message visible trở lại để một consumer khác có thể nhận và thực hiện logic với nó.</li>
+<li>Nếu thời gian timeout quá ngắn, consumer chưa xử lý xong mà đã hiển thị để một consumer khác nhận được message, hệ thống có thể sẽ thực hiện logic 2 lần trên cùng một message.</li>
+</ul>
+</li>
+</ul>
+<h2 id="-long-polling">🌿 Long Polling<a aria-hidden="true" tabindex="-1" href="#-long-polling" class="internal"> §</a></h2>
+<ul>
+<li>Khi một consumer requests message từ Queue, nó có thể lựa chọn là đợi (chứ không ngắt poll luôn) khi Queue đang trống.</li>
+<li>LongPolling giảm số lượng API gọi đến SQS, tăng hiệu quả và giảm độ trễ(nhận được message ngay khi nó được đẩy vào Queue).</li>
+<li>Thời gian đợi có thể được set từ 1s -> 20s.</li>
+<li>Long Polling sẽ được khuyến khích sử dụng hơn Short Polling</li>
+<li>Long polling có thể được enabled trong Queue hoặc có thể sử dụng API <strong>WatiTimeSeconds</strong> để set thời gian đợi.</li>
+</ul>
+<h2 id="-fifo-queue">🌿 FIFO Queue<a aria-hidden="true" tabindex="-1" href="#-fifo-queue" class="internal"> §</a></h2>
+<p><img src="../../../00-Meta/01-Attachments/Pasted-image-20230325161601.png" width="auto" height="auto"/></p>
+<ul>
+<li>FIFO =  FIrst In First Out</li>
+<li>Giới hạn thông lượng: 300 message/s</li>
+<li>Tránh việc gửi duplicate</li>
+<li>Các messages được thực thi theo đúng thứ tự.</li>
+<li>Chỉ có nhận một consumer.</li>
+</ul>
+<h3 id="-ordering-data">🍃 Ordering data<a aria-hidden="true" tabindex="-1" href="#-ordering-data" class="internal"> §</a></h3>
+<ul>
+<li>Vì chỉ nhận một consumer -> hiệu suất kém -> muốn scale lên nhiều consumers -> sử dụng Group ID</li>
+<li>Các messages vẫn được gửi theo thứ tự FIFO, những mỗi message sẽ được gắn với một group. Từ đó có thể tạo ra nhiều consumers, mỗi consumer sẽ poll messages ứng với mỗi group.
+<img src="../../../00-Meta/01-Attachments/Pasted-image-20230326082442.png" width="auto" height="auto"/></li>
+</ul>
+<h2 id="-integrate-with-auto-scaling-group">🌿 Integrate with Auto Scaling Group<a aria-hidden="true" tabindex="-1" href="#-integrate-with-auto-scaling-group" class="internal"> §</a></h2>
+<p><img src="../../../00-Meta/01-Attachments/Pasted-image-20230325162158.png" width="auto" height="auto"/></p>
+<ul>
+<li>Sử dụng cái CloudWach Metric để theo dõi số lượng messages trong Queue</li>
+<li>Nếu nhiều hơn 100 chẳng hạn(server không xử lý kịp), cái CloudWatch Alarm sẽ báo cho <a href="../../../40123345-posts/42-Code/42.03-AWS/ASG---Auto-Scaling-Group" class="internal">ASG</a> để thực hiện mở rộng, đáp ứng khả năng xử lý messages trong Queue, tương tự khi scale down.</li>
+</ul>
+<h3 id="-kiến-trúc-sử-dụng-queue-làm-buffer-khi-ghi-dữ-liệu-lớn-vào-database">🌿 Kiến trúc sử dụng Queue làm buffer khi ghi dữ liệu lớn vào database<a aria-hidden="true" tabindex="-1" href="#-kiến-trúc-sử-dụng-queue-làm-buffer-khi-ghi-dữ-liệu-lớn-vào-database" class="internal"> §</a></h3>
+<p><img src="../../../00-Meta/01-Attachments/Pasted-image-20230325162927.png" width="auto" height="auto"/></p>
+<ul>
+<li>Ví dụ chúng ta có một trang thương mại điện tử và vào đợt sale, mọi người mua hàng rất rất nhiều. Nếu để server ghi trực tiếp dữ liệu vào databases, khả năng cao database sẽ bị quá tải và sẽ bị mất một số giao dịch của người dùng.</li>
+<li>Giải pháp cho vấn đề này là sử dụng SQS, như vậy thì tất cả giao dịch của người dùng sẽ nằm trong Queue, một server khác sẽ có trách nhiệm nhận lại messages và thực hiện ghi dữ liệu dần dần vào databases.</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1}"></div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xmlSpace="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1}"></div></div></div><div class="backlinks"><h3>Backlinks</h3><ul class="overflow"><li><a href="../../../40123345-posts/42-Code/42.03-AWS/AWS-Integartion" class="internal">🌱 AWS Integartion</a></li><li><a href="../../../40123345-posts/42-Code/42.03-AWS/AWS-Step-Function" class="internal">🌱 AWS Step Function</a></li><li><a href="../../../40123345-posts/42-Code/42.03-AWS/Amazon-SNS---Simple-Notification-Service" class="internal">🌱 Amazon SNS - Simple Notification Service</a></li><li><a href="../../../40123345-posts/42-Code/42.03-AWS/Some-Solution-Architectures/Serverless" class="internal">🌱 Serverless</a></li></ul></div></div></div><footer><hr/><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.10</a>, © 2023</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+          import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+          const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+          mermaid.initialize({
+            startOnLoad: false,
+            securityLevel: 'loose',
+            theme: darkMode ? 'dark' : 'default'
+          });
+          document.addEventListener('nav', async () => {
+            await mermaid.run({
+              querySelector: '.mermaid'
+            })
+          });
+          </script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">
+          const socket = new WebSocket('ws://localhost:3001')
+          socket.addEventListener('message', () => document.location.reload())
+        </script><script src="../../../postscript.js" type="module"></script></html>

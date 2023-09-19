@@ -3,19 +3,24 @@ import * as Plugin from "./quartz/plugins"
 
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "🪴 HA's Garden",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
-    baseUrl: "quartz.jzhao.xyz",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    baseUrl: "https://anhhn.netlify.app/",
+    ignorePatterns: [
+      ".obsidian",
+      "10 Daily/",
+      "20 Excalidraw/",
+      "30 Templates/"
+    ],
     defaultDateType: "created",
     theme: {
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
+        header: "Dancing Script",
+        body: "Signika Negative",
         code: "IBM Plex Mono",
       },
       colors: {

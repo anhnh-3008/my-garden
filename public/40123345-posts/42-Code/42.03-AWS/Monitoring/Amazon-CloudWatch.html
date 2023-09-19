@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html><head><title>🌱 Amazon CloudWatch</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="🌱 Amazon CloudWatch"/><meta property="og:description" content="🌿 What? § Là một dịch vụ giám sát, ghi log và cảnh báo trên môi trường cloud của AWS. Nó giúp chúng ta giám sát tài nguyên và ứng dụng trên AWS, thu thập và phân tích các dữ liệu khác nhau, cung cấp các thông tin về hoạt động và hiệu suất của các tài nguyên và ứng dụng của chúng ta."/><meta property="og:image" content="https://https://anhhn.netlify.app//static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../../../static/icon.png"/><meta name="description" content="🌿 What? § Là một dịch vụ giám sát, ghi log và cảnh báo trên môi trường cloud của AWS. Nó giúp chúng ta giám sát tài nguyên và ứng dụng trên AWS, thu thập và phân tích các dữ liệu khác nhau, cung cấp các thông tin về hoạt động và hiệu suất của các tài nguyên và ứng dụng của chúng ta."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Dancing Script:wght@400;700&amp;family=Signika Negative:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="40123345-posts/42-Code/42.03-AWS/Monitoring/Amazon-CloudWatch"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="../../../..">🪴 HA's Garden</a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#-what" data-for="-what">🌿 What?</a></li><li class="depth-0"><a href="#-cloudwatch-metrics" data-for="-cloudwatch-metrics">🌿 CloudWatch Metrics</a></li><li class="depth-1"><a href="#-streams" data-for="-streams">🌱 Streams</a></li><li class="depth-0"><a href="#-cloudwatch-logs" data-for="-cloudwatch-logs">🌿 CloudWatch Logs</a></li><li class="depth-1"><a href="#-filter--insights" data-for="-filter--insights">🌱 Filter &amp; Insights</a></li><li class="depth-1"><a href="#-log-subcriptions" data-for="-log-subcriptions">🌱 Log Subcriptions</a></li><li class="depth-0"><a href="#-agent--logs-agent" data-for="-agent--logs-agent">🌿 Agent &amp; Logs Agent</a></li><li class="depth-0"><a href="#-alarms" data-for="-alarms">🌿 Alarms</a></li><li class="depth-1"><a href="#-composite-alarms" data-for="-composite-alarms">🌱 Composite Alarms</a></li><li class="depth-0"><a href="#-insight" data-for="-insight">🌿 Insight</a></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">🌱 Amazon CloudWatch</h1><p class="content-meta">Apr 08, 2023, 4 min read</p><ul class="tags"><li><a href="../../../../tags/aws" class="internal tag-link">#aws</a></li></ul></div></div><article class="popover-hint"><h2 id="-what">🌿 What?<a aria-hidden="true" tabindex="-1" href="#-what" class="internal"> §</a></h2>
+<ul>
+<li>Là một dịch vụ giám sát, ghi log và cảnh báo trên môi trường cloud của AWS. Nó giúp chúng ta giám sát tài nguyên và ứng dụng trên AWS, thu thập và phân tích các dữ liệu khác nhau, cung cấp các thông tin về hoạt động và hiệu suất của các tài nguyên và ứng dụng của chúng ta.</li>
+</ul>
+<h2 id="-cloudwatch-metrics">🌿 CloudWatch Metrics<a aria-hidden="true" tabindex="-1" href="#-cloudwatch-metrics" class="internal"> §</a></h2>
+<ul>
+<li>Là tính năng của CloudWatch cung cấp các thông số hiệu suất hoạt động của tất cả các services của AWS.</li>
+<li><strong>Metric</strong> là một biến để giám sát(CPUUtilization, network, …)</li>
+<li>Các Metrics thuộc về các <strong>namespaces</strong>.</li>
+<li><strong>Dimension</strong> là một thuộc tính của một metric(instance id, environment, …)</li>
+<li>Tối đa là 30 dimensions cho từng metric.</li>
+<li>Các metrics đều có <strong>timestamps</strong>.</li>
+<li>Có thể tạo CloudWatcch dashboards từ các metrics.</li>
+<li>Có thể tạo <strong>CloudWatch Custom Metrics</strong> để trích xuất dữ liệu cần thiết(ví dụ như trích xuất metric của RAM của EC2 instance, …)</li>
+</ul>
+<h3 id="-streams">🌱 Streams<a aria-hidden="true" tabindex="-1" href="#-streams" class="internal"> §</a></h3>
+<ul>
+<li>Có thể liên tục stream các thông số hiệu suất của app tới các destinations khác để thực hiện các tác vụ như lưu trữ, phân tích … với tần suất <strong>near-real-time</strong> và độ trễ thấp.</li>
+<li>Có thể lựa chọn <strong>filters metrics</strong> để chỉ định stream tới destinations.
+<img src="../../../../00-Meta/01-Attachments/Pasted-image-20230408140045.png" width="auto" height="auto"/></li>
+</ul>
+<h2 id="-cloudwatch-logs">🌿 CloudWatch Logs<a aria-hidden="true" tabindex="-1" href="#-cloudwatch-logs" class="internal"> §</a></h2>
+<ul>
+<li>Là tính năng của CloudWatch giúp chúng ta lưu trữ Logs của hệ thống.</li>
+<li><strong>Log groups</strong>: thường là đại diện cho một app.</li>
+<li><strong>Log stream:</strong> instances bên trong app / log files / containers.</li>
+<li>Có thể xác định thời gian hết hạn của log(nerver, 30 days, …), sau thời gian hết hạn, log sẽ tự động được xóa. Chúng ta sẽ phải trả tiền để được lưu log trên AWS.</li>
+<li><strong>CloudWatch Logs có thể gửi logs tới:</strong>
+<ul>
+<li>Amazon <a href="../../../../40123345-posts/42-Code/42.03-AWS/S3" class="internal">S3</a></li>
+<li><a href="../../../../40123345-posts/42-Code/42.03-AWS/Amazon-Kinesis" class="internal">Kinesis</a> Data Streams</li>
+<li><a href="../../../../40123345-posts/42-Code/42.03-AWS/Amazon-Kinesis" class="internal">Kinesis</a> Data Firehose</li>
+<li>AWS <a href="../../../../40123345-posts/42-Code/42.03-AWS/AWS-Lambda" class="internal">Lambda</a></li>
+<li><a href="../../../../40123345-posts/42-Code/42.03-AWS/Amazon-OpenSearch-Service" class="internal">OpenSearch</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="-filter--insights">🌱 Filter &amp; Insights<a aria-hidden="true" tabindex="-1" href="#-filter--insights" class="internal"> §</a></h3>
+<ul>
+<li>Có thể filter để xem log dễ dàng hơn.</li>
+<li>Metric filters có thể được sử dụng để trigger CloudWatch alarms.</li>
+<li>CloudWatch Logs Insight có thể được sử dụng để query logs và thêm các câu queries để làm Dashboards.</li>
+</ul>
+<h3 id="-log-subcriptions">🌱 Log Subcriptions<a aria-hidden="true" tabindex="-1" href="#-log-subcriptions" class="internal"> §</a></h3>
+<ul>
+<li>
+<p>Dùng <strong>Subcription Filter</strong> để điều hướng đến các dịch vụ tùy theo nhu cầu sử dụng của dự án.
+<img src="../../../../00-Meta/01-Attachments/Pasted-image-20230408141720.png" width="auto" height="auto"/></p>
+</li>
+<li>
+<p>Kiến trúc để thu thập logs từ nhiều accounts, regions về một chỗ:
+<img src="../../../../00-Meta/01-Attachments/Pasted-image-20230408141817.png" width="auto" height="auto"/></p>
+</li>
+</ul>
+<h2 id="-agent--logs-agent">🌿 Agent &amp; Logs Agent<a aria-hidden="true" tabindex="-1" href="#-agent--logs-agent" class="internal"> §</a></h2>
+<ul>
+<li>Mặc định sẽ không có logs từ EC2 machine tới CloudWatch. Để thu thập logs của EC2, chúng ta cần tạo một CloudWatch Agent đặt trong EC2 và nó sẽ thu thập + push log lên CloudWatch.</li>
+<li>Lưu ý về IAM permissions.</li>
+<li>CloudWatch log agent có thể setup được cả ở những server on-premises
+<img src="../../../../00-Meta/01-Attachments/Pasted-image-20230408144534.png" width="auto" height="auto"/></li>
+</ul>
+<h2 id="-alarms">🌿 Alarms<a aria-hidden="true" tabindex="-1" href="#-alarms" class="internal"> §</a></h2>
+<ul>
+<li>Là dịch vụ dùng để trigger các thông báo của các metrics.</li>
+<li>Có nhiều options(sampling, % max, min, …) để thực hiện trigger</li>
+<li>Alarm States:
+<ul>
+<li>OK</li>
+<li>INSUFFICIENT_DATA</li>
+<li>ALARM</li>
+</ul>
+</li>
+<li>Period - thời gian tính theo giây, để đánh giá metric.
+<ul>
+<li>có thể custom: 10s, 30s hoặc nhiều lần 60s.</li>
+</ul>
+</li>
+<li>Targets - đối tượng trigger của alarms:
+<ul>
+<li>Stop, Terminate, Reboot hoặc Recover EC2 Instance.</li>
+<li>Trigger đến Auto Scaling Action.</li>
+<li>Gửi thông báo đến <a href="../../../../40123345-posts/42-Code/42.03-AWS/Amazon-SNS---Simple-Notification-Service" class="internal">SNS</a>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="-composite-alarms">🌱 Composite Alarms<a aria-hidden="true" tabindex="-1" href="#-composite-alarms" class="internal"> §</a></h3>
+<ul>
+<li>
+<p>CloudWatch Alarms là một metric đơn lẻ.</p>
+</li>
+<li>
+<p>Composite alarms sẽ giúp chúng ta giám sát được trạng thái của nhiều alarms khác nhau.</p>
+</li>
+<li>
+<p>Có thể kết hợp điều kiện AND hoặc OR để kết hợp các alarms, tránh gặp những alarm noise không cần thiết.</p>
+<ul>
+<li>Ví dụ high CPU và high Network là bình thường, mình chỉ cần nó alarm lúc bất thường như high CPU những low Network. Đó chính là tác dụng của Composite Alarms.</li>
+</ul>
+</li>
+<li>
+<p>Alarms có thể được tạo dự trên CloudWatch Logs Metrics Filters.</p>
+</li>
+</ul>
+<h2 id="-insight">🌿 Insight<a aria-hidden="true" tabindex="-1" href="#-insight" class="internal"> §</a></h2>
+<ul>
+<li><strong>Container insight:</strong>
+<ul>
+<li>Trích xuất, tổng hợp logs và metrics của các container trong AWS, sử dụng CloudWatch Agent.</li>
+</ul>
+</li>
+<li><strong>Lambda insight:</strong>
+<ul>
+<li>Trích xuất, tổng hợp logs và metrics cho các ứng dụng có kiến trúc serverless.</li>
+</ul>
+</li>
+<li><strong>Contributes insight:</strong>
+<ul>
+<li>Cung cấp các thông tin chi tiết, dễ dàng tìm kiếm các thông số có giá trị bất thường.</li>
+</ul>
+</li>
+<li><strong>Application insight:</strong>
+<ul>
+<li>Tự động tạo bảng thống kê, phản ánh các vấn đề của hệ thống hoặc của các AWS services.</li>
+</ul>
+</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1}"></div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xmlSpace="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1}"></div></div></div><div class="backlinks"><h3>Backlinks</h3><ul class="overflow"><li><a href="../../../../40123345-posts/42-Code/42.03-AWS/AWS-System-Manger" class="internal">🌱 AWS System Manger</a></li><li><a href="../../../../40123345-posts/42-Code/42.03-AWS/Disaster-Recovery/Disaster-Recovery-Overview" class="internal">🌱 Disaster Recovery Overview</a></li><li><a href="../../../../40123345-posts/42-Code/42.03-AWS/Monitoring/Amazon-CloudTrail" class="internal">🌱 Amazon CloudTrail</a></li><li><a href="../../../../40123345-posts/42-Code/42.03-AWS/Some-Solution-Architectures/Highly-Available-EC2-Instance" class="internal">🌱 Highly Available EC2 Instance</a></li></ul></div></div></div><footer><hr/><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.10</a>, © 2023</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+          import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+          const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+          mermaid.initialize({
+            startOnLoad: false,
+            securityLevel: 'loose',
+            theme: darkMode ? 'dark' : 'default'
+          });
+          document.addEventListener('nav', async () => {
+            await mermaid.run({
+              querySelector: '.mermaid'
+            })
+          });
+          </script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">
+          const socket = new WebSocket('ws://localhost:3001')
+          socket.addEventListener('message', () => document.location.reload())
+        </script><script src="../../../../postscript.js" type="module"></script></html>

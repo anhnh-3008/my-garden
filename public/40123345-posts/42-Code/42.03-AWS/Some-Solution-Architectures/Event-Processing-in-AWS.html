@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html><head><title>🌱 Event Processing in AWS</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="🌱 Event Processing in AWS"/><meta property="og:description" content="Bài viết tổng hợp lại các kiến trúc thường được áp dụng cho hệ thống xử lý sự kiện trên AWS. 🌿 Lambda, SNS and SQS § Có 3 kiến trúc thường được sử dụng: SQS + Lambda Events push vào SQS queue Lambda pull mess từ SQS về để xử lý, nếu xử lý không thành công thì push ngược trở lại SQS."/><meta property="og:image" content="https://https://anhhn.netlify.app//static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../../../static/icon.png"/><meta name="description" content="Bài viết tổng hợp lại các kiến trúc thường được áp dụng cho hệ thống xử lý sự kiện trên AWS. 🌿 Lambda, SNS and SQS § Có 3 kiến trúc thường được sử dụng: SQS + Lambda Events push vào SQS queue Lambda pull mess từ SQS về để xử lý, nếu xử lý không thành công thì push ngược trở lại SQS."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Dancing Script:wght@400;700&amp;family=Signika Negative:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="40123345-posts/42-Code/42.03-AWS/Some-Solution-Architectures/Event-Processing-in-AWS"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="../../../..">🪴 HA's Garden</a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#-lambda-sns-and-sqs" data-for="-lambda-sns-and-sqs">🌿 Lambda, SNS and SQS</a></li><li class="depth-0"><a href="#-fan-out-pattern---delivery-to-multi-sqs" data-for="-fan-out-pattern---delivery-to-multi-sqs">🌿 Fan Out Pattern - delivery to multi SQS</a></li><li class="depth-0"><a href="#-events-of-s3" data-for="-events-of-s3">🌿 Events of S3</a></li><li class="depth-1"><a href="#-with-eventbridge" data-for="-with-eventbridge">🍃 With EventBridge</a></li><li class="depth-1"><a href="#-with-api-gateway" data-for="-with-api-gateway">🍃 With API Gateway</a></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">🌱 Event Processing in AWS</h1><p class="content-meta">Apr 21, 2023, 3 min read</p><ul class="tags"><li><a href="../../../../tags/aws" class="internal tag-link">#aws</a></li><li><a href="../../../../tags/architecture" class="internal tag-link">#architecture</a></li></ul></div></div><article class="popover-hint"><blockquote>
+<p>Bài viết tổng hợp lại các kiến trúc thường được áp dụng cho hệ thống xử lý sự kiện trên AWS.</p>
+</blockquote>
+<h2 id="-lambda-sns-and-sqs">🌿 Lambda, SNS and SQS<a aria-hidden="true" tabindex="-1" href="#-lambda-sns-and-sqs" class="internal"> §</a></h2>
+<p>Có 3 kiến trúc thường được sử dụng:</p>
+<ol>
+<li>SQS + Lambda
+<img src="../../../../00-Meta/01-Attachments/Pasted-image-20230421210356.png" width="auto" height="auto"/></li>
+</ol>
+<ul>
+<li>Events push vào SQS queue</li>
+<li>Lambda pull mess từ SQS về để xử lý, nếu xử lý không thành công thì push ngược trở lại SQS.</li>
+<li>Tránh trường hợp message có vấn đề, mãi không được xử lý thành công, gây ra vòng lặp vô hạn -> Chuyển message vào DLQ(Dead Letter Queue) sau số lần retry nhất định, không xử lý nó nữa</li>
+</ul>
+<ol start="2">
+<li>SQS FIFO + Lambda
+<img src="../../../../00-Meta/01-Attachments/Pasted-image-20230421210929.png" width="auto" height="auto"/></li>
+</ol>
+<ul>
+<li>Giống cái bên trên, khác là các messages trong Queue có thứ tự FIFO - First In First Out.</li>
+</ul>
+<ol start="3">
+<li>SNS + Lambda
+<img src="../../../../00-Meta/01-Attachments/Pasted-image-20230421211044.png" width="auto" height="auto"/></li>
+</ol>
+<ul>
+<li>Notification đc gửi bất đồng bộ tới Lambda để xử lý.</li>
+<li>Luồng retry + đẩy vào DLQ giống 2 cái bên trên.</li>
+</ul>
+<h2 id="-fan-out-pattern---delivery-to-multi-sqs">🌿 Fan Out Pattern - delivery to multi SQS<a aria-hidden="true" tabindex="-1" href="#-fan-out-pattern---delivery-to-multi-sqs" class="internal"> §</a></h2>
+<p><img src="../../../../00-Meta/01-Attachments/Pasted-image-20230421211812.png" width="auto" height="auto"/></p>
+<ul>
+<li>
+<p>Fan Out Pattern: được sử dụng với mục đích phân phối thông điệp tới nhiều đối tượng cùng lúc.</p>
+</li>
+<li>
+<p>Đảm bảo tính đúng đắn và tin cậy của các thông điệp.</p>
+</li>
+<li>
+<p>Tăng khả năng chịu lỗi.</p>
+</li>
+<li>
+<p>Có khả năng mở rộng linh hoạt.</p>
+</li>
+<li>
+<p>Sử dụng SNS - SNS hỗ trợ nhiều định dạng như email, tin nhắn, văn bản, … Tùy nhu cầu chúng ta có thể lựa chọn 2 options trên.</p>
+</li>
+<li>
+<p>Option1:</p>
+<ul>
+<li>Cơ chế sẽ là một message sẽ được put lần lượt tới các Queue</li>
+<li>Nhưng có thể xảy ra trường hợp put Queue2, message bị lỗi, thế là nó ko put đến Queue3 nữa -> Không đáng tin cậy</li>
+</ul>
+</li>
+<li>
+<p>Option2:</p>
+<ul>
+<li>Tăng cường độ tin cậy bằng cách thông qua SNS, kiêu gì nó cũng gửi message lên cả 3 Queue.</li>
+</ul>
+</li>
+</ul>
+<h2 id="-events-of-s3">🌿 Events of S3<a aria-hidden="true" tabindex="-1" href="#-events-of-s3" class="internal"> §</a></h2>
+<h3 id="-with-eventbridge">🍃 With EventBridge<a aria-hidden="true" tabindex="-1" href="#-with-eventbridge" class="internal"> §</a></h3>
+<p><img src="../../../../00-Meta/01-Attachments/Pasted-image-20230424202403.png" width="auto" height="auto"/></p>
+<ul>
+<li><strong>Filter Advance</strong> - có thể tạo JSON rules, hỗ trợ cho việc tìm kiếm các thông tin của objects(metadata, size, …)</li>
+<li><strong>Multiple Destinations</strong> - Có thể gửi các event tới nhiều AWS services khác, dễ dàng xử lý nhiều tác vụ theo nhu cầu sử dụng của hệ thống.</li>
+<li><strong>Capabilities</strong> - Ngoài ra EventBridge hỗ trợ lưu trữ, replay event, reliable delivery</li>
+</ul>
+<p><img src="../../../../00-Meta/01-Attachments/Pasted-image-20230424202857.png" width="auto" height="auto"/></p>
+<ul>
+<li>Ngoài ra nó còn được sử dụng để nhận các events từ các API được call. Từ đó có thể gửi tới các service khác ví dụ như SNS trong trường hợp khi người dùng xoá một bảng sẽ gửi mail tới tất cả các AWS accounts trong organization.</li>
+</ul>
+<h3 id="-with-api-gateway">🍃 With API Gateway<a aria-hidden="true" tabindex="-1" href="#-with-api-gateway" class="internal"> §</a></h3>
+<p><img src="../../../../00-Meta/01-Attachments/Pasted-image-20230424203103.png" width="auto" height="auto"/></p>
+<ul>
+<li>Mô hình thường được sử dụng để người dùng có thể lưu dữ liệu lên S3.</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1}"></div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xmlSpace="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1}"></div></div></div><div class="backlinks"><h3>Backlinks</h3><ul class="overflow"><li>No backlinks found</li></ul></div></div></div><footer><hr/><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.10</a>, © 2023</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+          import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+          const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+          mermaid.initialize({
+            startOnLoad: false,
+            securityLevel: 'loose',
+            theme: darkMode ? 'dark' : 'default'
+          });
+          document.addEventListener('nav', async () => {
+            await mermaid.run({
+              querySelector: '.mermaid'
+            })
+          });
+          </script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">
+          const socket = new WebSocket('ws://localhost:3001')
+          socket.addEventListener('message', () => document.location.reload())
+        </script><script src="../../../../postscript.js" type="module"></script></html>

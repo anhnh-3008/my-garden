@@ -1,0 +1,271 @@
+{
+  "main": {
+    "id": "7bcb73f330644bd2",
+    "type": "split",
+    "children": [
+      {
+        "id": "5d83bde276109c68",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b986fa719e5ec4dc",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "554adaa8af1aed7d",
+    "type": "split",
+    "children": [
+      {
+        "id": "5b1974d811abc839",
+        "type": "tabs",
+        "dimension": 65.7442748091603,
+        "children": [
+          {
+            "id": "39c4b66f80cf8ea5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "15e9b1d97896a158",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "hardcode",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bd2b96789568e9ef",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "928c28ca16f9925a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "7970dc6ad69a1294",
+        "type": "tabs",
+        "dimension": 34.25572519083969,
+        "children": [
+          {
+            "id": "419a06a65c4706f2",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.44332323542385965,
+                  "close": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 275.5
+  },
+  "right": {
+    "id": "8d6ddf44cf2d1223",
+    "type": "split",
+    "children": [
+      {
+        "id": "b600e1e155161d80",
+        "type": "tabs",
+        "dimension": 50,
+        "children": [
+          {
+            "id": "c80bfe5adc933b31",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "438d663acd2c906d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1f062ca86ee81ea0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "17466529e68adc26",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "1247c17c34c14587",
+        "type": "tabs",
+        "dimension": 50,
+        "children": [
+          {
+            "id": "6a4ac72297d2955a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "6069af8a03342a93",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": true,
+                "unlinkedCollapsed": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 318.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:New Excalidraw drawing": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "b986fa719e5ec4dc",
+  "lastOpenFiles": [
+    "_index.md",
+    "README.md",
+    "50 til/52 Journey/52.02 Other/Khám phá Văn hóa & Nghệ thuật.md",
+    "50 til/52 Journey/52.02 Other/Cách phân biệt rượu giả.md",
+    "50 til/51 Code/11 Golang/Slice in Golang.md",
+    "50 til/51 Code/11 Golang/Race Condition.md",
+    "50 til/51 Code/11 Golang/Method and Interface.md",
+    "50 til/51 Code/11 Golang/Goroutines.md",
+    "50 til/51 Code/11 Golang/Generic.md",
+    "50 til/51 Code/11 Golang/Basic.md",
+    "50 til/51 Code/10 React/State in React.md",
+    "50 til/51 Code/10 React/Props in React.md",
+    "50 til/51 Code/09 Docker/What is mean the tag suffix of an image on docker hub?.md",
+    "50 til/51 Code/09 Docker/Dockerfile.md",
+    "50 til/51 Code/09 Docker/Docker.md",
+    "50 til/51 Code/09 Docker/Docker Network.md",
+    "50 til/51 Code/09 Docker/Docker Compose.md",
+    "50 til/51 Code/09 Docker/Best practice when build Dockerfile.md",
+    "50 til/51 Code/08 System Design/Why is Redis so Fast?.md",
+    "50 til/51 Code/08 System Design/Why is RAM access faster than hard disk drive?.md",
+    "50 til/51 Code/08 System Design/System Identification Link.md",
+    "50 til/51 Code/08 System Design/Store passwords safely in the database?.md",
+    "50 til/51 Code/08 System Design/Single Sign-On(SSO).md",
+    "50 til/51 Code/08 System Design/Sequence Diagram là gì?.md",
+    "50 til/51 Code/08 System Design/Same-origin policy.md",
+    "50 til/51 Code/08 System Design/Robustness Diagram.md",
+    "50 til/52 Journey/52.02 Other",
+    "50 til/51 Code/11 Golang",
+    "50 til/51 Code/10 React",
+    "50 til/51 Code/09 Docker",
+    "50 til/51 Code/08 System Design",
+    "50 til/51 Code/07 Utils",
+    "50 til/51 Code/06 Servers",
+    "50 til/51 Code/05 Ruby",
+    "50 til/51 Code/04 Rails",
+    "50 til/51 Code/03 Operating System",
+    "00 Meta/01 Attachments/tu-duy-nhanh-va-cham.png",
+    "00 Meta/01 Attachments/cach-xay-dung-thap-tai-san-hieu-qua.jpg",
+    "00 Meta/01 Attachments/Why is RAM access faster than hard disk drive acess.png",
+    "00 Meta/01 Attachments/Single Sign-On.png",
+    "00 Meta/01 Attachments/Single Responsibility Principle.png",
+    "00 Meta/01 Attachments/Sequence Diagram chức năng đăng nhập.excalidraw.png",
+    "00 Meta/01 Attachments/Screenshot 2023-03-31 at 15.08.15.png",
+    "00 Meta/01 Attachments/Screenshot 2023-03-16 at 16.12.24.png",
+    "00 Meta/01 Attachments/Screenshot 2023-03-06 at 17.40.10.png",
+    "00 Meta/01 Attachments/Screenshot 2023-03-06 at 16.47.30.png",
+    "50 til/51 Code/51.03 Operating System/Untitled.canvas",
+    "50 til/51 Code/51.01 Style/Untitled.canvas",
+    "Untitled 1.canvas"
+  ]
+}

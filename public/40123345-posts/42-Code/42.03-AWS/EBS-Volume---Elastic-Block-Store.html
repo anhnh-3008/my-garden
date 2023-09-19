@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html><head><title>🌱 EBS Volume - Elastic Block Store</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="🌱 EBS Volume - Elastic Block Store"/><meta property="og:description" content="🌿 What? § Là một dịch vụ lưu trữ thông qua các virtual disks, giúp chúng ta có thể truy xuất dữ liệu từ các EC2 Instances (a network drive, not a physical drive)."/><meta property="og:image" content="https://https://anhhn.netlify.app//static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🌿 What? § Là một dịch vụ lưu trữ thông qua các virtual disks, giúp chúng ta có thể truy xuất dữ liệu từ các EC2 Instances (a network drive, not a physical drive)."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Dancing Script:wght@400;700&amp;family=Signika Negative:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="40123345-posts/42-Code/42.03-AWS/EBS-Volume---Elastic-Block-Store"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="../../..">🪴 HA's Garden</a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#-what" data-for="-what">🌿 What?</a></li><li class="depth-0"><a href="#-ebs-snapshots" data-for="-ebs-snapshots">🌿 EBS Snapshots</a></li><li class="depth-1"><a href="#-features" data-for="-features">🍃 Features</a></li><li class="depth-0"><a href="#-ebs-volume-types" data-for="-ebs-volume-types">🌿 EBS Volume Types</a></li><li class="depth-1"><a href="#-general-purpose-ssd" data-for="-general-purpose-ssd">🍃 General Purpose SSD</a></li><li class="depth-1"><a href="#-provisioned-iops" data-for="-provisioned-iops">🍃 Provisioned IOPS</a></li><li class="depth-1"><a href="#-hard-disk-drivers" data-for="-hard-disk-drivers">🍃 Hard Disk Drivers</a></li><li class="depth-0"><a href="#-ebs-encryption" data-for="-ebs-encryption">🌿 EBS Encryption</a></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">🌱 EBS Volume - Elastic Block Store</h1><p class="content-meta">Mar 03, 2023, 5 min read</p><ul class="tags"><li><a href="../../../tags/aws" class="internal tag-link">#aws</a></li></ul></div></div><article class="popover-hint"><h2 id="-what">🌿 What?<a aria-hidden="true" tabindex="-1" href="#-what" class="internal"> §</a></h2>
+<p><img src="../../../00-Meta/01-Attachments/Screenshot-2023-03-03-at-11.24.50.png" width="auto" height="auto"/></p>
+<ul>
+<li>Là một dịch vụ lưu trữ thông qua các <strong>virtual disks</strong>, giúp chúng ta có thể truy xuất dữ liệu từ các EC2 Instances (a network drive, not a physical drive).
+<ul>
+<li>EBS sẽ sử dụng network để giao tiếp với các EC2 Instance, vì vậy có thể có chút độ trễ.</li>
+</ul>
+</li>
+<li>Cho phép lưu trữ dữ liệu cả khi đã terminate EC2 instance. Có thể mount lại dữ liệu nếu cần.</li>
+<li>1 EBS chỉ mounted được tới 1 instance tại cùng một thời điểm.
+<ul>
+<li>Có thể detached khỏi một Instance và attached vào một Instance khác dễ dàng và nhanh chóng.</li>
+</ul>
+</li>
+<li>Bound trong 1 AZ chỉ định, không sử dụng được cho các EC2 instance ở khác AZ.
+<ul>
+<li>Để move một volume qua AZ khác, chúng ta cần snapshot nó.</li>
+</ul>
+</li>
+<li>Có thể hiểu nó như một cái USB, có thể mang đi cắm vào các EC2 instances khác cần sử dụng dữ liệu.</li>
+<li>Đương nhiên chúng ta sẽ cần chỉ định cấu hình(bao nhiêu Gbs và IOPS - Input/output Operations Per Second - tốc độ đọc ghi thế nào)
+<ul>
+<li>Có thể thêm tiền để upgrade cấu hình.</li>
+</ul>
+</li>
+</ul>
+<h2 id="-ebs-snapshots">🌿 EBS Snapshots<a aria-hidden="true" tabindex="-1" href="#-ebs-snapshots" class="internal"> §</a></h2>
+<p><img src="../../../00-Meta/01-Attachments/Screenshot-2023-03-03-at-11.56.30.png" width="auto" height="auto"/></p>
+<ul>
+<li>Là tính năng giúp cta sao chép EBS Volume, bao gồm dữ liệu, tệp tin và cấu hình của chúng.</li>
+<li>Giúp move volume giữa những AZs khác nhau.</li>
+</ul>
+<h3 id="-features">🍃 Features<a aria-hidden="true" tabindex="-1" href="#-features" class="internal"> §</a></h3>
+<ol>
+<li>
+<p>🌱 EBS Snapshot Archive</p>
+<ul>
+<li>Có thể chuyển Snapshot vào một <strong>archive tier</strong> thay vì lưu trữ thông thường, cách này rẻ hơn 75%.</li>
+<li>Mất 24-72h để restoring lại.</li>
+</ul>
+</li>
+<li>
+<p>🌱 Recycle Bin for EBS Snapshots</p>
+<ul>
+<li>Giữ lại những snapshots đã bị xóa, từ đó có thể lấy lại được nếu chẳng may chúng ta xóa nhầm.</li>
+<li>Chỉ định thời gian giữ lại (1 ngày - 1 năm)</li>
+</ul>
+</li>
+<li>
+<p>🌱 Fast Snapshot Restore (FSR)</p>
+<ul>
+<li>Cho phép khởi tạo không có độ trễ cho lần đầu tiên. Nếu cta có snapshot lớn và muốn khởi tạo EBS Volume nhanh.</li>
+<li>Tính năng này cần trả thêm phí để sử dụng.</li>
+</ul>
+</li>
+</ol>
+<h2 id="-ebs-volume-types">🌿 EBS Volume Types<a aria-hidden="true" tabindex="-1" href="#-ebs-volume-types" class="internal"> §</a></h2>
+<ul>
+<li>Có 6 loại:
+<ul>
+<li>gp2/gp3(SSD): cho những nhu cầu sử dụng tiêu chuẩn, cân bằng giữa giá cả và hiệu suất sử dụng. Phù hợp với nhiều ứng dụng.</li>
+<li>io1/io2(SSD): hiệu suất tốt nhất, sử dụng cho những ứng dụng cần thực hiện tính toán tốc độ cao, I/O tốt.</li>
+<li>st1(HDD): Giá thấp hơn, sử dụng HDD phục vụ lưu trữ dữ liệu thường xuyên truy xuất và yêu cầu khả năng truyền tải dữ liệu lớn.</li>
+<li>sc1(HDD): Giá thấp nhất, để lưu trữ dữ liệu lớn và dữ liệu không được thường xuyên truy xuất.</li>
+</ul>
+</li>
+<li>Các đặc điểm của EBS Volume là: Size, Throughput, IOPS(I/O Operating Per Second)</li>
+<li>Chỉ gp2/gp3 và io I/io2 mới có thể sử dụng để làm boot volumes.</li>
+</ul>
+<h3 id="-general-purpose-ssd">🍃 General Purpose SSD<a aria-hidden="true" tabindex="-1" href="#-general-purpose-ssd" class="internal"> §</a></h3>
+<ul>
+<li>Giá cả hợp lý, độ trễ thấp.</li>
+<li>Sử dụng làm boot volumes, virtual desktops, development and test environments.</li>
+<li>1Gb - 16Tb
+|gp3|gp2|
+|----|----|
+|Baseline là 3000 IOPS và throughput of 125 Mib/s|Chỉ lên được 3000 IOPS là max|
+|IOPS và Throughput có thể set độc lập|IOPS và Throughput luôn linked với nhau|</li>
+</ul>
+<h3 id="-provisioned-iops">🍃 Provisioned IOPS<a aria-hidden="true" tabindex="-1" href="#-provisioned-iops" class="internal"> §</a></h3>
+<ul>
+<li>Dự án có nghiệp vụ quan trọng cần duy trì hiệu suất IOPS hoặc rõ hơn là cần nhiều hơn 16000 IOPS.</li>
+<li>Là lựa chọn tuyệt vời cho <strong>database workloads</strong></li>
+<li>4Gb - 16Tb
+<ul>
+<li>Max: 64000 IOPS với <strong>Nitro EC2 instance</strong> và 32000 với những EC2 instances thường.</li>
+<li>Giống gp3, có thể nâng IOPS độc lập.</li>
+<li>io2 có độ bền cao hơn và IOPS trên GiB cao hơn io1 với cùng mức giá.</li>
+</ul>
+</li>
+<li>io2 Block Express (4GB - 64 TB)
+<ul>
+<li>Độ trễ cực thấp.</li>
+<li>Max: 256000 IOPS</li>
+</ul>
+</li>
+<li>Hỗ trợ Multi-attach
+<ul>
+<li>Cho phép một EBS Volume attach với nhiều EC2 Instances trong cùng một AZ.</li>
+<li>Mỗi Instance đều có full quyền đọc ghi.</li>
+<li>Max có thể attach được 16 Instances một lúc.</li>
+</ul>
+</li>
+</ul>
+<h3 id="-hard-disk-drivers">🍃 Hard Disk Drivers<a aria-hidden="true" tabindex="-1" href="#-hard-disk-drivers" class="internal"> §</a></h3>
+<ul>
+<li>Không thể là một boot volume</li>
+<li>125GB - 16TB</li>
+<li>Throughput Optimized HDD - st1
+<ul>
+<li>Use cases: Big Data, Data Warehouses</li>
+<li>Max Throughput: 500 MiB/s - max IOPS 500</li>
+</ul>
+</li>
+<li>Cold HDD - sc1
+<ul>
+<li>Dùng để lưu trữ data không thường xuyên truy xuất</li>
+<li>Chi phí thấp nhất</li>
+<li>Max throughput 250MiB/s - max IOPS 250</li>
+</ul>
+</li>
+</ul>
+<h2 id="-ebs-encryption">🌿 EBS Encryption<a aria-hidden="true" tabindex="-1" href="#-ebs-encryption" class="internal"> §</a></h2>
+<ul>
+<li>Mã hóa dữ liệu trước khi được lưu trữ.</li>
+<li>Sau khi tạo một EBS Volume được mã hóa:
+<ul>
+<li>Toàn bộ data trong volume đều được mã hóa</li>
+<li>Toàn bộ dữ liệu chuyển đổi giữa instance và volume đều được mã hóa</li>
+<li>Tất cả snapshots đều được mã hóa.</li>
+<li>Tạo volume mới phải tạo từ snapshot.</li>
+</ul>
+</li>
+<li>Cơ chế mã hóa và giải mã được thực hiện tự động.</li>
+<li>Quá trình mã hóa không ảnh hưởng nhiều đến độ trễ.</li>
+<li>Được mã hóa bởi thuật toán AES-256.</li>
+<li>Nếu tạo một EBS volume không mã hóa, muốn chuyển qua một EBS volume mã hóa:
+<ul>
+<li>Tạo snapchat từ Volume đang sử dụng.</li>
+<li>Tạo một Volume từ snapchat -> chọn encrypt.</li>
+<li>Attach tới EC2 Instance.</li>
+</ul>
+</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1}"></div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xmlSpace="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1}"></div></div></div><div class="backlinks"><h3>Backlinks</h3><ul class="overflow"><li><a href="../../../40123345-posts/42-Code/42.03-AWS/AWS-System-Manger" class="internal">🌱 AWS System Manger</a></li><li><a href="../../../40123345-posts/42-Code/42.03-AWS/Databases/Amazon-RDS---Relational-Database-Service" class="internal">🌱 Amazon RDS - Relational Database Service</a></li><li><a href="../../../40123345-posts/42-Code/42.03-AWS/Databases/Database-in-AWS" class="internal">🌱 Database in AWS</a></li><li><a href="../../../40123345-posts/42-Code/42.03-AWS/Disaster-Recovery/AWS-Backup" class="internal">🌱 AWS Backup</a></li><li><a href="../../../40123345-posts/42-Code/42.03-AWS/Disaster-Recovery/Disaster-Recovery-Overview" class="internal">🌱 Disaster Recovery Overview</a></li><li><a href="../../../40123345-posts/42-Code/42.03-AWS/EC2---Elastic-Compute-Cloud" class="internal">🌱 EC2 - Elastic Compute Cloud</a></li><li><a href="../../../40123345-posts/42-Code/42.03-AWS/Redshift" class="internal">🌱 Redshift</a></li><li><a href="../../../40123345-posts/42-Code/42.03-AWS/Security-&amp;-Encryption/AWS-KMS---Key-Management-Service" class="internal">🌱 AWS KMS - Key Management Service</a></li><li><a href="../../../40123345-posts/42-Code/42.03-AWS/Some-Solution-Architectures/Highly-Available-EC2-Instance" class="internal">🌱 Highly Available EC2 Instance</a></li></ul></div></div></div><footer><hr/><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.10</a>, © 2023</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+          import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+          const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+          mermaid.initialize({
+            startOnLoad: false,
+            securityLevel: 'loose',
+            theme: darkMode ? 'dark' : 'default'
+          });
+          document.addEventListener('nav', async () => {
+            await mermaid.run({
+              querySelector: '.mermaid'
+            })
+          });
+          </script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">
+          const socket = new WebSocket('ws://localhost:3001')
+          socket.addEventListener('message', () => document.location.reload())
+        </script><script src="../../../postscript.js" type="module"></script></html>

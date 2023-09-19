@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>🪴 HA&#039;s Garden</title>
+      <link>https://https://anhhn.netlify.app/</link>
+      <description>Last 10 notes on 🪴 HA's Garden</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>🌱 Display Hardcode Value</title>
+    <link>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.01-Ruby/Display-Hardcode-Value</link>
+    <guid>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.01-Ruby/Display-Hardcode-Value</guid>
+    <description> Trong quá trình phát triển các dự án Ruby on Rails, mình thấy gem config rất hay được sử dụng để lưu các giá trị hardcode. Vấn đề mình gặp đó là mỗi lần muốn xem giá trị từ một key ví dụ như Settings.</description>
+    <pubDate>Mon, 31 Oct 2022 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>🌱 RubyCritic</title>
+    <link>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.01-Ruby/RubyCritic</link>
+    <guid>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.01-Ruby/RubyCritic</guid>
+    <description> 🌱 RubyCritic cung cấp báo cáo trực quan về những vấn đề như code thối, cấu trúc code, tính dễ kiểm tra, và độ phủ của test case cho app Ruby. 🌱 Đang liên tục phát triển và release tính năng mới.</description>
+    <pubDate>Thu, 20 Oct 2022 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>🌱 Vue3 - Essentials</title>
+    <link>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.02-Vuejs/Vue3---Essentials</link>
+    <guid>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.02-Vuejs/Vue3---Essentials</guid>
+    <description>🌿 I. Creating the Vue App § Tạo Vue App(được khởi tạo một lần, tất cả đều config ở đây). const app = Vue.createApp({ // Heart of the Vue App data() { // data option return { product: &#039;Socks&#039; } } }) Mount App to DOM - như ví dụ ở dưới, mount tới div tag có id là app, tất cả DOM element bao trong div đó sẽ có thể truy cập tới Vue App.</description>
+    <pubDate>Sat, 24 Dec 2022 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>🌱 What is Vue?</title>
+    <link>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.02-Vuejs/What-is-Vue?</link>
+    <guid>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.02-Vuejs/What-is-Vue?</guid>
+    <description>🌿 What is Vue? § Vuejs là một open source Javascript framework hướng tới việc xây dựng giao diện người dùng(UI), được tạo ra bởi Evan You. Như trên Landing page có giới thiệu, Vuejs là một phiên bản cấp tiến của Javascript framework với những đặc điểm nổi bật như dễ tiếp cận, linh hoạt và hiệu quả.</description>
+    <pubDate>Sat, 24 Dec 2022 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>🌱 AMI - Amazon Machine Image</title>
+    <link>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.03-AWS/AMI---Amazon-Machine-Image</link>
+    <guid>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.03-AWS/AMI---Amazon-Machine-Image</guid>
+    <description>🌿 What? § AMI - Amazon Machine Image Có chứa những thông tin về OS, phần mềm cài đặt, volumes, cấu hình, hay các thiết lập khác của một EC2 Instance.</description>
+    <pubDate>Sat, 04 Mar 2023 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>🌱 ASG - Auto Scaling Group</title>
+    <link>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.03-AWS/ASG---Auto-Scaling-Group</link>
+    <guid>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.03-AWS/ASG---Auto-Scaling-Group</guid>
+    <description>🌿 What? § Là một service của AWS hỗ trợ việc tự động mở rộng hay thu nhỏ số lượng instances để phù hợp với lượng tải của ứng dụng. Mục đích: Thêm số lượng EC2 Instances để đáp ứng lượng tải tăng cao.</description>
+    <pubDate>Tue, 07 Mar 2023 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>🌱 AWS API Gateway</title>
+    <link>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.03-AWS/AWS-API-Gateway</link>
+    <guid>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.03-AWS/AWS-API-Gateway</guid>
+    <description>🌿 What? § Kết hợp với AWS Lambda: kiến trúc không có server. Expose REST API. Hỗ trợ giao thức WebSocket Xử lý API versioning(v1,v2,…) Xử lý giữa các môi trường phát triển khác nhau(dev, test, prod, …) Xử lý bảo mật(Authen &amp; Authori) Tạo API keys Kết hợp được với Swagger/Open API để nhanh chóng tạo ra doc.</description>
+    <pubDate>Wed, 29 Mar 2023 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>🌱 AWS App Runner</title>
+    <link>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.03-AWS/AWS-App-Runner</link>
+    <guid>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.03-AWS/AWS-App-Runner</guid>
+    <description>🌿 What? § Là một service giúp chúng ta dễ dàng hơn trong việc triển khai web applications và APIs. Không cần yêu cầu có kinh nghiệm với cơ sở hạ tầng(infrastructure).</description>
+    <pubDate>Mon, 27 Mar 2023 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>🌱 AWS Batch</title>
+    <link>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.03-AWS/AWS-Batch</link>
+    <guid>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.03-AWS/AWS-Batch</guid>
+    <description>🌿 What? § Do AWS quản lý hoàn toàn. Hỗ trợ chạy các tác vụ theo lô(kiểu như xử lý ảnh khi người dùng gửi lên S3, …) Batch sẽ linh động tạo ra các EC2 Instances hoặc Spot Instances để xử lý logic, nó sẽ tự biết lựa chọn về compute/memory phù hợp.</description>
+    <pubDate>Thu, 27 Apr 2023 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>🌱 AWS CloudFormation</title>
+    <link>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.03-AWS/AWS-CloudFormation</link>
+    <guid>https://https://anhhn.netlify.app//40123345-posts/42-Code/42.03-AWS/AWS-CloudFormation</guid>
+    <description>🌿 What? § Là một bản phác thảo cho kiến trúc hạ tầng trên AWS, cho hầu hết các resources trên AWS. Ví dụ, chúng ta cần một kiến trúc bao gồm: Security Group 2 EC2 Instances sử dụng SG trên Một S3 Bucket Một ELB CloudFormation sẽ tạo tất cả theo đúng trình tự như trên và đúng theo những thông số mà chúng ta đã chỉ định.</description>
+    <pubDate>Thu, 27 Apr 2023 00:00:00 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>

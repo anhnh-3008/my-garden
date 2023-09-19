@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html><head><title>🌱 S3 Security</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="🌱 S3 Security"/><meta property="og:description" content="🌿 Object Encryption § Bạn có thể mã hóa objects trong S3 buckets bằng4 phương thức sau: Server-Side Encryption (SSE) Server-Side Encryption with Amazon S3-Managed Keys (SSE-S3) - Enabled by Default Mã hóa bằng key được xử lý, quản lý và sở hữu của AWS."/><meta property="og:image" content="https://https://anhhn.netlify.app//static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🌿 Object Encryption § Bạn có thể mã hóa objects trong S3 buckets bằng4 phương thức sau: Server-Side Encryption (SSE) Server-Side Encryption with Amazon S3-Managed Keys (SSE-S3) - Enabled by Default Mã hóa bằng key được xử lý, quản lý và sở hữu của AWS."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Dancing Script:wght@400;700&amp;family=Signika Negative:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="40123345-posts/42-Code/42.03-AWS/S3-Security"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="../../..">🪴 HA's Garden</a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#-object-encryption" data-for="-object-encryption">🌿 Object Encryption</a></li><li class="depth-1"><a href="#-sse---s3" data-for="-sse---s3">🍃 SSE - S3</a></li><li class="depth-1"><a href="#-sse---kms" data-for="-sse---kms">🍃 SSE - KMS</a></li><li class="depth-1"><a href="#-sse---c" data-for="-sse---c">🍃 SSE - C</a></li><li class="depth-1"><a href="#-client-side-encryption" data-for="-client-side-encryption">🍃 Client-Side Encryption</a></li><li class="depth-0"><a href="#-cors---cross-origin-resource-sharing" data-for="-cors---cross-origin-resource-sharing">🌿 CORS - Cross Origin Resource Sharing</a></li><li class="depth-0"><a href="#-mfa-delete" data-for="-mfa-delete">🌿 MFA Delete</a></li><li class="depth-0"><a href="#-access-log" data-for="-access-log">🌿 Access Log</a></li><li class="depth-0"><a href="#-pre-signed-urls" data-for="-pre-signed-urls">🌿 Pre-Signed URLs</a></li><li class="depth-0"><a href="#-glacier-vault-lock" data-for="-glacier-vault-lock">🌿 Glacier Vault Lock</a></li><li class="depth-0"><a href="#-object-lock" data-for="-object-lock">🌿 Object Lock</a></li><li class="depth-0"><a href="#-access-point" data-for="-access-point">🌿 Access Point</a></li><li class="depth-0"><a href="#-s3-object-lambda" data-for="-s3-object-lambda">🌿 S3 Object Lambda</a></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">🌱 S3 Security</h1><p class="content-meta">Mar 15, 2023, 6 min read</p><ul class="tags"><li><a href="../../../tags/aws" class="internal tag-link">#aws</a></li></ul></div></div><article class="popover-hint"><h2 id="-object-encryption">🌿 Object Encryption<a aria-hidden="true" tabindex="-1" href="#-object-encryption" class="internal"> §</a></h2>
+<ul>
+<li>
+<p>Bạn có thể mã hóa objects trong S3 buckets bằng4 phương thức sau:</p>
+<ul>
+<li><strong>Server-Side Encryption (SSE)</strong>
+<ul>
+<li><strong>Server-Side Encryption with Amazon S3-Managed Keys (SSE-S3) - Enabled by Default</strong>
+<ul>
+<li>Mã hóa bằng key được xử lý, quản lý và sở hữu của AWS.</li>
+</ul>
+</li>
+<li><strong>Server-Side Encryption with KMS Keys stored in AWS KMS(SSE-KMS)</strong>
+<ul>
+<li>Tận dụng AWS Key Management Service (AWS KMS) để quản lý các keys mã hóa</li>
+</ul>
+</li>
+<li><strong>Server-Side Encryption with Customer-Provided Keys (SSE-C)</strong>
+<ul>
+<li>Khi bạn muốn tự quản lý các keys của mình sở hữu.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Client-Side Encryption</strong></li>
+</ul>
+</li>
+<li>
+<p>Cần hiểu để vận dụng cho những tình huống xuất hiện trong bài thi.</p>
+</li>
+<li>
+<p><strong>Notes: Bucket Policies được đánh giá trước(ưu tiên hơn) Default Encryption</strong>
+<img src="../../../00-Meta/01-Attachments/Pasted-image-20230315214628.png" width="auto" height="auto"/></p>
+</li>
+<li>
+<p>Chúng ta có thể chỉ định phương thức mã hóa ở trong <strong>Bucket Policicy</strong></p>
+</li>
+</ul>
+<h3 id="-sse---s3">🍃 SSE - S3<a aria-hidden="true" tabindex="-1" href="#-sse---s3" class="internal"> §</a></h3>
+<ul>
+<li>Mã hóa sử dụng keys được xử lý, quản lý cũng như sở hữu bởi AWS.</li>
+<li>Object được mã hóa ở Server Side</li>
+<li>Loại mã hóa là <strong>AES-256</strong></li>
+<li>Phải set header là <strong>“x-amz-server-side-encryption”:“AES256”</strong></li>
+<li><strong>Mặc định được bật cho những buckets mới hoặc objects mới</strong>
+<img src="../../../00-Meta/01-Attachments/Pasted-image-20230315211412.png" width="auto" height="auto"/></li>
+</ul>
+<h3 id="-sse---kms">🍃 SSE - KMS<a aria-hidden="true" tabindex="-1" href="#-sse---kms" class="internal"> §</a></h3>
+<ul>
+<li>Mã hóa sử dụng các keys được xử lý và quản lý bởi AWS KMS(Key Management Service)</li>
+<li>Lợi ích: người dùng control + audit key bằng CloudTrail</li>
+<li>Object mã hóa ở server-side</li>
+<li>Phải set header là <strong>“x-amz-server-side-encryption”:“aws:kms”</strong></li>
+<li>Ở cách mã hóa này, không chỉ đòi hỏi người dùng có quyền truy cập vào object mà người dùng còn cần phải có key thì mới giải mã để xem được object.</li>
+</ul>
+<p><img src="../../../00-Meta/01-Attachments/Pasted-image-20230315211924.png" width="auto" height="auto"/></p>
+<ul>
+<li>Giới hạn:
+<ul>
+<li>Có thể bị ảnh hưởng bởi giới hạn của KMS</li>
+<li>Khi upload, nó sẽ gọi <strong>GenerateDataKey</strong> KMS API</li>
+<li>Khi download, nó sẽ gọi <strong>Decrypt</strong> KMS API</li>
+<li>Tùy từng region, mỗi giây có thể gọi được từ 5000-30000 req/s</li>
+<li>Bạn có thể yêu cầu để tăng số lượng request/s trên Service Quotas Console</li>
+</ul>
+</li>
+</ul>
+<h3 id="-sse---c">🍃 SSE - C<a aria-hidden="true" tabindex="-1" href="#-sse---c" class="internal"> §</a></h3>
+<ul>
+<li>Sử dụng các keys thuộc toàn quyền sở hữu của khách hàng ngoài AWS.</li>
+<li>S3 không lưu trữ các keys mã hóa này</li>
+<li><strong>Phải sử dụng HTTPS</strong></li>
+<li>Key mã hóa cần phải được cung cấp trong Header, với tất cả các request, áp dụng cho cả việc đọc và ghi dữ liệu.
+<img src="../../../00-Meta/01-Attachments/Pasted-image-20230315213039.png" width="auto" height="auto"/></li>
+</ul>
+<h3 id="-client-side-encryption">🍃 Client-Side Encryption<a aria-hidden="true" tabindex="-1" href="#-client-side-encryption" class="internal"> §</a></h3>
+<ul>
+<li>Người dùng sử dụng các thư viện như <strong>Amazon S3 Clien-Side Encryption Library</strong> để lưu keys mã hóa.</li>
+<li>Client tự phải mã hóa dữ liệu trước khi gửi lên S3 lưu trữ.</li>
+<li>Client tự phải giải mã dữ liệu khi truy xuất từ S3</li>
+<li>Client toàn quyền quản lý các keys cung như encryption cycle.</li>
+</ul>
+<p><img src="../../../00-Meta/01-Attachments/Pasted-image-20230315213437.png" width="auto" height="auto"/></p>
+<h2 id="-cors---cross-origin-resource-sharing">🌿 CORS - Cross Origin Resource Sharing<a aria-hidden="true" tabindex="-1" href="#-cors---cross-origin-resource-sharing" class="internal"> §</a></h2>
+<ul>
+<li>Origin = scheme(protocol) +host(domain) + port</li>
+<li>Dựa theo cơ chế này để quyết định xem có cho phép một origin khác truy cập vào tài nguyên của một origin không.</li>
+<li>Một request sẽ không được hoàn thành trừ khi origin kia cho phép, sử dụng <strong>CORS Hearder(ex: Access-Control-Allow-Origin)</strong></li>
+</ul>
+<h2 id="-mfa-delete">🌿 MFA Delete<a aria-hidden="true" tabindex="-1" href="#-mfa-delete" class="internal"> §</a></h2>
+<ul>
+<li>Một phương thức giúp ngăn ngừa sai xót khi lựa chọn xoá hoàn toàn(permanent delete), yêu cầu người dùng nhập thêm bảo mật 2 lớp để xác nhận xoá.</li>
+<li>MFA sẽ được yêu cầu khi:
+<ul>
+<li>Xoá vĩnh viễn một object</li>
+<li>Tắt versioning trên bucket</li>
+</ul>
+</li>
+<li>MFA sẽ không được yêu cầu khi:
+<ul>
+<li>Bật versioning</li>
+<li>Liệt kê các object đã bị xoá</li>
+</ul>
+</li>
+<li>Để sử dụng MFA Delete, <strong>Phải bật versioning</strong> cho bucket</li>
+<li><strong>Chỉ bucket owner(root account) mới có thể bật/tắt MFA Delete</strong></li>
+</ul>
+<h2 id="-access-log">🌿 Access Log<a aria-hidden="true" tabindex="-1" href="#-access-log" class="internal"> §</a></h2>
+<ul>
+<li>Tự động lưu lại toàn bộ các requests của tất cả các accounts đến bucket.</li>
+<li>Dùng cho mục đích audit</li>
+<li>Bucket vs bucket set logging phải chung một region
+<img src="../../../00-Meta/01-Attachments/Pasted-image-20230316153210.png" width="auto" height="auto"/></li>
+<li><strong>Warning</strong>
+<ul>
+<li>Không được set logging bucket và bucket tương tác với users là 1, vì nó sẽ dẫn đến tình trạng sinh requests vô hạn đến bucket -> đốt tiền.
+<img src="../../../00-Meta/01-Attachments/Pasted-image-20230316155423.png" width="auto" height="auto"/></li>
+</ul>
+</li>
+</ul>
+<h2 id="-pre-signed-urls">🌿 Pre-Signed URLs<a aria-hidden="true" tabindex="-1" href="#-pre-signed-urls" class="internal"> §</a></h2>
+<p><img src="../../../00-Meta/01-Attachments/Screenshot-2023-03-16-at-16.12.24.png" width="auto" height="auto"/></p>
+<ul>
+<li>
+<p>Tạo ra pre-signed URLs sử dụng <strong>S3 Console, AWS CLI, SDK</strong></p>
+</li>
+<li>
+<p><strong>URL Expiration</strong>:</p>
+<ul>
+<li><strong>S3 Console</strong>: 1 phút - 720 phút(12 giờ)</li>
+<li><strong>AWS CLI</strong>: thiết lập thời gian hết hạn với tham số <em>—expires-in</em>, đơn vị là giây(mặc định là 3,600s, max là 604800s ~ 168 giờ)</li>
+</ul>
+</li>
+<li>
+<p>User nhận pre-signed URL như sẽ kế thừa permission, trong thời gian quy định, cho phép thực hiện GET/PUT với bucket.</p>
+</li>
+<li>
+<p>Ex: như Insta, cho phép xem ảnh một thời gian nhất định.</p>
+</li>
+</ul>
+<h2 id="-glacier-vault-lock">🌿 Glacier Vault Lock<a aria-hidden="true" tabindex="-1" href="#-glacier-vault-lock" class="internal"> §</a></h2>
+<ul>
+<li>Đáp ứng cho những object có mô hình WORM(Write Once Read Many). Ý tưởng là object được ghi vào bucket sẽ không được modify hoặc delete, chỉ đọc được thôi.</li>
+</ul>
+<h2 id="-object-lock">🌿 Object Lock<a aria-hidden="true" tabindex="-1" href="#-object-lock" class="internal"> §</a></h2>
+<ul>
+<li>Cũng dùng cho mô hình WORM</li>
+<li>Chặn việc xoá một version object theo số lần chỉ định(set 2 lần, xoá đến lần thứ 3 mới được)</li>
+<li><strong>Retention mode - Compliance</strong>
+<ul>
+<li>Object version không thể bị overwrite hoặc delete bởi bất kỳ user nào, kể cả root user.</li>
+<li>Retension mode không thể bị thay đổi.</li>
+</ul>
+</li>
+<li><strong>Retention mode - Governance</strong>
+<ul>
+<li>Hầu hết user không thể orverwrite hoặc delete một object version hoặc sửa đổi lock settings của nó.</li>
+<li>Một số users có quyền đặc biệt có thể thay đổi retention hoặc xoá object.</li>
+</ul>
+</li>
+<li><strong>Retention Period</strong>
+<ul>
+<li>Bảo vệ object trong một khoảng thời gian cố định, có thể extend.</li>
+</ul>
+</li>
+<li><strong>Legal Hold</strong>
+<ul>
+<li>Bảo vệ object vô thời hạn, không phụ thuộc vào retention period.</li>
+<li>Có thể tự do thêm hoặc xoá bằng cách sử dụng quyền <em>s3:PutObjectLegalHold</em> của IAM</li>
+</ul>
+</li>
+</ul>
+<h2 id="-access-point">🌿 Access Point<a aria-hidden="true" tabindex="-1" href="#-access-point" class="internal"> §</a></h2>
+<ul>
+<li>Một bucket sẽ có nhiều folders, <strong>access point</strong> sẽ xác định quyền truy cập của từng user đối với từng folder.
+<img src="../../../00-Meta/01-Attachments/Pasted-image-20230316165829.png" width="auto" height="auto"/></li>
+<li>Mỗi một <strong>Access Point</strong> có:
+<ul>
+<li>DNS name(Internet Origin hoặc VPC Origin)</li>
+<li>Một access point policy(giống bucket policy)</li>
+</ul>
+</li>
+</ul>
+<p><img src="../../../00-Meta/01-Attachments/Pasted-image-20230316170258.png" width="auto" height="auto"/></p>
+<h2 id="-s3-object-lambda">🌿 S3 Object Lambda<a aria-hidden="true" tabindex="-1" href="#-s3-object-lambda" class="internal"> §</a></h2>
+<ul>
+<li>Sử dụng khi cần format lại dữ liệu trước khi trả về cho người dùng.</li>
+<li>Ví dụ như cần sắp xếp lại theo thứ tự nhất định hay convert tử XML -> JSON, …
+<img src="../../../00-Meta/01-Attachments/Pasted-image-20230316171258.png" width="auto" height="auto"/></li>
+<li>Lambda hiểu đơn giản là service cho phép chạy code mà không cần có server, phù hợp cho những tác vụ kiểu xử lý dữ liệu trước khi trả về cho người dùng như trên hoặc chạy các tác vụ định kỳ kiểu cuối ngày tổng kết xem hôm nay có bao nhiêu objects mới, …</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1}"></div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xmlSpace="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1}"></div></div></div><div class="backlinks"><h3>Backlinks</h3><ul class="overflow"><li>No backlinks found</li></ul></div></div></div><footer><hr/><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.10</a>, © 2023</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+          import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+          const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+          mermaid.initialize({
+            startOnLoad: false,
+            securityLevel: 'loose',
+            theme: darkMode ? 'dark' : 'default'
+          });
+          document.addEventListener('nav', async () => {
+            await mermaid.run({
+              querySelector: '.mermaid'
+            })
+          });
+          </script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">
+          const socket = new WebSocket('ws://localhost:3001')
+          socket.addEventListener('message', () => document.location.reload())
+        </script><script src="../../../postscript.js" type="module"></script></html>

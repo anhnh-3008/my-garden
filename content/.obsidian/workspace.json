@@ -1,0 +1,334 @@
+{
+  "main": {
+    "id": "7bcb73f330644bd2",
+    "type": "split",
+    "children": [
+      {
+        "id": "5d83bde276109c68",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bcfee16a532d237f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40123345 posts/44 Finance/44.04 Macroeconomics/Đối tác chiến lược toàn diện là gì? Tiềm năng phát triển trong tương lai.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5330ad755255f8c6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "50 til/51 Code/05 Ruby/Split array by an value.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "37947aaca4ff4517",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40123345 posts/46 Book/01 Sách/Fiction/Người phát ngôn của thần chết.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a36951dbb461d818",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40123345 posts/46 Journey/Một số trang youtube thú vị.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b986fa719e5ec4dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_index.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "554adaa8af1aed7d",
+    "type": "split",
+    "children": [
+      {
+        "id": "5b1974d811abc839",
+        "type": "tabs",
+        "dimension": 65.7442748091603,
+        "children": [
+          {
+            "id": "39c4b66f80cf8ea5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "15e9b1d97896a158",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "hardcode",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bd2b96789568e9ef",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "928c28ca16f9925a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "7970dc6ad69a1294",
+        "type": "tabs",
+        "dimension": 34.25572519083969,
+        "children": [
+          {
+            "id": "419a06a65c4706f2",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "_index.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.44332323542385965,
+                  "close": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 275.5
+  },
+  "right": {
+    "id": "8d6ddf44cf2d1223",
+    "type": "split",
+    "children": [
+      {
+        "id": "b600e1e155161d80",
+        "type": "tabs",
+        "dimension": 50,
+        "children": [
+          {
+            "id": "c80bfe5adc933b31",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "438d663acd2c906d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1f062ca86ee81ea0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_index.md"
+              }
+            }
+          },
+          {
+            "id": "17466529e68adc26",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "1247c17c34c14587",
+        "type": "tabs",
+        "dimension": 50,
+        "children": [
+          {
+            "id": "6a4ac72297d2955a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "6069af8a03342a93",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_index.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 318.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:New Excalidraw drawing": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "b986fa719e5ec4dc",
+  "lastOpenFiles": [
+    "tags/til.md",
+    "_index.md",
+    "tags",
+    "40123345 posts/46 Book/01 Sách/Fiction/Số đỏ.md",
+    "40123345 posts/46 Book/01 Sách/Fiction/Tắt đèn.md",
+    "40123345 posts/46 Book/01 Sách/Non-fiction/Tại sao chúng ta lại ngủ.md",
+    "40123345 posts/46 Book/01 Sách/Fiction/Người phát ngôn của thần chết.md",
+    "40123345 posts/42 Code/42.01 Ruby/Display Hardcode Value.md",
+    "00 Meta/01 Attachments/Pasted image 20230919152349.png",
+    "10 Daily/2022-10-26.md",
+    "10 Daily/2022-10-28.md",
+    "00 Meta/01 Attachments/Pasted image 20230919151232.png",
+    "10 Daily/2022-10-31.md",
+    "tags/ruby.md",
+    "50 til/53 Psychology/Sự ngụy biện của tay thiện xạ Texas.md",
+    "50 til/53 Psychology/Prisoner’s Dilemma.md",
+    "00 Meta/01 Attachments/Pasted image 20230918143815.png",
+    "40123345 posts/46 Book/Review sách.md",
+    "00 Meta/01 Attachments/Pasted image 20230918114236.png",
+    "00 Meta/01 Attachments/Pasted image 20230918114231.png",
+    "30 Templates/Template TIL psychology.md",
+    "40123345 posts/46 Journey/Một số trang youtube thú vị.md",
+    "10 Daily/2022-09-30.md",
+    "10 Daily/2022-10-10.md",
+    "00 Meta/01 Attachments/Pasted image 20230915152904.png",
+    "00 Meta/01 Attachments/Pasted image 20230915151634.png",
+    "20 Excalidraw/Drawing 2023-09-15 15.10.07.excalidraw.md",
+    "20 Excalidraw/Drawing 2023-09-13 10.56.58.excalidraw.md",
+    "00 Meta/01 Attachments/Pasted Image 20230915151407_841.png",
+    "00 Meta/01 Attachments/Pasted Image 20230915151407_819.png",
+    "00 Meta/01 Attachments/Pasted Image 20230915151407_807.png",
+    "40123345 posts/46 Book/02 Tác giả/Vũ Trọng Phụng.md",
+    "50 til/51 Code/05 Ruby/Split array by an value.md",
+    "50 til/51 Code/51.03 Operating System/Untitled.canvas",
+    "50 til/51 Code/51.01 Style/Untitled.canvas",
+    "30 Templates/Template TIL.md",
+    "30 Templates/Template review sách.md",
+    "50 til/51 Code/09 Docker/What is mean the tag suffix of an image on docker hub?.md",
+    "50 til/51 Code/09 Docker/Dockerfile.md",
+    "40123345 posts/46 Book/01 Sách/Non-fiction",
+    "40123345 posts/46 Book/01 Sách/Fiction",
+    "40123345 posts/46 Book/02 Tác giả",
+    "40123345 posts/46 Book/01 Sách",
+    "40123345 posts/46 Book",
+    "40123345 posts/46 Journey",
+    "40123345 posts/44 Finance/44.04 Macroeconomics",
+    "40123345 posts/44 Finance/44.03 Stock Market/Các chỉ số Vĩ mô",
+    "40123345 posts/44 Finance/44.03 Stock Market",
+    "Untitled 1.canvas"
+  ]
+}

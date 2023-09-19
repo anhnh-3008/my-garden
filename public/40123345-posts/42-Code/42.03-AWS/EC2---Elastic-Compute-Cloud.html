@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html><head><title>🌱 EC2 - Elastic Compute Cloud</title><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="🌱 EC2 - Elastic Compute Cloud"/><meta property="og:description" content="🌿 What? § 🌱 EC2 - Elastic Compute Cloud - Infrastructure as a Service. 🌱 Là một trong những Services được thuê nhiều nhất của AWS. 🌱 Service này chủ yếu được sử dụng để: Thuê virtual machines(EC2) Lưu dữ liệu trên virtual drives(EBS - Elastic Block Store) Phân phối tải tới các máy ảo(ELB - Elastic Load Balancing) Auto-scaling group (ASG) 🌿 EC2 sizing &amp;amp; Configuration options § 🌱 OS: Linux, Windows hoặc Mac OS."/><meta property="og:image" content="https://https://anhhn.netlify.app//static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🌿 What? § 🌱 EC2 - Elastic Compute Cloud - Infrastructure as a Service. 🌱 Là một trong những Services được thuê nhiều nhất của AWS. 🌱 Service này chủ yếu được sử dụng để: Thuê virtual machines(EC2) Lưu dữ liệu trên virtual drives(EBS - Elastic Block Store) Phân phối tải tới các máy ảo(ELB - Elastic Load Balancing) Auto-scaling group (ASG) 🌿 EC2 sizing &amp;amp; Configuration options § 🌱 OS: Linux, Windows hoặc Mac OS."/><meta name="generator" content="Quartz"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="../../../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Dancing Script:wght@400;700&amp;family=Signika Negative:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet" type="text/css" spa-preserve/><script src="../../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch(`../../../static/contentIndex.json`).then(data => data.json())</script></head><body data-slug="40123345-posts/42-Code/42.03-AWS/EC2---Elastic-Compute-Cloud"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h1 class="page-title"><a href="../../..">🪴 HA's Garden</a></h1><div class="spacer mobile-only"></div><div class="search"><div id="search-icon"><p>Search</p><div></div><svg tabIndex="0" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search</title><desc id="desc">Search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></div><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="results-container"></div></div></div></div><div class="darkmode"><input class="toggle" id="darkmode-toggle" type="checkbox" tabIndex="-1"/><label id="toggle-label-light" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xmlSpace="preserve"><title>Light mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg></label><label id="toggle-label-dark" for="darkmode-toggle" tabIndex="-1"><svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'" xmlSpace="preserve"><title>Dark mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></label></div><div class="toc desktop-only"><button type="button" id="toc"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content"><ul class="overflow"><li class="depth-0"><a href="#-what" data-for="-what">🌿 What?</a></li><li class="depth-0"><a href="#-ec2-sizing--configuration-options" data-for="-ec2-sizing--configuration-options">🌿 EC2 sizing &amp; Configuration options</a></li><li class="depth-1"><a href="#-ec2-user-data" data-for="-ec2-user-data">🌱 EC2 User Data</a></li><li class="depth-0"><a href="#-ec2-instance-types" data-for="-ec2-instance-types">🌿 EC2 instance types</a></li><li class="depth-1"><a href="#-general-purpose-type" data-for="-general-purpose-type">🍃 General Purpose Type</a></li><li class="depth-1"><a href="#-compute-optimized-type" data-for="-compute-optimized-type">🍃 Compute Optimized Type</a></li><li class="depth-1"><a href="#-memory-optimized-type" data-for="-memory-optimized-type">🍃 Memory Optimized Type</a></li><li class="depth-1"><a href="#-storage-optimized-type" data-for="-storage-optimized-type">🍃 Storage Optimized Type</a></li><li class="depth-0"><a href="#-security-groups" data-for="-security-groups">🌿 Security Groups</a></li><li class="depth-1"><a href="#-overview" data-for="-overview">🍃 Overview</a></li><li class="depth-1"><a href="#-deeper-dive" data-for="-deeper-dive">🍃 Deeper dive</a></li><li class="depth-1"><a href="#-good-to-know" data-for="-good-to-know">🍃 Good to know</a></li><li class="depth-1"><a href="#-classic-port" data-for="-classic-port">🍃 Classic Port</a></li><li class="depth-0"><a href="#-purchasing-options" data-for="-purchasing-options">🌿 Purchasing Options</a></li><li class="depth-1"><a href="#-on-demand-instances" data-for="-on-demand-instances">🍃 On-Demand Instances</a></li><li class="depth-1"><a href="#-reserved-instances-1--3-years" data-for="-reserved-instances-1--3-years">🍃 Reserved Instances (1 &amp; 3 years)</a></li><li class="depth-1"><a href="#--savings-plans1--3-years" data-for="--savings-plans1--3-years">🍃  Savings Plans(1 &amp; 3 years)</a></li><li class="depth-1"><a href="#-spot-instances" data-for="-spot-instances">🍃 Spot Instances</a></li><li class="depth-1"><a href="#-dedicated-hosts" data-for="-dedicated-hosts">🍃 Dedicated Hosts</a></li><li class="depth-1"><a href="#-dedicated-instances" data-for="-dedicated-instances">🍃 Dedicated Instances</a></li><li class="depth-1"><a href="#-capacity-reservations" data-for="-capacity-reservations">🍃 Capacity Reservations</a></li><li class="depth-0"><a href="#-some-notes" data-for="-some-notes">🌿 Some notes</a></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><h1 class="article-title">🌱 EC2 - Elastic Compute Cloud</h1><p class="content-meta">Feb 25, 2023, 7 min read</p><ul class="tags"><li><a href="../../../tags/aws" class="internal tag-link">#aws</a></li></ul></div></div><article class="popover-hint"><h2 id="-what">🌿 What?<a aria-hidden="true" tabindex="-1" href="#-what" class="internal"> §</a></h2>
+<ul>
+<li>🌱 EC2 - Elastic Compute Cloud - Infrastructure as a Service.</li>
+<li>🌱 Là một trong những Services được thuê nhiều nhất của AWS.</li>
+<li>🌱 Service này chủ yếu được sử dụng để:
+<ul>
+<li>Thuê virtual machines(EC2)</li>
+<li>Lưu dữ liệu trên virtual drives(<a href="../../../40123345-posts/42-Code/42.03-AWS/EBS-Volume---Elastic-Block-Store" class="internal">EBS</a> - Elastic Block Store)</li>
+<li>Phân phối tải tới các máy ảo(<a href="../../../40123345-posts/42-Code/42.03-AWS/ELB---Elastic-Load-Balancing" class="internal">ELB - Elastic Load Balancing</a>)</li>
+<li>Auto-scaling group (ASG)</li>
+</ul>
+</li>
+</ul>
+<h2 id="-ec2-sizing--configuration-options">🌿 EC2 sizing &amp; Configuration options<a aria-hidden="true" tabindex="-1" href="#-ec2-sizing--configuration-options" class="internal"> §</a></h2>
+<ul>
+<li>🌱 OS: Linux, Windows hoặc Mac OS.</li>
+<li>🌱 CPU: Cần tốc độ xử lý thế nào?</li>
+<li>🌱 RAM: Cần bộ nhớ đệm bao nhiêu?</li>
+<li>🌱 Storage space:
+<ul>
+<li>Network-attached (<a href="../../../40123345-posts/42-Code/42.03-AWS/EBS-Volume---Elastic-Block-Store" class="internal">EBS</a> &amp; <a href="../../../40123345-posts/42-Code/42.03-AWS/EFS---Elastic-File-System" class="internal">EFS - Elastic File System</a>)</li>
+<li>Hardware (<a href="../../../40123345-posts/42-Code/42.03-AWS/EC2-Instance-Store" class="internal">EC2 Instance Store</a>)</li>
+</ul>
+</li>
+<li>🌱 Network Card: tốc độ, Public IP address.</li>
+<li>🌱 Firewall rules: bảo mật</li>
+<li>🌱 Boootstap script(chạy 1 lần đầu tiên khi launch): EC2 User Data</li>
+</ul>
+<h3 id="-ec2-user-data">🌱 EC2 User Data<a aria-hidden="true" tabindex="-1" href="#-ec2-user-data" class="internal"> §</a></h3>
+<ul>
+<li>Chạy một số câu lệnh khi một máy ảo khởi chạy.</li>
+<li>Script này chỉ chạy 1 lần duy nhất khi máy ảo khởi chạy lần đầu tiên.</li>
+<li>Mục đích thường là để:
+<ul>
+<li>Installing updates</li>
+<li>Installing software</li>
+<li>Downloading common files from the internet</li>
+<li>Hay bất kỳ tác vụ nào mà chúng ta muốn chạy.</li>
+</ul>
+</li>
+<li>Root user sẽ chạy EC2 User Data Script.</li>
+</ul>
+<h2 id="-ec2-instance-types">🌿 EC2 instance types<a aria-hidden="true" tabindex="-1" href="#-ec2-instance-types" class="internal"> §</a></h2>
+<p><img src="../../../00-Meta/01-Attachments/Pasted-image-20230225140557.png" width="auto" height="auto"/></p>
+<ul>
+<li>🌱 Choosing the kind of intance that fits best your application.</li>
+<li>🌱 Naming convention: ví dụ: <strong>m5.2xlarge</strong>
+<ul>
+<li>m: instance class</li>
+<li>5: gen 5</li>
+<li>2xlarge: size của instance(size, memory, CPU)</li>
+</ul>
+</li>
+<li>🌱 Có 7 types.</li>
+</ul>
+<h3 id="-general-purpose-type">🍃 General Purpose Type<a aria-hidden="true" tabindex="-1" href="#-general-purpose-type" class="internal"> §</a></h3>
+<ul>
+<li>Sử dụng cho đa dạng workloads như web servers hoặc code repositories( hiểu là những tác vụ không có yêu cầu đặc biệt).</li>
+<li>Cân bằng giữa:
+<ul>
+<li>Compute</li>
+<li>Memory</li>
+<li>Networking</li>
+</ul>
+</li>
+</ul>
+<h3 id="-compute-optimized-type">🍃 Compute Optimized Type<a aria-hidden="true" tabindex="-1" href="#-compute-optimized-type" class="internal"> §</a></h3>
+<ul>
+<li>Sử dụng cho những ứng dụng có yêu cầu cao về hiệu suất tính toán, xử lý(CPU). Ví dụ như:
+<ul>
+<li>Batch processing workloads (tác vụ xử lý dữ liệu hàng loạt)</li>
+<li>Media transcoding</li>
+<li>Web servers hiệu năng cao</li>
+<li>HPC - High performance computing</li>
+<li>Machine Learning &amp; Modeling (mô hình hóa)</li>
+<li>Gaming servers</li>
+</ul>
+</li>
+<li>Instance class: C (CPU)</li>
+</ul>
+<h3 id="-memory-optimized-type">🍃 Memory Optimized Type<a aria-hidden="true" tabindex="-1" href="#-memory-optimized-type" class="internal"> §</a></h3>
+<ul>
+<li>Sử dụng cho những ứng dụng có yêu cầu cao về tốc độ xử lý những bộ dữ liệu lớn trong bộ nhớ(RAM). Ví dụ như:
+<ul>
+<li>Cần high performance để xử lý dữ liệu.</li>
+<li>Ứng dụng cần xử lý real-time với những bộ dữ liệu không cấu trúc lớn.</li>
+<li>Databases optimized for BI(business intelligence)</li>
+</ul>
+</li>
+<li>Instance class: thường là R (RAM)</li>
+</ul>
+<h3 id="-storage-optimized-type">🍃 Storage Optimized Type<a aria-hidden="true" tabindex="-1" href="#-storage-optimized-type" class="internal"> §</a></h3>
+<ul>
+<li>Sử dụng với những ứng dụng thường xuyên phải tương tác với dữ liệu(đọc, ghi) ở local storage. Ví dụ như:
+<ul>
+<li>Hệ thống xử lý transaction online (OLTP).</li>
+<li>Databases(Relational &amp; NoSQL)</li>
+<li>Cache dữ liệu(Redis)</li>
+<li>Data warehousing</li>
+<li>Lưu files.</li>
+</ul>
+</li>
+</ul>
+<h2 id="-security-groups">🌿 Security Groups<a aria-hidden="true" tabindex="-1" href="#-security-groups" class="internal"> §</a></h2>
+<h3 id="-overview">🍃 Overview<a aria-hidden="true" tabindex="-1" href="#-overview" class="internal"> §</a></h3>
+<ul>
+<li>🌱 Là nền tảng an ninh mạng của AWS.</li>
+<li>🌱 Kiểm soát cách traffic tương tác với các EC2 Instances của chúng ta.</li>
+<li>🌱 Security groups <strong>chỉ chứa allow rules.</strong></li>
+<li>🌱 Rules có thể tham chiếu theo IP hoặc Security Group.</li>
+</ul>
+<h3 id="-deeper-dive">🍃 Deeper dive<a aria-hidden="true" tabindex="-1" href="#-deeper-dive" class="internal"> §</a></h3>
+<ul>
+<li>🌱 Hoạt động như một “firewall” bảo vệ cho EC2 Intances.</li>
+<li>🌱 Qui định:
+<ul>
+<li>Truy cập vào các cổng</li>
+<li>Trao quyền IP ranges -  IPv4 và IPv6</li>
+<li>Kiểm soát inbound connect (từ bên ngoài vào instance)</li>
+<li>Kiểm soát outbound connect (từ instance ra bên ngoài)</li>
+</ul>
+</li>
+</ul>
+<h3 id="-good-to-know">🍃 Good to know<a aria-hidden="true" tabindex="-1" href="#-good-to-know" class="internal"> §</a></h3>
+<ul>
+<li>🌱 Có thể attached tới nhiều instances.</li>
+<li>🌱 Locked down một khu vực</li>
+<li>🌱 Sẽ tốt hơn khi có một security group riêng để truy cập bằng SSH</li>
+<li>🌱 Nếu app của bạn ko truy cập được(time out), có thể security group có vấn đề.</li>
+<li>🌱 Nếu app nhận được “connection refused”, là do app có vấn đề hoặc EC2 intance chưa được launched.</li>
+<li>🌱 Mặc định tất cả inbound traffic sẽ bị blocked.</li>
+<li>🌱 Mặc định tất cả outbound traffic được thông qua.</li>
+</ul>
+<p><img src="../../../00-Meta/01-Attachments/Pasted-image-20230227215728.png" width="auto" height="auto"/></p>
+<h3 id="-classic-port">🍃 Classic Port<a aria-hidden="true" tabindex="-1" href="#-classic-port" class="internal"> §</a></h3>
+<ul>
+<li>🌱 22 = SSH - log into a Linux instance</li>
+<li>🌱 21 = FTP (File Transfer Protocol) - upload files</li>
+<li>🌱 22 = SFTP (Secure File Transfer Protocol)</li>
+<li>🌱 80 = HTTP</li>
+<li>🌱 443 = HTTPS</li>
+<li>🌱 3389 = RDP (<a href="../../../50-til/51-Code/06-Servers/Remote-Desktop-Protocol" class="internal">Remote Desktop Protocol</a>) - log into a Windows intance.</li>
+</ul>
+<h2 id="-purchasing-options">🌿 Purchasing Options<a aria-hidden="true" tabindex="-1" href="#-purchasing-options" class="internal"> §</a></h2>
+<ul>
+<li>Cần lựa chọn các phương án phù hợp với nhu cầu sử dụng và tối ưu chi phí.</li>
+</ul>
+<h3 id="-on-demand-instances">🍃 On-Demand Instances<a aria-hidden="true" tabindex="-1" href="#-on-demand-instances" class="internal"> §</a></h3>
+<ul>
+<li>🌱 Đoán trước được chi phí, dùng đến đâu trả đến đấy.
+<ul>
+<li>Nếu dùng Linux or Windows - trả tiền theo từng giây, sau phút đầu tiên</li>
+<li>Tất cả OS còn lại - trả tiền theo giờ.</li>
+</ul>
+</li>
+<li>🌱 Có giá cao nhất khi không thanh toán trước.</li>
+<li>🌱 Không cần phải cam kết thời gian sử dụng.</li>
+<li>🤔 Nên sử dụng cho short-term và un-interrupted workloads, những dự án chúng ta không thể dự đoán được triển vọng tương lai cũng như yêu cầu tài nguyên:
+<ul>
+<li>Dự án kiểm thử.</li>
+<li>Dự án cần triển khai nhanh nhưng có thể đóng bất kì lúc nào.</li>
+</ul>
+</li>
+</ul>
+<h3 id="-reserved-instances-1--3-years">🍃 Reserved Instances (1 &amp; 3 years)<a aria-hidden="true" tabindex="-1" href="#-reserved-instances-1--3-years" class="internal"> §</a></h3>
+<ul>
+<li>
+<p>🤔 Sử dụng cho các dự án dài hạn, vì thuê thời gian dài nên AWS sẽ discount tùy theo thời gian chúng ta thuê là bao lâu. Các dự án ví dụ như:</p>
+<ul>
+<li>Một trang blog</li>
+<li>Duy trì một database</li>
+</ul>
+</li>
+<li>
+<p>Rẻ hơn nhiều so với On-demand instances.</p>
+</li>
+<li>
+<p>Có thể chọn attributes(type, region, OS,tenancy)</p>
+</li>
+<li>
+<p>Càng thuê nhiều năm càng được discount nhiều.</p>
+</li>
+<li>
+<p>No upfront(+), Partial Upfront(++), All Upfront(+++)</p>
+</li>
+<li>
+<p>Lựa chọn đuọc phạm vi: region, zone.</p>
+</li>
+<li>
+<p>Có thể mua hoặc bán trên Reserved Instance Marketplace tùy theo nhu cầu.</p>
+</li>
+<li>
+<p>Convertible Reserved Instances - long workloads</p>
+<ul>
+<li>flexible instances(có thể thay đổi được type, OS, family, tenancy của instance)</li>
+</ul>
+</li>
+</ul>
+<h3 id="--savings-plans1--3-years">🍃  Savings Plans(1 &amp; 3 years)<a aria-hidden="true" tabindex="-1" href="#--savings-plans1--3-years" class="internal"> §</a></h3>
+<ul>
+<li>Long workloads.</li>
+<li>Discount dựa theo thời gian sử dụng(thuê càng lâu càng rẻ)</li>
+<li>Cam kết về số lượng sử dụng(vd 10$/hour for 1 - 3 years)</li>
+<li>Bất kì chi phí phát sinh nào sẽ tính theo giá của On-Demand instances.</li>
+<li>Chỉ định được instance family và region(vd M5 in us-west-1)</li>
+<li>Có thể thay đổi:
+<ul>
+<li>Instance size(m5.xlarge, m5.2xlarge)</li>
+<li>OS</li>
+<li>Tenancy(Host, Dedicated, Default)</li>
+</ul>
+</li>
+</ul>
+<h3 id="-spot-instances">🍃 Spot Instances<a aria-hidden="true" tabindex="-1" href="#-spot-instances" class="internal"> §</a></h3>
+<ul>
+<li>Short workloads.</li>
+<li>Lựa chọn rẻ nhất.</li>
+<li>Có thể hiểu option này chúng ta sẽ thuê những EC2 Instances chưa có người sử dụng, cta sẽ đấu giá nó là 1$ để xài, nếu không có người trả giá cao hơn thì vấn có quyền sử dụng. Nếu ai trả cao hơn thì mất luôn 😗</li>
+<li>Phù hợp với những servers chạy các tác vụ sẽ chạy lại khi có lỗi.Hoặc dự án thử nghiệm, không quan trọng khi bị dừng đột ngột.
+<ul>
+<li>Jobs</li>
+<li>Image processing</li>
+</ul>
+</li>
+<li>Không phù hợp với những công việc quan trọng hoặc sử dụng cho database.</li>
+</ul>
+<h4 id="-terminate-spot-instances">🌱 Terminate Spot Instances<a aria-hidden="true" tabindex="-1" href="#-terminate-spot-instances" class="internal"> §</a></h4>
+<ul>
+<li>Phải cancel <strong>spot request</strong> trước(có thể launch instances), việc này sẽ không terminate các EC2 Instances. Sau khi cancel, chúng ta tiếp theo mới thực hiện terminate các Instances.</li>
+</ul>
+<h4 id="-spot-fleets">🌱 Spot Fleets<a aria-hidden="true" tabindex="-1" href="#-spot-fleets" class="internal"> §</a></h4>
+<ul>
+<li>Spot Fleets = Spot Instances + (optional) On-Demand Instances</li>
+<li>Đạt được target capacity với mức phí hạn chế.</li>
+<li>Stop launching khi đạt ngưỡng tải hoặc hạn mức chi phí.</li>
+<li>Chiến lược sắp xếp Spot Instances:
+<ul>
+<li>lowestPrice</li>
+<li>diversified</li>
+<li>capacityOptimized</li>
+</ul>
+</li>
+<li>Cho phép chúng ta tự động request Spot Instances với chi phí thấp nhất.</li>
+</ul>
+<h3 id="-dedicated-hosts">🍃 Dedicated Hosts<a aria-hidden="true" tabindex="-1" href="#-dedicated-hosts" class="internal"> §</a></h3>
+<ul>
+<li>Thuê hẳn một server vật lý.</li>
+<li>Đắt nhất.</li>
+<li>Công ty tổ chức nào có tiền thì xài, hoặc phần mềm có những yêu cầu đặc thù(ví dụ như các phần mềm của chính phủ)</li>
+</ul>
+<h3 id="-dedicated-instances">🍃 Dedicated Instances<a aria-hidden="true" tabindex="-1" href="#-dedicated-instances" class="internal"> §</a></h3>
+<ul>
+<li>Thuê riêng hardware để chạy instances, chỉ mình mình dùng thôi, ko có thằng nào dùng chung hardware với mình cả.</li>
+</ul>
+<h3 id="-capacity-reservations">🍃 Capacity Reservations<a aria-hidden="true" tabindex="-1" href="#-capacity-reservations" class="internal"> §</a></h3>
+<ul>
+<li>Có thể đặt trước ở một AZ bất kỳ thời gian nào.</li>
+<li>Truy cập vào EC2 bất cứ khi nào.</li>
+<li>Không cần cam kết thời gian. không có discount.</li>
+<li>Trả tiền theo tỉ lệ của On-Demand</li>
+</ul>
+<p><img src="../../../00-Meta/01-Attachments/Pasted-image-20230228222033.png" width="auto" height="auto"/></p>
+<h2 id="-some-notes">🌿 Some notes<a aria-hidden="true" tabindex="-1" href="#-some-notes" class="internal"> §</a></h2>
+<ul>
+<li>🌱 Khi start lại một EC2 Instance, Private IPv4 giữ nguyên còn Public IPv4 có thể bị thay đổi.</li>
+</ul></article></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1}"></div><svg version="1.1" id="global-graph-icon" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xmlSpace="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+	s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+	c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+	C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+	c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+	v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+	s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+	C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+	S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+	s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+	s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1}"></div></div></div><div class="backlinks"><h3>Backlinks</h3><ul class="overflow"><li>No backlinks found</li></ul></div></div></div><footer><hr/><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.0.10</a>, © 2023</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></body><script type="application/javascript">// quartz/components/scripts/quartz/components/scripts/callout.inline.ts
+function toggleCallout() {
+  const outerBlock = this.parentElement;
+  outerBlock.classList.toggle(`is-collapsed`);
+  const collapsed = outerBlock.classList.contains(`is-collapsed`);
+  const height = collapsed ? this.scrollHeight : outerBlock.scrollHeight;
+  outerBlock.style.maxHeight = height + `px`;
+  let current = outerBlock;
+  let parent = outerBlock.parentElement;
+  while (parent) {
+    if (!parent.classList.contains(`callout`)) {
+      return;
+    }
+    const collapsed2 = parent.classList.contains(`is-collapsed`);
+    const height2 = collapsed2 ? parent.scrollHeight : parent.scrollHeight + current.scrollHeight;
+    parent.style.maxHeight = height2 + `px`;
+    current = parent;
+    parent = parent.parentElement;
+  }
+}
+function setupCallout() {
+  const collapsible = document.getElementsByClassName(
+    `callout is-collapsible`
+  );
+  for (const div of collapsible) {
+    const title = div.firstElementChild;
+    if (title) {
+      title.removeEventListener(`click`, toggleCallout);
+      title.addEventListener(`click`, toggleCallout);
+      const collapsed = div.classList.contains(`is-collapsed`);
+      const height = collapsed ? title.scrollHeight : div.scrollHeight;
+      div.style.maxHeight = height + `px`;
+    }
+  }
+}
+document.addEventListener(`nav`, setupCallout);
+window.addEventListener(`resize`, setupCallout);
+</script><script type="module">
+          import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+          const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+          mermaid.initialize({
+            startOnLoad: false,
+            securityLevel: 'loose',
+            theme: darkMode ? 'dark' : 'default'
+          });
+          document.addEventListener('nav', async () => {
+            await mermaid.run({
+              querySelector: '.mermaid'
+            })
+          });
+          </script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">
+          const socket = new WebSocket('ws://localhost:3001')
+          socket.addEventListener('message', () => document.location.reload())
+        </script><script src="../../../postscript.js" type="module"></script></html>

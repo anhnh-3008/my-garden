@@ -1,0 +1,13 @@
+{
+  "userIgnoreFilters": [
+    "00 Meta/"
+  ],
+  "attachmentFolderPath": "00 Meta/01 Attachments",
+  "useMarkdownLinks": false,
+  "newLinkFormat": "absolute",
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "livePreview": true,
+  "defaultViewMode": "source",
+  "newFileLocation": "current"
+}

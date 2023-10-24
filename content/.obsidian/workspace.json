@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50 til/51 Code/04 Rails/Syntax mới cho QueryMethods select.md",
+                "file": "40123345 posts/44 Finance/04 Macroeconomics/Liên hệ tình hình vĩ mô và tài sản tài chính.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40123345 posts/44 Finance/05 Báo cáo tài chính/Tổng quan Báo cáo tài chính.md",
+                "file": "70 Work/Zeal/Investigate Miyagi Site.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -39,7 +39,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40123345 posts/44 Finance/05 Báo cáo tài chính/Báo cáo kết quả kinh doanh.md",
+                "file": "70 Work/Queue/Tìm hiểu push file gián tiếp lên Azure thông qua Rails server.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fd04d032dfbd2848",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "70 Work/Zeal/Implement Magical Click for Kireilign.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -52,14 +65,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40123345 posts/44 Finance/04 Macroeconomics/Liên hệ tình hình vĩ mô và tài sản tài chính.md",
+                "file": "40123345 posts/44 Finance/04 Macroeconomics/Yếu tố vĩ mô tác động lên tài sản tài chính.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -89,7 +103,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "?",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -114,7 +128,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "7970dc6ad69a1294",
@@ -127,7 +142,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "50 til/51 Code/04 Rails/Syntax mới cho QueryMethods select.md",
+                "file": "40123345 posts/44 Finance/04 Macroeconomics/Yếu tố vĩ mô tác động lên tài sản tài chính.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -160,7 +175,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 275.5
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "8d6ddf44cf2d1223",
@@ -196,7 +212,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "50 til/51 Code/04 Rails/Syntax mới cho QueryMethods select.md"
+                "file": "40123345 posts/44 Finance/04 Macroeconomics/Yếu tố vĩ mô tác động lên tài sản tài chính.md"
               }
             }
           },
@@ -223,7 +239,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "50 til/51 Code/04 Rails/Syntax mới cho QueryMethods select.md",
+                "file": "40123345 posts/44 Finance/04 Macroeconomics/Yếu tố vĩ mô tác động lên tài sản tài chính.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -240,7 +256,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "50 til/51 Code/04 Rails/Syntax mới cho QueryMethods select.md",
+                "file": "40123345 posts/44 Finance/04 Macroeconomics/Yếu tố vĩ mô tác động lên tài sản tài chính.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -250,7 +266,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 318.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -264,34 +280,41 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b986fa719e5ec4dc",
+  "active": "7b489bf12d77479b",
   "lastOpenFiles": [
-    "20 Excalidraw/Why is RAM access faster than hard disk drive acess.md",
-    "40123345 posts/44 Finance/What is the Financial Freedom?.md",
-    "40123345 posts/44 Finance/01 Wealth/Tiếp cận tự do tài chính.md",
-    "40123345 posts/44 Finance/01 Wealth/The 4% Rule.md",
-    "10 Daily/2022-11-19.md",
-    "50 til/51 Code/04 Rails/Syntax mới cho QueryMethods select.md",
-    "50 til/51 Code/04 Rails/Why is must run bundle exec before any command.md",
-    "10 Daily/2023-01-15.md",
-    "40123345 posts/44 Finance/01 Wealth/What is the Financial Freedom.md",
-    "40123345 posts/44 Finance/Nguồn  xem thông tin.md",
-    "50 til/51 Code/09 Docker/What is mean the tag suffix of an image on docker hub.md",
-    "50 til/51 Code/04 Rails/What happens when add acts_as into model.md",
-    "50 til/51 Code/04 Rails/How to safely remove a column in Rails.md",
+    "00 Meta/01 Attachments/Pasted image 20231024154943.png",
+    "40123345 posts/44 Finance/04 Macroeconomics/Yếu tố vĩ mô tác động lên tài sản tài chính.md",
+    "40123345 posts/46 Book/Review sách.md",
+    "40123345 posts/44 Finance/04 Macroeconomics/Chính sách tài khoá.md",
+    "40123345 posts/44 Finance/04 Macroeconomics/Bơm tiền và Hút tiền.md",
+    "40123345 posts/44 Finance/04 Macroeconomics/Bond Yield - Lợi suất trái phiếu Chính phủ.md",
     "40123345 posts/44 Finance/04 Macroeconomics/Đối tác chiến lược toàn diện, tiềm năng phát triển trong tương lai.md",
-    "50 til/51 Code/08 System Design/Sequence Diagram là gì.md",
-    "50 til/51 Code/06 Servers/Bastion Host là gì.md",
-    "50 til/55 Math/Đạo hàm để làm gì.md",
-    "50 til/55 Math/Hàm số đường thẳng y=ax+b.md",
-    "40123345 posts/42 Code/42.02 Vuejs/What is Vue.md",
     "40123345 posts/44 Finance/05 Báo cáo tài chính/Bảng cân đối kế toán.md",
+    "40123345 posts/44 Finance/Nguồn  xem thông tin.md",
+    "40123345 posts/44 Finance/Các nền kinh tế vận hành.md",
+    "40123345 posts/44 Finance/03 Stock Market/Nguyên tắc cơ bản tiếp cận báo cáo tài chính.md",
+    "40123345 posts/44 Finance/03 Stock Market/Cổ phiếu là gì.md",
+    "40123345 posts/44 Finance/03 Stock Market/Các bước lựa chọn một cổ phiếu.md",
     "40123345 posts/44 Finance/04 Macroeconomics/Liên hệ tình hình vĩ mô và tài sản tài chính.md",
+    "70 Work/Zeal/Implement Magical Click for Kireilign.md",
+    "70 Work/Zeal/Investigate Gaba Site.md",
+    "Untitled.md",
+    "50 til/51 Code/11 Golang/Basic.md",
+    "70 Work/Zeal/Investigate Miyagi Site.md",
+    "50 til/51 Code/06 Servers/8 popular network protocols.md",
+    "40123345 posts/44 Finance/03 Stock Market/Untitled",
+    "00 Meta/01 Attachments/Pasted image 20231009100743.png",
+    "70 Work/Queue/Tìm hiểu push file gián tiếp lên Azure thông qua Rails server.md",
+    "40123345 posts/44 Finance/05 Báo cáo tài chính/Báo cáo kết quả kinh doanh.md",
+    "70 Work/Queue",
+    "00 Meta/01 Attachments/Pasted image 20231005100313.png",
+    "40123345 posts/44 Finance/04 Macroeconomics/BOP - Balance of Payment.md",
+    "70 Work/Zeal/Untitled",
+    "50 til/51 Code/11 Golang/Method and Interface.md",
     "40123345 posts/44 Finance/04 Macroeconomics/Interest rate - Lãi suất.md",
-    "40123345 posts/44 Finance/04 Macroeconomics/Inflation - Lạm phát.md",
-    "50 til/51 Code/03 Operating System/Why must run apt update before install any lib for Linux.md",
-    "10 Daily/2022-10-10.md",
-    "10 Daily/2022-10-07.md",
+    "70 Work/Zeal",
+    "10 Daily/2023-09-28.md",
+    "70 Work",
     "00 Meta/01 Attachments/Pasted image 20230920110202.png",
     "00 Meta/01 Attachments/Pasted image 20230920105746.png",
     "00 Meta/01 Attachments/Pasted image 20230920104844.png",
@@ -302,16 +325,9 @@
     "50 til/51 Code/11 Golang",
     "50 til/51 Code/10 React",
     "50 til/51 Code/09 Docker",
-    "50 til/51 Code/08 System Design",
-    "50 til/51 Code/07 Utils",
-    "50 til/51 Code/06 Servers",
-    "50 til/51 Code/05 Ruby",
-    "50 til/51 Code/04 Rails",
     "00 Meta/01 Attachments/tu-duy-nhanh-va-cham.png",
     "00 Meta/01 Attachments/cach-xay-dung-thap-tai-san-hieu-qua.jpg",
     "00 Meta/01 Attachments/Why is RAM access faster than hard disk drive acess.png",
-    "00 Meta/01 Attachments/Single Sign-On.png",
-    "00 Meta/01 Attachments/Single Responsibility Principle.png",
     "50 til/51 Code/51.03 Operating System/Untitled.canvas",
     "50 til/51 Code/51.01 Style/Untitled.canvas",
     "Untitled 1.canvas"

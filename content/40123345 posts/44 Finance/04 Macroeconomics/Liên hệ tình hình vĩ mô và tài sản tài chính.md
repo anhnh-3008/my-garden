@@ -7,6 +7,7 @@ date: 2023-09-14
 aliases: 
 draft: true
 ---
+![[00 Meta/01 Attachments/Pasted image 20231005100313.png]]
 
 - Điều quan trọng nhất khi tham gia vào cuộc chơi là phải biết luật chơi(meta game) và quản trò.
 - Nếu TTCK là một ván bài, ở Việt Nam người chia bài sẽ là Chính Phủ

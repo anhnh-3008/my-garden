@@ -22,7 +22,7 @@ aliases:
 	- Bên vay là ngân hàng thương mại. Bên cho vay là ngân hàng nhà nước.
 - Lãi suất tái chiết khấu.
 	- Được quy định bởi NHNN dựa trên giấy tờ có giá trị ngắn hạn hoặc số tiền ghi trên thương phiếu khi đến kỳ hạn thanh toán.
-- Lãi suất liên ngân hàng - Overnight rate.
+- Lãi suất liên ngân hàng
 	- Lãi suất giữa các NHTM sử dụng để vay tiền lẫn nhau.
 - Lãi suất cơ bản.
 	- Là lãi suất tối thiểu Ngân hàng Nhà nước áp dụng cho đồng tiền trong nước.

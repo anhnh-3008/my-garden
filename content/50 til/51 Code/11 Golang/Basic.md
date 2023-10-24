@@ -1,9 +1,10 @@
 ---
-title: "🌱 Golang basic"
-tags: [golang]
+title: 🌱 Golang basic
+tags:
+  - golang
 date: 2023-06-27
-alias: []
-draft: true
+aliases: 
+draft: false
 ---
 
 ## 🌿 Packages, Variables, Functions

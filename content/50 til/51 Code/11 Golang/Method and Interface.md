@@ -1,9 +1,12 @@
 ---
-title: "🌱 Method and Interface in Golang"
-tags: [golang]
+title: 🌱 Method and Interface in Golang
+tags:
+  - golang
 date: 2023-06-28
-alias: [method, interface]
-draft: true
+aliases:
+  - method
+  - interface
+draft: false
 ---
 
 ## 🌿 Method

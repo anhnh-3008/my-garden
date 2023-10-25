@@ -13,7 +13,85 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40123345 posts/44 Finance/04 Macroeconomics/Liên hệ tình hình vĩ mô và tài sản tài chính.md",
+                "file": "50 til/51 Code/08 System Design/Design patterns/Design patterns.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "286e51b9685abd3e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "50 til/51 Code/08 System Design/Design patterns/Creational Patterns.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c84fafc439cafd66",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "50 til/51 Code/08 System Design/Design patterns/Structural Patterns.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8557419f6d5f5791",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "50 til/51 Code/08 System Design/Design patterns/Creational Patterns.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6d2fd9769c86db94",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "50 til/51 Code/08 System Design/Design patterns/Creational Patterns.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "723280cd0d20237a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "50 til/51 Code/08 System Design/Design patterns/Factory Method.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "98d90f5a47e4a942",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "50 til/51 Code/08 System Design/Design patterns/Creational Patterns.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -73,7 +151,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -128,8 +206,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "7970dc6ad69a1294",
@@ -142,7 +219,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40123345 posts/44 Finance/04 Macroeconomics/Yếu tố vĩ mô tác động lên tài sản tài chính.md",
+                "file": "50 til/51 Code/08 System Design/Design patterns/Creational Patterns.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -175,8 +252,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 224.5
   },
   "right": {
     "id": "8d6ddf44cf2d1223",
@@ -212,7 +288,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "40123345 posts/44 Finance/04 Macroeconomics/Yếu tố vĩ mô tác động lên tài sản tài chính.md"
+                "file": "50 til/51 Code/08 System Design/Design patterns/Creational Patterns.md"
               }
             }
           },
@@ -239,7 +315,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "40123345 posts/44 Finance/04 Macroeconomics/Yếu tố vĩ mô tác động lên tài sản tài chính.md",
+                "file": "50 til/51 Code/08 System Design/Design patterns/Creational Patterns.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -256,13 +332,14 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "40123345 posts/44 Finance/04 Macroeconomics/Yếu tố vĩ mô tác động lên tài sản tài chính.md",
+                "file": "50 til/51 Code/08 System Design/Design patterns/Creational Patterns.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -280,9 +357,31 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7b489bf12d77479b",
+  "active": "98d90f5a47e4a942",
   "lastOpenFiles": [
-    "00 Meta/01 Attachments/Pasted image 20231024154943.png",
+    "50 til/51 Code/08 System Design/Design patterns/Abstract Factory.md",
+    "00 Meta/01 Attachments/Pasted image 20231025171133.png",
+    "00 Meta/01 Attachments/Pasted image 20231025170913.png",
+    "00 Meta/01 Attachments/Pasted image 20231025165321.png",
+    "00 Meta/01 Attachments/Pasted image 20231025164738.png",
+    "50 til/51 Code/08 System Design/Design patterns/Factory Method.md",
+    "00 Meta/01 Attachments/Pasted image 20231025160148.png",
+    "00 Meta/01 Attachments/Pasted image 20231025160141.png",
+    "00 Meta/01 Attachments/Pasted image 20231025155341.png",
+    "00 Meta/01 Attachments/Pasted image 20231025155022.png",
+    "50 til/51 Code/01 Style/SOLID.md",
+    "50 til/51 Code/08 System Design/Design patterns/Design patterns.md",
+    "50 til/51 Code/08 System Design/Design patterns/Singleton.md",
+    "50 til/51 Code/08 System Design/Design patterns/Creational Patterns.md",
+    "00 Meta/01 Attachments/Pasted image 20231025135740.png",
+    "00 Meta/01 Attachments/Pasted image 20231025133825.png",
+    "50 til/51 Code/08 System Design/Design patterns/Behavioral Patterns.md",
+    "50 til/51 Code/08 System Design/Design patterns/Structural Patterns.md",
+    "50 til/51 Code/08 System Design/Design patterns",
+    "40123345 posts/44 Finance/04 Macroeconomics/Liên hệ tình hình vĩ mô và tài sản tài chính.md",
+    "70 Work/Zeal/Investigate Miyagi Site.md",
+    "70 Work/Queue/Tìm hiểu push file gián tiếp lên Azure thông qua Rails server.md",
+    "70 Work/Zeal/Implement Magical Click for Kireilign.md",
     "40123345 posts/44 Finance/04 Macroeconomics/Yếu tố vĩ mô tác động lên tài sản tài chính.md",
     "40123345 posts/46 Book/Review sách.md",
     "40123345 posts/44 Finance/04 Macroeconomics/Chính sách tài khoá.md",
@@ -295,39 +394,16 @@
     "40123345 posts/44 Finance/03 Stock Market/Nguyên tắc cơ bản tiếp cận báo cáo tài chính.md",
     "40123345 posts/44 Finance/03 Stock Market/Cổ phiếu là gì.md",
     "40123345 posts/44 Finance/03 Stock Market/Các bước lựa chọn một cổ phiếu.md",
-    "40123345 posts/44 Finance/04 Macroeconomics/Liên hệ tình hình vĩ mô và tài sản tài chính.md",
-    "70 Work/Zeal/Implement Magical Click for Kireilign.md",
     "70 Work/Zeal/Investigate Gaba Site.md",
-    "Untitled.md",
-    "50 til/51 Code/11 Golang/Basic.md",
-    "70 Work/Zeal/Investigate Miyagi Site.md",
-    "50 til/51 Code/06 Servers/8 popular network protocols.md",
     "40123345 posts/44 Finance/03 Stock Market/Untitled",
-    "00 Meta/01 Attachments/Pasted image 20231009100743.png",
-    "70 Work/Queue/Tìm hiểu push file gián tiếp lên Azure thông qua Rails server.md",
-    "40123345 posts/44 Finance/05 Báo cáo tài chính/Báo cáo kết quả kinh doanh.md",
     "70 Work/Queue",
-    "00 Meta/01 Attachments/Pasted image 20231005100313.png",
-    "40123345 posts/44 Finance/04 Macroeconomics/BOP - Balance of Payment.md",
     "70 Work/Zeal/Untitled",
-    "50 til/51 Code/11 Golang/Method and Interface.md",
-    "40123345 posts/44 Finance/04 Macroeconomics/Interest rate - Lãi suất.md",
     "70 Work/Zeal",
-    "10 Daily/2023-09-28.md",
     "70 Work",
-    "00 Meta/01 Attachments/Pasted image 20230920110202.png",
-    "00 Meta/01 Attachments/Pasted image 20230920105746.png",
-    "00 Meta/01 Attachments/Pasted image 20230920104844.png",
-    "00 Meta/01 Attachments/Pasted image 20230920103645.png",
-    "00 Meta/01 Attachments/Pasted image 20230920102354.png",
     "40123345 posts/44 Finance/05 Báo cáo tài chính",
     "50 til/52 Journey/52.02 Other",
     "50 til/51 Code/11 Golang",
     "50 til/51 Code/10 React",
-    "50 til/51 Code/09 Docker",
-    "00 Meta/01 Attachments/tu-duy-nhanh-va-cham.png",
-    "00 Meta/01 Attachments/cach-xay-dung-thap-tai-san-hieu-qua.jpg",
-    "00 Meta/01 Attachments/Why is RAM access faster than hard disk drive acess.png",
     "50 til/51 Code/51.03 Operating System/Untitled.canvas",
     "50 til/51 Code/51.01 Style/Untitled.canvas",
     "Untitled 1.canvas"

@@ -21,9 +21,10 @@ Những ưu điểm design patterns mang lại:
 - Như là tiếng nói chung trong lĩnh vực thiết kế phần mềm, giúp các thành viên trong team giao tiếp dễ dàng hơn.
 
 # 🌿 Types of Design Patterns
+Trong seri này, mình sẽ viết với mục tiêu biết được mặt chữ 😅 ý là biết mỗi loại để làm gì, trường hợp nào thì nên sử dụng. Còn chi tiết sử dụng thế nào? implement code với ruby, nodejs, golang thế nào? thì lúc làm mọi người tìm hiểu thêm hen 😁
 ![[00 Meta/01 Attachments/Pasted image 20231025112303.png]]
 
 Được chia làm 3 loại patterns:
-- [*] [[50 til/51 Code/08 System Design/Design patterns/Creational Patterns|Creational patterns]].
-- [*] [[50 til/51 Code/08 System Design/Design patterns/Structural Patterns|Structural patterns]].
-- [*] [[50 til/51 Code/08 System Design/Design patterns/Behavioral Patterns|Behavioral patterns]].
+- [*] [[50 til/51 Code/08 System Design/Design patterns/Creational patterns/Creational Patterns|Creational patterns]].
+- [*] [[50 til/51 Code/08 System Design/Design patterns/Structural patterns/Structural Patterns|Structural patterns]].
+- [*] [[50 til/51 Code/08 System Design/Design patterns/Behavioral patterns/Behavioral Patterns|Behavioral patterns]].

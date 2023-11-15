@@ -3,20 +3,63 @@
   "search": "",
   "showTags": true,
   "showAttachments": true,
-  "hideUnresolved": true,
+  "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
-  "colorGroups": [],
-  "collapse-display": false,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:\"10 Daily\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 14701173
+      }
+    },
+    {
+      "query": "path:\"00 Meta\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
+    },
+    {
+      "query": "path:\"50 til\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 5420768
+      }
+    },
+    {
+      "query": "path:\"40 posts/44 Finance\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 14807055
+      }
+    },
+    {
+      "query": "path:\"40 posts/42 Code\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 15169293
+      }
+    },
+    {
+      "query": "path:\"20 Excalidraw\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 1901044
+      }
+    }
+  ],
+  "collapse-display": true,
   "showArrow": false,
-  "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1.39014097073519,
-  "lineSizeMultiplier": 1,
+  "textFadeMultiplier": -0.2,
+  "nodeSizeMultiplier": 1.298681640625,
+  "lineSizeMultiplier": 1.0989013671875,
   "collapse-forces": true,
   "centerStrength": 0.518713248970312,
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.12746409258048613,
+  "scale": 0.1461490807966529,
   "close": true
 }

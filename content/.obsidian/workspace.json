@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b986fa719e5ec4dc",
+            "id": "147ca8f6a751e086",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50 til/51 Code/08 System Design/Design patterns/Design patterns.md",
+                "file": "50 til/51 Code/08 System Design/Design patterns/Structural patterns/Adapter.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "286e51b9685abd3e",
+            "id": "6b63bd7b40bcb51b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50 til/51 Code/08 System Design/Design patterns/Creational Patterns.md",
+                "file": "50 til/51 Code/08 System Design/Design patterns/Structural patterns/Structural Patterns.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,12 +34,12 @@
             }
           },
           {
-            "id": "c84fafc439cafd66",
+            "id": "4a2dc26c9ea3f462",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50 til/51 Code/08 System Design/Design patterns/Structural Patterns.md",
+                "file": "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Hoà Phát - HPG.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,12 +47,12 @@
             }
           },
           {
-            "id": "8557419f6d5f5791",
+            "id": "f9b8be8b7305357e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50 til/51 Code/08 System Design/Design patterns/Creational Patterns.md",
+                "file": "40 posts/44 Finance/05 Khoá học/Báo cáo tài chính - A Báu/Lưu chuyển tiền tệ.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,90 +60,12 @@
             }
           },
           {
-            "id": "6d2fd9769c86db94",
+            "id": "beb16404d777c579",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50 til/51 Code/08 System Design/Design patterns/Creational Patterns.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "723280cd0d20237a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "50 til/51 Code/08 System Design/Design patterns/Factory Method.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "98d90f5a47e4a942",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "50 til/51 Code/08 System Design/Design patterns/Creational Patterns.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9ffbc8cf7a6be47f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "70 Work/Zeal/Investigate Miyagi Site.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2b25a9152345879e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "70 Work/Queue/Tìm hiểu push file gián tiếp lên Azure thông qua Rails server.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fd04d032dfbd2848",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "70 Work/Zeal/Implement Magical Click for Kireilign.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7b489bf12d77479b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40123345 posts/44 Finance/04 Macroeconomics/Yếu tố vĩ mô tác động lên tài sản tài chính.md",
+                "file": "40 posts/44 Finance/01 Wealth/Quy tắc 72.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -151,7 +73,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -181,7 +103,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:til",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -219,7 +141,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "50 til/51 Code/08 System Design/Design patterns/Creational Patterns.md",
+                "file": "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Hoà Phát - HPG.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -242,7 +164,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.44332323542385965,
+                  "scale": 0.19405886143754472,
                   "close": true
                 }
               }
@@ -288,7 +210,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "50 til/51 Code/08 System Design/Design patterns/Creational Patterns.md"
+                "file": "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Hoà Phát - HPG.md"
               }
             }
           },
@@ -315,7 +237,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "50 til/51 Code/08 System Design/Design patterns/Creational Patterns.md",
+                "file": "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Hoà Phát - HPG.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -332,7 +254,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "50 til/51 Code/08 System Design/Design patterns/Creational Patterns.md",
+                "file": "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Hoà Phát - HPG.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -357,53 +279,55 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "98d90f5a47e4a942",
+  "active": "4a2dc26c9ea3f462",
   "lastOpenFiles": [
-    "50 til/51 Code/08 System Design/Design patterns/Abstract Factory.md",
-    "00 Meta/01 Attachments/Pasted image 20231025171133.png",
-    "00 Meta/01 Attachments/Pasted image 20231025170913.png",
-    "00 Meta/01 Attachments/Pasted image 20231025165321.png",
-    "00 Meta/01 Attachments/Pasted image 20231025164738.png",
-    "50 til/51 Code/08 System Design/Design patterns/Factory Method.md",
-    "00 Meta/01 Attachments/Pasted image 20231025160148.png",
-    "00 Meta/01 Attachments/Pasted image 20231025160141.png",
-    "00 Meta/01 Attachments/Pasted image 20231025155341.png",
-    "00 Meta/01 Attachments/Pasted image 20231025155022.png",
-    "50 til/51 Code/01 Style/SOLID.md",
-    "50 til/51 Code/08 System Design/Design patterns/Design patterns.md",
-    "50 til/51 Code/08 System Design/Design patterns/Singleton.md",
-    "50 til/51 Code/08 System Design/Design patterns/Creational Patterns.md",
-    "00 Meta/01 Attachments/Pasted image 20231025135740.png",
-    "00 Meta/01 Attachments/Pasted image 20231025133825.png",
-    "50 til/51 Code/08 System Design/Design patterns/Behavioral Patterns.md",
-    "50 til/51 Code/08 System Design/Design patterns/Structural Patterns.md",
-    "50 til/51 Code/08 System Design/Design patterns",
-    "40123345 posts/44 Finance/04 Macroeconomics/Liên hệ tình hình vĩ mô và tài sản tài chính.md",
-    "70 Work/Zeal/Investigate Miyagi Site.md",
-    "70 Work/Queue/Tìm hiểu push file gián tiếp lên Azure thông qua Rails server.md",
-    "70 Work/Zeal/Implement Magical Click for Kireilign.md",
-    "40123345 posts/44 Finance/04 Macroeconomics/Yếu tố vĩ mô tác động lên tài sản tài chính.md",
-    "40123345 posts/46 Book/Review sách.md",
-    "40123345 posts/44 Finance/04 Macroeconomics/Chính sách tài khoá.md",
-    "40123345 posts/44 Finance/04 Macroeconomics/Bơm tiền và Hút tiền.md",
-    "40123345 posts/44 Finance/04 Macroeconomics/Bond Yield - Lợi suất trái phiếu Chính phủ.md",
-    "40123345 posts/44 Finance/04 Macroeconomics/Đối tác chiến lược toàn diện, tiềm năng phát triển trong tương lai.md",
-    "40123345 posts/44 Finance/05 Báo cáo tài chính/Bảng cân đối kế toán.md",
-    "40123345 posts/44 Finance/Nguồn  xem thông tin.md",
-    "40123345 posts/44 Finance/Các nền kinh tế vận hành.md",
-    "40123345 posts/44 Finance/03 Stock Market/Nguyên tắc cơ bản tiếp cận báo cáo tài chính.md",
-    "40123345 posts/44 Finance/03 Stock Market/Cổ phiếu là gì.md",
-    "40123345 posts/44 Finance/03 Stock Market/Các bước lựa chọn một cổ phiếu.md",
-    "70 Work/Zeal/Investigate Gaba Site.md",
-    "40123345 posts/44 Finance/03 Stock Market/Untitled",
-    "70 Work/Queue",
-    "70 Work/Zeal/Untitled",
-    "70 Work/Zeal",
-    "70 Work",
-    "40123345 posts/44 Finance/05 Báo cáo tài chính",
-    "50 til/52 Journey/52.02 Other",
-    "50 til/51 Code/11 Golang",
-    "50 til/51 Code/10 React",
+    "00 Meta/01 Attachments/Pasted image 20231213102608.png",
+    "40 posts/44 Finance/03 Stock Market/Nguyên tắc đầu tư cá nhân.md",
+    "40 posts/44 Finance/03 Stock Market/Nguyên tắc cơ bản tiếp cận báo cáo tài chính.md",
+    "40 posts/44 Finance/05 Khoá học/Báo cáo tài chính - A Báu/Bảng cân đối kế toán.md",
+    "40 posts/44 Finance/02 Ngành nghề/Chu kỳ kinh tế.md",
+    "40 posts/44 Finance/02 Ngành nghề/Chu kỳ nhóm ngành.md",
+    "40 posts/44 Finance/02 Ngành nghề/Nhóm ngành chăm sóc sức khoẻ.md",
+    "40 posts/44 Finance/02 Ngành nghề/Chu kỳ bong bóng tài chính.md",
+    "40 posts/44 Finance/03 Stock Market/Mô hình chuyển dịch các lớp tài sản.md",
+    "40 posts/44 Finance/03 Stock Market/Cổ phiếu là gì.md",
+    "40 posts/44 Finance/03 Stock Market/Cách định giá một Doanh nghiệp bất động sản.md",
+    "40 posts/44 Finance/03 Stock Market/Các chủ thể trong Thị trường Chứng khoán.md",
+    "40 posts/44 Finance/03 Stock Market/Các bước lựa chọn một cổ phiếu.md",
+    "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Hoà Phát - HPG.md",
+    "40 posts/44 Finance/05 Khoá học/Báo cáo tài chính - anh Long AFA/Bảng cân đối kế toán.md",
+    "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Chuỗi giá trị ngành Thép.md",
+    "00 Meta/01 Attachments/Pasted image 20231212110716.png",
+    "00 Meta/01 Attachments/Pasted image 20231212110539.png",
+    "00 Meta/01 Attachments/Pasted image 20231212110140.png",
+    "00 Meta/01 Attachments/Pasted image 20231212105353.png",
+    "00 Meta/01 Attachments/Pasted image 20231212100555.png",
+    "00 Meta/01 Attachments/Pasted image 20231212100531.png",
+    "00 Meta/01 Attachments/Pasted image 20231212100527.png",
+    "40 posts/44 Finance/02 Ngành nghề/Nhóm ngành Vật liệu.md",
+    "40 posts/44 Finance/02 Ngành nghề/Ngành thép",
+    "40 posts/44 Finance/02 Ngành nghề/Nhóm ngành Công nghiệp.md",
+    "40 posts/44 Finance/02 Ngành nghề/Nhóm ngành Năng lượng.md",
+    "40 posts/44 Finance/02 Ngành nghề/Nhóm ngành Tài chính.md",
+    "40 posts/44 Finance/Nguồn  xem thông tin.md",
+    "40 posts/44 Finance/05 Khoá học/Vĩ mô - Tiền tệ - Trần Ngọc Báu/Cách dự phóng GDP.md",
+    "40 posts/44 Finance/05 Khoá học/Phân tích kỹ thuật - VSA/Buổi 1 - Tổng quan thị trường.md",
+    "40 posts/44 Finance/05 Khoá học/Phân tích kỹ thuật - VSA/Buổi 4 - Kháng cự và Hỗ trợ.md",
+    "40 posts/44 Finance/05 Khoá học/Phân tích kỹ thuật - VSA/Buổi 3 - Bùng nổ theo đà.md",
+    "40 posts/44 Finance/05 Khoá học/Phân tích kỹ thuật - VSA/Buổi 2 - Xác định thị trường đỉnh.md",
+    "00 Meta/01 Attachments/Pasted Image 20231208110111_692.png",
+    "00 Meta/01 Attachments/Pasted Image 20231208110026_675.png",
+    "00 Meta/01 Attachments/Pasted Image 20231208105926_666.png",
+    "00 Meta/01 Attachments/Báo cáo thu nhập.xmind",
+    "Untitled.canvas",
+    "40 posts/44 Finance/05 Khoá học/Báo cáo tài chính - A Báu",
+    "50 til/51 Code/08 System Design/Design patterns/Behavioral patterns",
+    "50 til/51 Code/08 System Design/Design patterns/Structural patterns",
+    "50 til/51 Code/08 System Design/Design patterns/Creational patterns",
+    "40 posts/44 Finance/05 Khoá học/Phân tích kỹ thuật - VSA",
+    "70 Work/01 Personal/Asset Statistic Project",
+    "70 Work/02 Company",
+    "70 Work/01 Personal",
     "50 til/51 Code/51.03 Operating System/Untitled.canvas",
     "50 til/51 Code/51.01 Style/Untitled.canvas",
     "Untitled 1.canvas"

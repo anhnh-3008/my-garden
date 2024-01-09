@@ -1,0 +1,22 @@
+- [ ] Tạo EC2: recommend server
+	- [x] Tạo Ec2
+	- [ ] Setup server
+- [ ] Tạo EC2: nodejs server
+	- [x] Tạo EC2
+	- [ ] Setup
+	- [ ] Tạo ASG
+		- [ ] Config để tự động scaling được
+		- [ ] Kết nối với ALB
+	- [ ] Tạo ALB
+		- [ ] Config để kết nối với ASG
+	- [x] Tạo S3
+	- [ ] Tạo Cloudfront
+- [ ] ElastiCache
+	- [x] Tạo ElastiCache
+	- [ ] Connect với cụm ASG
+- [x] RDS
+	- [x] Tạo RDS
+	- [x] Config để EC2 recommend connect được
+- [ ] SNS
+- [ ] CloudWatch
+- [ ] Bugdet

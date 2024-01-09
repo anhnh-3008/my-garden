@@ -21,6 +21,6 @@ Vì là một lập trình viên nên sẽ có nhiều bài viết thiên về c
 
 Ngoài ra, mình cũng có hứng thú với [[tags/finance|chủ đề về kinh tế]] nữa 💸
 
-À nếu bạn cũng là một dev Ruby, hãy xem thử [[40 posts/42 Code/42.01 Ruby/Display Hardcode Value|extension VsCode này]] nha, có thể nó sẽ giúp quá trình code của bạn tiện lợi hơn đoá 🙇
+À nếu bạn cũng là một dev Ruby, hãy xem thử [[42 Code/42.01 Ruby/Display Hardcode Value|extension VsCode này]] nha, có thể nó sẽ giúp quá trình code của bạn tiện lợi hơn đoá 🙇
 
 Mong là bạn sẽ có những trải nghiệm thú vị trên khu vườn của mình 🥳. See yaaa 👋 

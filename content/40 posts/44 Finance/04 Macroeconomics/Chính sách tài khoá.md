@@ -6,7 +6,7 @@ tags:
   - seed
 date: 2023-09-07
 aliases:
-  - tài khoá
+  - chính sách tài khóa
 draft: false
 ---
 

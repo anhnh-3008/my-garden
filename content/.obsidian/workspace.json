@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "147ca8f6a751e086",
+            "id": "5330ad755255f8c6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50 til/51 Code/08 System Design/Design patterns/Structural patterns/Adapter.md",
+                "file": "50 til/51 Code/05 Ruby/Split array by an value.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "6b63bd7b40bcb51b",
+            "id": "b986fa719e5ec4dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50 til/51 Code/08 System Design/Design patterns/Structural patterns/Structural Patterns.md",
+                "file": "70 Work/01 Personal/Insida/Document of insida dev server.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,38 +34,12 @@
             }
           },
           {
-            "id": "4a2dc26c9ea3f462",
+            "id": "d985e8e5acdc0ac7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Hoà Phát - HPG.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f9b8be8b7305357e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40 posts/44 Finance/05 Khoá học/Báo cáo tài chính - A Báu/Lưu chuyển tiền tệ.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "beb16404d777c579",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40 posts/44 Finance/01 Wealth/Quy tắc 72.md",
+                "file": "70 Work/01 Personal/Insida/Setup prod.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -103,7 +77,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:til",
+                "query": "hardcode",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -141,7 +115,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Hoà Phát - HPG.md",
+                "file": "70 Work/01 Personal/Insida/Setup prod.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -164,7 +138,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.19405886143754472,
+                  "scale": 0.44332323542385965,
                   "close": true
                 }
               }
@@ -174,7 +148,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 224.5
+    "width": 275.5
   },
   "right": {
     "id": "8d6ddf44cf2d1223",
@@ -210,7 +184,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Hoà Phát - HPG.md"
+                "file": "70 Work/01 Personal/Insida/Setup prod.md"
               }
             }
           },
@@ -220,7 +194,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -237,7 +213,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Hoà Phát - HPG.md",
+                "file": "70 Work/01 Personal/Insida/Setup prod.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -254,7 +230,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Hoà Phát - HPG.md",
+                "file": "70 Work/01 Personal/Insida/Setup prod.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -265,7 +241,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 318.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -279,55 +255,54 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "4a2dc26c9ea3f462",
+  "active": "d985e8e5acdc0ac7",
   "lastOpenFiles": [
-    "00 Meta/01 Attachments/Pasted image 20231213102608.png",
-    "40 posts/44 Finance/03 Stock Market/Nguyên tắc đầu tư cá nhân.md",
-    "40 posts/44 Finance/03 Stock Market/Nguyên tắc cơ bản tiếp cận báo cáo tài chính.md",
-    "40 posts/44 Finance/05 Khoá học/Báo cáo tài chính - A Báu/Bảng cân đối kế toán.md",
-    "40 posts/44 Finance/02 Ngành nghề/Chu kỳ kinh tế.md",
-    "40 posts/44 Finance/02 Ngành nghề/Chu kỳ nhóm ngành.md",
-    "40 posts/44 Finance/02 Ngành nghề/Nhóm ngành chăm sóc sức khoẻ.md",
-    "40 posts/44 Finance/02 Ngành nghề/Chu kỳ bong bóng tài chính.md",
+    "70 Work/01 Personal/Insida/Params test Postman.md",
+    "70 Work/01 Personal/Insida/Kiến trúc production AWS.md",
+    "70 Work/01 Personal/Insida/Document of insida dev server.md",
+    "70 Work/01 Personal/Insida/Document of Django server.md",
+    "70 Work/01 Personal/Insida/Check API màn Listing.md",
+    "70 Work/01 Personal/Insida/Check API phần Profiles.md",
+    "00 Meta/01 Attachments/Pasted image 20240613195459.png",
+    "70 Work/01 Personal/Insida/Setup prod.md",
+    "70 Work/01 Personal/Translate realtime game for PS5/Realtime translate all game on Ps5.md",
+    "70 Work/01 Personal/Translate realtime game for PS5",
+    "70 Work/01 Personal/BuyBuyMotors/Doc of BBM Python PRE Server.md",
+    "70 Work/01 Personal/BuyBuyMotors/Doc of BBM Python TEST Server.md",
+    "70 Work/01 Personal/BuyBuyMotors/Tìm hiểu nền tảng xiaohongshu.md",
     "40 posts/44 Finance/03 Stock Market/Mô hình chuyển dịch các lớp tài sản.md",
+    "40 posts/44 Finance/03 Stock Market/Nguyên tắc cơ bản tiếp cận báo cáo tài chính.md",
+    "40 posts/44 Finance/03 Stock Market/Kiểm định cung cầu.md",
     "40 posts/44 Finance/03 Stock Market/Cổ phiếu là gì.md",
     "40 posts/44 Finance/03 Stock Market/Cách định giá một Doanh nghiệp bất động sản.md",
     "40 posts/44 Finance/03 Stock Market/Các chủ thể trong Thị trường Chứng khoán.md",
     "40 posts/44 Finance/03 Stock Market/Các bước lựa chọn một cổ phiếu.md",
-    "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Hoà Phát - HPG.md",
-    "40 posts/44 Finance/05 Khoá học/Báo cáo tài chính - anh Long AFA/Bảng cân đối kế toán.md",
-    "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Chuỗi giá trị ngành Thép.md",
-    "00 Meta/01 Attachments/Pasted image 20231212110716.png",
-    "00 Meta/01 Attachments/Pasted image 20231212110539.png",
-    "00 Meta/01 Attachments/Pasted image 20231212110140.png",
-    "00 Meta/01 Attachments/Pasted image 20231212105353.png",
-    "00 Meta/01 Attachments/Pasted image 20231212100555.png",
-    "00 Meta/01 Attachments/Pasted image 20231212100531.png",
-    "00 Meta/01 Attachments/Pasted image 20231212100527.png",
-    "40 posts/44 Finance/02 Ngành nghề/Nhóm ngành Vật liệu.md",
-    "40 posts/44 Finance/02 Ngành nghề/Ngành thép",
-    "40 posts/44 Finance/02 Ngành nghề/Nhóm ngành Công nghiệp.md",
-    "40 posts/44 Finance/02 Ngành nghề/Nhóm ngành Năng lượng.md",
-    "40 posts/44 Finance/02 Ngành nghề/Nhóm ngành Tài chính.md",
-    "40 posts/44 Finance/Nguồn  xem thông tin.md",
-    "40 posts/44 Finance/05 Khoá học/Vĩ mô - Tiền tệ - Trần Ngọc Báu/Cách dự phóng GDP.md",
-    "40 posts/44 Finance/05 Khoá học/Phân tích kỹ thuật - VSA/Buổi 1 - Tổng quan thị trường.md",
-    "40 posts/44 Finance/05 Khoá học/Phân tích kỹ thuật - VSA/Buổi 4 - Kháng cự và Hỗ trợ.md",
-    "40 posts/44 Finance/05 Khoá học/Phân tích kỹ thuật - VSA/Buổi 3 - Bùng nổ theo đà.md",
-    "40 posts/44 Finance/05 Khoá học/Phân tích kỹ thuật - VSA/Buổi 2 - Xác định thị trường đỉnh.md",
-    "00 Meta/01 Attachments/Pasted Image 20231208110111_692.png",
-    "00 Meta/01 Attachments/Pasted Image 20231208110026_675.png",
-    "00 Meta/01 Attachments/Pasted Image 20231208105926_666.png",
-    "00 Meta/01 Attachments/Báo cáo thu nhập.xmind",
-    "Untitled.canvas",
-    "40 posts/44 Finance/05 Khoá học/Báo cáo tài chính - A Báu",
-    "50 til/51 Code/08 System Design/Design patterns/Behavioral patterns",
-    "50 til/51 Code/08 System Design/Design patterns/Structural patterns",
-    "50 til/51 Code/08 System Design/Design patterns/Creational patterns",
-    "40 posts/44 Finance/05 Khoá học/Phân tích kỹ thuật - VSA",
+    "40 posts/44 Finance/03 Stock Market/Báo cáo triển vọng của VCBS cho 2024.md",
+    "40 posts/44 Finance/03 Stock Market/Nhận định thị trường.md",
+    "10 Daily/2024-04-26.md",
+    "40 posts/46 Journey/Plan đi chơi Hải Phòng 2 ngày 1 đêm.md",
+    "_index.md",
+    "70 Work/02 Company/Zeal/Investigate Souei Seminar.md",
+    "70 Work/02 Company/Zeal/Investigate Seiki Gakuen.md",
+    "70 Work/02 Company/Zeal/Investigate Rize Clinic.md",
+    "70 Work/02 Company/Zeal",
+    "70 Work/02 Company/Queue",
+    "70 Work/01 Personal/Insida",
+    "70 Work/01 Personal/BuyBuyMotors",
     "70 Work/01 Personal/Asset Statistic Project",
     "70 Work/02 Company",
     "70 Work/01 Personal",
+    "70 Work",
+    "50 til/51 Code/12 Python",
+    "00 Meta/01 Attachments/Screenshot 2024-02-28 at 10.21.01.png",
+    "00 Meta/01 Attachments/Screenshot 2024-02-28 at 10.18.51.png",
+    "00 Meta/01 Attachments/Pasted image 20240220145506.png",
+    "00 Meta/01 Attachments/Pasted image 20240220134943.png",
+    "00 Meta/01 Attachments/Pasted image 20240220133242.png",
+    "00 Meta/01 Attachments/Pasted image 20240220095243.png",
+    "00 Meta/01 Attachments/Pasted image 20240205112623.png",
+    "00 Meta/01 Attachments/Pasted image 20240205112130.png",
+    "00 Meta/01 Attachments/Pasted image 20240130235704.png",
     "50 til/51 Code/51.03 Operating System/Untitled.canvas",
     "50 til/51 Code/51.01 Style/Untitled.canvas",
     "Untitled 1.canvas"

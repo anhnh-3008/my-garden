@@ -7,6 +7,7 @@ tags:
 date: 2023-09-05
 aliases:
   - lạm phát
+  - inflation
 ---
 
 ## 🌿 What?

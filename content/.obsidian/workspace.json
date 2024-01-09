@@ -11,13 +11,8 @@
             "id": "147ca8f6a751e086",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "50 til/51 Code/08 System Design/Design patterns/Structural patterns/Adapter.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           },
           {
@@ -39,7 +34,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Hoà Phát - HPG.md",
+                "file": "40 posts/44 Finance/05 Khoá học/Vĩ mô - Tiền tệ - Trần Ngọc Báu/Cách dự phóng GDP.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -52,7 +47,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40 posts/44 Finance/05 Khoá học/Báo cáo tài chính - A Báu/Lưu chuyển tiền tệ.md",
+                "file": "70 Work/01 Personal/Insida/Check API phần Profiles.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e93ce2add97d4757",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40 posts/44 Finance/Nhận định hàng năm/2024/Timeline 2024.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -65,7 +73,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "40 posts/44 Finance/01 Wealth/Quy tắc 72.md",
+                "file": "70 Work/01 Personal/BuyBuyMotors/Tìm hiểu nền tảng xiaohongshu.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e4877b2d6a82312d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40 posts/44 Finance/03 Stock Market/Nguyên tắc đầu tư cá nhân.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -73,7 +94,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -103,7 +124,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:til",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -141,7 +162,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Hoà Phát - HPG.md",
+                "file": "40 posts/44 Finance/Nhận định hàng năm/2024/Timeline 2024.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -210,7 +231,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Hoà Phát - HPG.md"
+                "file": "40 posts/44 Finance/Nhận định hàng năm/2024/Timeline 2024.md"
               }
             }
           },
@@ -220,11 +241,22 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
+          },
+          {
+            "id": "79fb0b9888103ebf",
+            "type": "leaf",
+            "state": {
+              "type": "QUICKSHARE_SIDE_VIEW",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       },
       {
         "id": "1247c17c34c14587",
@@ -237,7 +269,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Hoà Phát - HPG.md",
+                "file": "40 posts/44 Finance/Nhận định hàng năm/2024/Timeline 2024.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -254,7 +286,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Hoà Phát - HPG.md",
+                "file": "40 posts/44 Finance/Nhận định hàng năm/2024/Timeline 2024.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -265,7 +297,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 445.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -279,55 +311,54 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "4a2dc26c9ea3f462",
+  "active": "e93ce2add97d4757",
   "lastOpenFiles": [
-    "00 Meta/01 Attachments/Pasted image 20231213102608.png",
-    "40 posts/44 Finance/03 Stock Market/Nguyên tắc đầu tư cá nhân.md",
+    "40 posts/44 Finance/Nhận định hàng năm/2024/Báo cáo chiến lược đầu tư 2024 AFA Capital.md",
+    "40 posts/44 Finance/05 Khoá học/Phân tích kỹ thuật - VSA/Chỉ báo RSI.md",
+    "00 Meta/01 Attachments/Screenshot 2024-02-28 at 10.21.01.png",
+    "00 Meta/01 Attachments/Screenshot 2024-02-28 at 10.18.51.png",
+    "40 posts/44 Finance/Decode data của wichart.md",
+    "40 posts/44 Finance/Nhận định hàng năm/2024/Timeline 2024.md",
+    "40 posts/44 Finance/Nguồn  xem thông tin.md",
+    "40 posts/44 Finance/Nhận định hàng năm/2024/Vĩ mô của BSC.md",
     "40 posts/44 Finance/03 Stock Market/Nguyên tắc cơ bản tiếp cận báo cáo tài chính.md",
-    "40 posts/44 Finance/05 Khoá học/Báo cáo tài chính - A Báu/Bảng cân đối kế toán.md",
-    "40 posts/44 Finance/02 Ngành nghề/Chu kỳ kinh tế.md",
-    "40 posts/44 Finance/02 Ngành nghề/Chu kỳ nhóm ngành.md",
-    "40 posts/44 Finance/02 Ngành nghề/Nhóm ngành chăm sóc sức khoẻ.md",
-    "40 posts/44 Finance/02 Ngành nghề/Chu kỳ bong bóng tài chính.md",
-    "40 posts/44 Finance/03 Stock Market/Mô hình chuyển dịch các lớp tài sản.md",
-    "40 posts/44 Finance/03 Stock Market/Cổ phiếu là gì.md",
+    "40 posts/44 Finance/03 Stock Market/Nhận định thị trường.md",
+    "40 posts/44 Finance/03 Stock Market/Nguyên tắc đầu tư cá nhân.md",
+    "70 Work/01 Personal/Insida/Check API màn Listing.md",
+    "70 Work/01 Personal/Insida/Check API phần Profiles.md",
+    "40 posts/44 Finance/03 Stock Market/Báo cáo triển vọng của VCBS cho 2024.md",
+    "40 posts/44 Finance/03 Stock Market/Các bước lựa chọn một cổ phiếu.md",
     "40 posts/44 Finance/03 Stock Market/Cách định giá một Doanh nghiệp bất động sản.md",
     "40 posts/44 Finance/03 Stock Market/Các chủ thể trong Thị trường Chứng khoán.md",
-    "40 posts/44 Finance/03 Stock Market/Các bước lựa chọn một cổ phiếu.md",
-    "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Hoà Phát - HPG.md",
-    "40 posts/44 Finance/05 Khoá học/Báo cáo tài chính - anh Long AFA/Bảng cân đối kế toán.md",
-    "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Chuỗi giá trị ngành Thép.md",
-    "00 Meta/01 Attachments/Pasted image 20231212110716.png",
-    "00 Meta/01 Attachments/Pasted image 20231212110539.png",
-    "00 Meta/01 Attachments/Pasted image 20231212110140.png",
-    "00 Meta/01 Attachments/Pasted image 20231212105353.png",
-    "00 Meta/01 Attachments/Pasted image 20231212100555.png",
-    "00 Meta/01 Attachments/Pasted image 20231212100531.png",
-    "00 Meta/01 Attachments/Pasted image 20231212100527.png",
-    "40 posts/44 Finance/02 Ngành nghề/Nhóm ngành Vật liệu.md",
+    "40 posts/44 Finance/03 Stock Market/Mô hình chuyển dịch các lớp tài sản.md",
+    "40 posts/44 Finance/03 Stock Market/Kiểm định cung cầu.md",
+    "70 Work/02 Company/Queue/Tìm hiểu task mới.md",
+    "00 Meta/01 Attachments/Pasted image 20240220145506.png",
+    "00 Meta/01 Attachments/Pasted image 20240220134943.png",
+    "00 Meta/01 Attachments/Pasted image 20240220133242.png",
+    "00 Meta/01 Attachments/Pasted image 20240220095243.png",
+    "70 Work/01 Personal/BuyBuyMotors/Tìm hiểu nền tảng xiaohongshu.md",
+    "40 posts/46 Journey/Digital garden là gì.md",
+    "40 posts/41 Health/Sức khỏe.md",
+    "40 posts/44 Finance/05 Khoá học/Báo cáo tài chính - A Báu/Lưu chuyển tiền tệ.md",
+    "70 Work/01 Personal/Insida",
+    "70 Work/01 Personal/Untitled.md",
+    "40 posts/46 Book/01 Sách/Non-fiction/Economix.md",
+    "00 Meta/01 Attachments/Pasted image 20240205112623.png",
+    "00 Meta/01 Attachments/Pasted image 20240205112130.png",
+    "40 posts/44 Finance/Các nền kinh tế vận hành.md",
+    "00 Meta/01 Attachments/Pasted image 20240130235704.png",
+    "00 Meta/01 Attachments/Pasted image 20240127120512.png",
+    "70 Work/01 Personal/BuyBuyMotors",
+    "50 til/51 Code/12 Python",
+    "40 posts/44 Finance/Nhận định hàng năm/2024",
+    "40 posts/44 Finance/Nhận định hàng năm",
+    "40 posts/44 Finance/02 Ngành nghề/BĐS KCN",
+    "40 posts/44 Finance/02 Ngành nghề/Ngành thép/Untitled",
     "40 posts/44 Finance/02 Ngành nghề/Ngành thép",
-    "40 posts/44 Finance/02 Ngành nghề/Nhóm ngành Công nghiệp.md",
-    "40 posts/44 Finance/02 Ngành nghề/Nhóm ngành Năng lượng.md",
-    "40 posts/44 Finance/02 Ngành nghề/Nhóm ngành Tài chính.md",
-    "40 posts/44 Finance/Nguồn  xem thông tin.md",
-    "40 posts/44 Finance/05 Khoá học/Vĩ mô - Tiền tệ - Trần Ngọc Báu/Cách dự phóng GDP.md",
-    "40 posts/44 Finance/05 Khoá học/Phân tích kỹ thuật - VSA/Buổi 1 - Tổng quan thị trường.md",
-    "40 posts/44 Finance/05 Khoá học/Phân tích kỹ thuật - VSA/Buổi 4 - Kháng cự và Hỗ trợ.md",
-    "40 posts/44 Finance/05 Khoá học/Phân tích kỹ thuật - VSA/Buổi 3 - Bùng nổ theo đà.md",
-    "40 posts/44 Finance/05 Khoá học/Phân tích kỹ thuật - VSA/Buổi 2 - Xác định thị trường đỉnh.md",
-    "00 Meta/01 Attachments/Pasted Image 20231208110111_692.png",
-    "00 Meta/01 Attachments/Pasted Image 20231208110026_675.png",
-    "00 Meta/01 Attachments/Pasted Image 20231208105926_666.png",
     "00 Meta/01 Attachments/Báo cáo thu nhập.xmind",
     "Untitled.canvas",
     "40 posts/44 Finance/05 Khoá học/Báo cáo tài chính - A Báu",
-    "50 til/51 Code/08 System Design/Design patterns/Behavioral patterns",
-    "50 til/51 Code/08 System Design/Design patterns/Structural patterns",
-    "50 til/51 Code/08 System Design/Design patterns/Creational patterns",
-    "40 posts/44 Finance/05 Khoá học/Phân tích kỹ thuật - VSA",
-    "70 Work/01 Personal/Asset Statistic Project",
-    "70 Work/02 Company",
-    "70 Work/01 Personal",
     "50 til/51 Code/51.03 Operating System/Untitled.canvas",
     "50 til/51 Code/51.01 Style/Untitled.canvas",
     "Untitled 1.canvas"

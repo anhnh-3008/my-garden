@@ -4,7 +4,7 @@ tags:
   - finance
 date: 2023-11-27
 aliases: 
-draft: true
+draft: false
 ---
 # 🌿 What?
 Là nơi ghi lại doanh thu và chi phí đi kèm từ hoạt động kinh doanh, sản xuất của các doanh nghiệp.

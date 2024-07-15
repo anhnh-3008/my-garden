@@ -1,0 +1,4 @@
+- [x] Deploy authorization + Tạo 4 account cho 4 roles tương ứng
+- [x] Fix total hiển thị theo số lượng query
+- [x] Thêm các trường liên quan đến chạy ads cho post + trả về list UserID cho root khi tạo bài viết.
+- [ ] Bulk upload post

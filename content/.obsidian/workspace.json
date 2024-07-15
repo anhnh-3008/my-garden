@@ -13,7 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "50 til/51 Code/05 Ruby/Split array by an value.md",
+                "file": "70 Work/01 Personal/Insida/Checklist.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f61affa2e99592af",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "42 Code/42.03 Refactoring technique/Hướng tiếp cận refactor với một dự án mới.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -37,17 +50,12 @@
             "id": "d985e8e5acdc0ac7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "70 Work/01 Personal/Insida/Setup prod.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -115,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "70 Work/01 Personal/Insida/Setup prod.md",
+                "file": "42 Code/42.03 Refactoring technique/Hướng tiếp cận refactor với một dự án mới.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -184,7 +192,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "70 Work/01 Personal/Insida/Setup prod.md"
+                "file": "42 Code/42.03 Refactoring technique/Hướng tiếp cận refactor với một dự án mới.md"
               }
             }
           },
@@ -213,7 +221,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "70 Work/01 Personal/Insida/Setup prod.md",
+                "file": "42 Code/42.03 Refactoring technique/Hướng tiếp cận refactor với một dự án mới.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -230,7 +238,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "70 Work/01 Personal/Insida/Setup prod.md",
+                "file": "42 Code/42.03 Refactoring technique/Hướng tiếp cận refactor với một dự án mới.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -255,16 +263,28 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "d985e8e5acdc0ac7",
+  "active": "f61affa2e99592af",
   "lastOpenFiles": [
+    "50 til/51 Code/01 Style/SOLID.md",
+    "42 Code/42.03 Refactoring technique/Hướng tiếp cận refactor với một dự án mới.md",
+    "10 Daily/2024-07-15.md",
+    "70 Work/01 Personal/Insida/Document of insida dev server.md",
+    "42 Code/42.03 Refactoring technique",
+    "40 posts/46 Book/01 Sách/Non-fiction/Tư duy ngược.md",
+    "10 Daily/2024-04-26.md",
+    "00 Meta/01 Attachments/Pasted image 20240715103259.png",
+    "40 posts/46 Book/01 Sách/Non-fiction/Economix.md",
+    "50 til/51 Code/05 Ruby/Split array by an value.md",
+    "70 Work/01 Personal/Insida/Checklist.md",
+    "42 Code/42.01 Ruby/Display Hardcode Value.md",
+    "70 Work/01 Personal/Insida/Setup prod.md",
+    "00 Meta/01 Attachments/Pasted image 20240620111513.png",
     "70 Work/01 Personal/Insida/Params test Postman.md",
     "70 Work/01 Personal/Insida/Kiến trúc production AWS.md",
-    "70 Work/01 Personal/Insida/Document of insida dev server.md",
     "70 Work/01 Personal/Insida/Document of Django server.md",
     "70 Work/01 Personal/Insida/Check API màn Listing.md",
     "70 Work/01 Personal/Insida/Check API phần Profiles.md",
     "00 Meta/01 Attachments/Pasted image 20240613195459.png",
-    "70 Work/01 Personal/Insida/Setup prod.md",
     "70 Work/01 Personal/Translate realtime game for PS5/Realtime translate all game on Ps5.md",
     "70 Work/01 Personal/Translate realtime game for PS5",
     "70 Work/01 Personal/BuyBuyMotors/Doc of BBM Python PRE Server.md",
@@ -276,15 +296,6 @@
     "40 posts/44 Finance/03 Stock Market/Cổ phiếu là gì.md",
     "40 posts/44 Finance/03 Stock Market/Cách định giá một Doanh nghiệp bất động sản.md",
     "40 posts/44 Finance/03 Stock Market/Các chủ thể trong Thị trường Chứng khoán.md",
-    "40 posts/44 Finance/03 Stock Market/Các bước lựa chọn một cổ phiếu.md",
-    "40 posts/44 Finance/03 Stock Market/Báo cáo triển vọng của VCBS cho 2024.md",
-    "40 posts/44 Finance/03 Stock Market/Nhận định thị trường.md",
-    "10 Daily/2024-04-26.md",
-    "40 posts/46 Journey/Plan đi chơi Hải Phòng 2 ngày 1 đêm.md",
-    "_index.md",
-    "70 Work/02 Company/Zeal/Investigate Souei Seminar.md",
-    "70 Work/02 Company/Zeal/Investigate Seiki Gakuen.md",
-    "70 Work/02 Company/Zeal/Investigate Rize Clinic.md",
     "70 Work/02 Company/Zeal",
     "70 Work/02 Company/Queue",
     "70 Work/01 Personal/Insida",
@@ -293,7 +304,6 @@
     "70 Work/02 Company",
     "70 Work/01 Personal",
     "70 Work",
-    "50 til/51 Code/12 Python",
     "00 Meta/01 Attachments/Screenshot 2024-02-28 at 10.21.01.png",
     "00 Meta/01 Attachments/Screenshot 2024-02-28 at 10.18.51.png",
     "00 Meta/01 Attachments/Pasted image 20240220145506.png",
@@ -301,8 +311,6 @@
     "00 Meta/01 Attachments/Pasted image 20240220133242.png",
     "00 Meta/01 Attachments/Pasted image 20240220095243.png",
     "00 Meta/01 Attachments/Pasted image 20240205112623.png",
-    "00 Meta/01 Attachments/Pasted image 20240205112130.png",
-    "00 Meta/01 Attachments/Pasted image 20240130235704.png",
     "50 til/51 Code/51.03 Operating System/Untitled.canvas",
     "50 til/51 Code/51.01 Style/Untitled.canvas",
     "Untitled 1.canvas"

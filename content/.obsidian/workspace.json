@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "42 Code/42.03 Refactoring technique/Hướng tiếp cận refactor với một dự án mới.md",
+                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 2 - Tạo class có một trách nhiệm duy nhất.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -123,7 +123,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "42 Code/42.03 Refactoring technique/Hướng tiếp cận refactor với một dự án mới.md",
+                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 2 - Tạo class có một trách nhiệm duy nhất.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -146,7 +146,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.44332323542385965,
+                  "scale": 2.059306315246457,
                   "close": true
                 }
               }
@@ -192,7 +192,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "42 Code/42.03 Refactoring technique/Hướng tiếp cận refactor với một dự án mới.md"
+                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 2 - Tạo class có một trách nhiệm duy nhất.md"
               }
             }
           },
@@ -221,7 +221,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "42 Code/42.03 Refactoring technique/Hướng tiếp cận refactor với một dự án mới.md",
+                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 2 - Tạo class có một trách nhiệm duy nhất.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -238,7 +238,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "42 Code/42.03 Refactoring technique/Hướng tiếp cận refactor với một dự án mới.md",
+                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 2 - Tạo class có một trách nhiệm duy nhất.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -265,8 +265,12 @@
   },
   "active": "f61affa2e99592af",
   "lastOpenFiles": [
-    "50 til/51 Code/01 Style/SOLID.md",
+    "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap1 - Lập trình hướng đối tượng.md",
+    "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 2 - Tạo class có một trách nhiệm duy nhất.md",
+    "00 Meta/01 Attachments/Pasted image 20240718171553.png",
     "42 Code/42.03 Refactoring technique/Hướng tiếp cận refactor với một dự án mới.md",
+    "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng",
+    "50 til/51 Code/01 Style/SOLID.md",
     "10 Daily/2024-07-15.md",
     "70 Work/01 Personal/Insida/Document of insida dev server.md",
     "42 Code/42.03 Refactoring technique",
@@ -293,9 +297,6 @@
     "40 posts/44 Finance/03 Stock Market/Mô hình chuyển dịch các lớp tài sản.md",
     "40 posts/44 Finance/03 Stock Market/Nguyên tắc cơ bản tiếp cận báo cáo tài chính.md",
     "40 posts/44 Finance/03 Stock Market/Kiểm định cung cầu.md",
-    "40 posts/44 Finance/03 Stock Market/Cổ phiếu là gì.md",
-    "40 posts/44 Finance/03 Stock Market/Cách định giá một Doanh nghiệp bất động sản.md",
-    "40 posts/44 Finance/03 Stock Market/Các chủ thể trong Thị trường Chứng khoán.md",
     "70 Work/02 Company/Zeal",
     "70 Work/02 Company/Queue",
     "70 Work/01 Personal/Insida",
@@ -303,14 +304,12 @@
     "70 Work/01 Personal/Asset Statistic Project",
     "70 Work/02 Company",
     "70 Work/01 Personal",
-    "70 Work",
     "00 Meta/01 Attachments/Screenshot 2024-02-28 at 10.21.01.png",
     "00 Meta/01 Attachments/Screenshot 2024-02-28 at 10.18.51.png",
     "00 Meta/01 Attachments/Pasted image 20240220145506.png",
     "00 Meta/01 Attachments/Pasted image 20240220134943.png",
     "00 Meta/01 Attachments/Pasted image 20240220133242.png",
     "00 Meta/01 Attachments/Pasted image 20240220095243.png",
-    "00 Meta/01 Attachments/Pasted image 20240205112623.png",
     "50 til/51 Code/51.03 Operating System/Untitled.canvas",
     "50 til/51 Code/51.01 Style/Untitled.canvas",
     "Untitled 1.canvas"

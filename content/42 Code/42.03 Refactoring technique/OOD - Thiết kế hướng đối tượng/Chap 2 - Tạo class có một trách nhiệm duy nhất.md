@@ -1,5 +1,5 @@
 ---
-title: 🌱 Chap 2 - Tọa class có một trách nhiệm duy nhất
+title: 🌱 Chap 2 - Tạo class có một trách nhiệm duy nhất
 tags:
   - system_design
 date: 2024-07-18
@@ -9,7 +9,7 @@ draft: false
 # 🌿 Là gì?
 - Một class chỉ có một trách nhiệm duy nhất và thực hiện một nhiệm vụ duy nhất.
 
-# ❓Tại sao?
+# ❓Tại sao cần áp dụng?
 - Dễ thay đổi và tránh bị ảnh hưởng bởi những thay đổi trong tương lai.
 - Tái sử dụng được.
 

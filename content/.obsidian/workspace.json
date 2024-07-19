@@ -34,6 +34,19 @@
             }
           },
           {
+            "id": "d00bcba769271a60",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap3 - Quản lý sự phụ thuộc.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "b986fa719e5ec4dc",
             "type": "leaf",
             "state": {
@@ -55,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -123,7 +136,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 2 - Tạo class có một trách nhiệm duy nhất.md",
+                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap3 - Quản lý sự phụ thuộc.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -192,7 +205,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 2 - Tạo class có một trách nhiệm duy nhất.md"
+                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap3 - Quản lý sự phụ thuộc.md"
               }
             }
           },
@@ -221,7 +234,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 2 - Tạo class có một trách nhiệm duy nhất.md",
+                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap3 - Quản lý sự phụ thuộc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -238,7 +251,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 2 - Tạo class có một trách nhiệm duy nhất.md",
+                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap3 - Quản lý sự phụ thuộc.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -263,10 +276,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f61affa2e99592af",
+  "active": "d00bcba769271a60",
   "lastOpenFiles": [
-    "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap1 - Lập trình hướng đối tượng.md",
+    "00 Meta/01 Attachments/Pasted image 20240719162007.png",
     "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 2 - Tạo class có một trách nhiệm duy nhất.md",
+    "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap3 - Quản lý sự phụ thuộc.md",
+    "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap1 - Lập trình hướng đối tượng.md",
     "00 Meta/01 Attachments/Pasted image 20240718171553.png",
     "42 Code/42.03 Refactoring technique/Hướng tiếp cận refactor với một dự án mới.md",
     "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng",
@@ -296,7 +311,6 @@
     "70 Work/01 Personal/BuyBuyMotors/Tìm hiểu nền tảng xiaohongshu.md",
     "40 posts/44 Finance/03 Stock Market/Mô hình chuyển dịch các lớp tài sản.md",
     "40 posts/44 Finance/03 Stock Market/Nguyên tắc cơ bản tiếp cận báo cáo tài chính.md",
-    "40 posts/44 Finance/03 Stock Market/Kiểm định cung cầu.md",
     "70 Work/02 Company/Zeal",
     "70 Work/02 Company/Queue",
     "70 Work/01 Personal/Insida",

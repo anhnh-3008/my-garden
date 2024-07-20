@@ -59,7 +59,7 @@ end
 > Không thể tránh sự phụ thuộc giữa các objects, nhiệm vụ của chúng ta là giảm thiểu điều đó. Tránh tạo ra Sự Ràng Buộc, đó là khi sửa class A mà bắt buộc phải sửa cả class B hay tệ hơn là C, D, ... 😅
 
 > [!tip] Tip
-> Hãy giữ cho các class của chúng ta biết ít nhất có thể, đừng biến chúng trở thành những kẻ nhiều chuyện 🙅‍♂️🙅‍♂️🙅‍♂️
+> Hãy giữ cho các class biết ít nhất có thể, đừng biến chúng trở thành những kẻ nhiều chuyện 🙅‍♂️🙅‍♂️🙅‍♂️
 # 🛡️ Các phương pháp để tránh phụ thuộc
 
 ## 💉 ⭐⭐⭐ Inject Dependencies
@@ -300,5 +300,41 @@ gear = GearWrapper.gear(
 
 > [!tip] Tip
 > Những gì thuộc về 'bên thứ 3' nên được xử lý bọc lại ở một nơi duy nhất.
+
+## Quản lý hướng phụ thuộc
+Là kỹ thuật xác định mối liên hệ kế thừa, là thay vì A phụ thuộc vào B thì đổi lại B phụ thuộc vào A nếu A ít có khả năng thay đổi trong tương lai. Điều này giúp giảm thiểu ảnh hưởng bởi những phát triển trong tương lai.
+
+### Chọn hướng phụ thuộc
+> [!Tip] Nên nhớ
+> Chỉ phụ thuộc vào những thứ ít có khả năng thay đổi.
+
+Facts về code:
+- Các lớp trừu tượng sẽ ít có khả năng bị thay đổi hơn các lớp cụ thể.
+- Thay đổi một lớp có nhiều phụ thuộc sẽ có ảnh hưởng lớn.
+
+Để hiểu hơn về sự ảnh hưởng của hướng phụ thuộc, chúng ta có thể lấy ví dụ class `Gear` đang hướng sự phụ thuộc tới các class `String`, `Number`, ... của Ruby. Nếu các classes của Ruby thay đổi, chúng ta sẽ phải sửa lại toàn bộ source code 😱, thật may là các classes của framework sẽ rất ít khi thay đổi, nhất là về mặt cấu trúc.
+
+### Trừu tượng và cụ thể
+Như ở ví dụ của **Inject Dependencies**, việc đổi từ `Wheel.new` sang một object `@wheel` là thao tác chuyển đổi từ cụ thể sang trừu tượng. Từ phụ thuộc đính danh class `Wheel` thì giờ chuyển thành nhận tất cả các đối tượng có phương thức `diameter`.
+
+Ở các ngôn ngữ lập trình có kiểu dữ liệu tĩnh, chúng ta phải khai báo kiểu dữ liệu đi kèm với tham số, nếu muốn truyền một cấu trúc trừu tượng thì sẽ phải tạo `interfaces`.
+
+Ruby giúp lập trình viên bỏ qua bước khởi tạo các `interfaces`. Nhưng việc khai báo kiểu dữ liệu kia sẽ giúp đoạn mã rõ ràng hơn, thể hiện rõ chủ đích của lập trình viên hơn. Ví dụ trường hợp bạn chỉ cần `Gear` nhận đối tượng của `Wheel` thôi, nhưng khi sử dụng **Inject Dependencies**, mặc định tham số `wheel` sẽ là đại diện của `interface`.
+
+> [!note] Trừu tượng
+> Đại diện cho những phương thức, giá trị chung, ổn định. Ít bị thay đổi hơn so với các Classes cụ thể được tạo ra.
+
+> [!tip] Lưu ý
+> Trong Ruby không cần lập trình viên tạo interfaces, nhưng để phù hợp với chuẩn mực thiết kế, chúng ta có thể tạo một class như một interface.
+
+### Xác định phụ thuộc
+![[00 Meta/01 Attachments/Pasted image 20240720112221.png]]
+- Các Classes ở khu vực A là các classes có rất nhiều sự phụ thuộc nhưng ít bị thay đổi. Ở khu vực này các lớp sẽ là các lớp trừu tượng. Nếu bạn đánh giá một lớp thuộc khu vực A thì bạn nên biến class đó từ cụ thể thành trừu tượng.
+- Các Classes ở khu vực B là các Classes it bị thay đổi, ít phụ thuộc, là các classes độc lập có thể tái sử dụng cũng như phát triển trong tương lai.
+- Các Classes ở khu vực C ít bị thay đổi nhưng có nhiều phụ thuộc. Việc có thể chấp nhận được vì trong lập trình rất khó để giảm thiểu sự phụ thuộc do các Class cần giao tiếp với nhau. Việc ít bị thay đổi cũng giảm thiểu nhiều chi phí thay đổi trong tương lai.
+- Các Classes ở khu vực D sẽ cảnh báo chất lượng code của dự án. Càng nhiều class ở khu vực này, càng đau thương 😢. Nếu bạn không thể giảm sự phụ thuộc -> hãy di chuyển nó về khu vực A để thành một class trừu tượng, nếu không, buộc bạn phải chuyển class về khu vực C bằng cách giảm đi sự phụ thuộc.
+
+> [!summary] Tóm tắt
+> Luôn nhớ quy tắc: Chỉ phụ thuộc vào những thứ ít bị thay đổi. Giảm sự phụ thuộc.
 # 🌿 Refer 
 Chap 3 - Managing Dependencies

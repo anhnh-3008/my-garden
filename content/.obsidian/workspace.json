@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap3 - Quản lý sự phụ thuộc.md",
+                "file": "40 posts/46 Book/01 Sách/Fiction/Đứa trẻ hư.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -136,7 +136,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap3 - Quản lý sự phụ thuộc.md",
+                "file": "40 posts/46 Book/01 Sách/Fiction/Đứa trẻ hư.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -205,7 +205,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap3 - Quản lý sự phụ thuộc.md"
+                "file": "40 posts/46 Book/01 Sách/Fiction/Đứa trẻ hư.md"
               }
             }
           },
@@ -234,7 +234,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap3 - Quản lý sự phụ thuộc.md",
+                "file": "40 posts/46 Book/01 Sách/Fiction/Đứa trẻ hư.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -251,7 +251,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap3 - Quản lý sự phụ thuộc.md",
+                "file": "40 posts/46 Book/01 Sách/Fiction/Đứa trẻ hư.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               }
@@ -262,7 +262,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 318.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -278,9 +279,19 @@
   },
   "active": "d00bcba769271a60",
   "lastOpenFiles": [
+    "40 posts/46 Book/01 Sách/Fiction/Tắt đèn.md",
+    "40 posts/46 Book/01 Sách/Fiction/Đứa trẻ hư.md",
+    "00 Meta/01 Attachments/Pasted image 20240915003104 1.png",
+    "00 Meta/01 Attachments/Pasted image 20240915003104.png",
+    "40 posts/46 Book/01 Sách/Fiction/Không gia đình.md",
+    "40 posts/46 Book/01 Sách/Fiction/Người phát ngôn của thần chết.md",
+    "40 posts/46 Book/01 Sách/Fiction/Số đỏ.md",
+    "00 Meta/01 Attachments/Pasted image 20240915002630.png",
+    "10 Daily/2024-09-11.md",
+    "00 Meta/01 Attachments/Pasted image 20240914165653.png",
+    "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap3 - Quản lý sự phụ thuộc.md",
     "00 Meta/01 Attachments/Pasted image 20240720112221.png",
     "70 Work/01 Personal/Insida/Tìm hiểu Azure AI Moderation API.md",
-    "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap3 - Quản lý sự phụ thuộc.md",
     "00 Meta/01 Attachments/Pasted image 20240719162007.png",
     "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 2 - Tạo class có một trách nhiệm duy nhất.md",
     "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap1 - Lập trình hướng đối tượng.md",
@@ -304,14 +315,8 @@
     "70 Work/01 Personal/Insida/Kiến trúc production AWS.md",
     "70 Work/01 Personal/Insida/Document of Django server.md",
     "70 Work/01 Personal/Insida/Check API màn Listing.md",
-    "70 Work/01 Personal/Insida/Check API phần Profiles.md",
     "00 Meta/01 Attachments/Pasted image 20240613195459.png",
-    "70 Work/01 Personal/Translate realtime game for PS5/Realtime translate all game on Ps5.md",
     "70 Work/01 Personal/Translate realtime game for PS5",
-    "70 Work/01 Personal/BuyBuyMotors/Doc of BBM Python PRE Server.md",
-    "70 Work/01 Personal/BuyBuyMotors/Doc of BBM Python TEST Server.md",
-    "70 Work/01 Personal/BuyBuyMotors/Tìm hiểu nền tảng xiaohongshu.md",
-    "40 posts/44 Finance/03 Stock Market/Mô hình chuyển dịch các lớp tài sản.md",
     "70 Work/02 Company/Zeal",
     "70 Work/02 Company/Queue",
     "70 Work/01 Personal/Insida",
@@ -319,11 +324,6 @@
     "70 Work/01 Personal/Asset Statistic Project",
     "70 Work/02 Company",
     "70 Work/01 Personal",
-    "00 Meta/01 Attachments/Screenshot 2024-02-28 at 10.21.01.png",
-    "00 Meta/01 Attachments/Screenshot 2024-02-28 at 10.18.51.png",
-    "00 Meta/01 Attachments/Pasted image 20240220145506.png",
-    "00 Meta/01 Attachments/Pasted image 20240220134943.png",
-    "00 Meta/01 Attachments/Pasted image 20240220133242.png",
     "50 til/51 Code/51.03 Operating System/Untitled.canvas",
     "50 til/51 Code/51.01 Style/Untitled.canvas",
     "Untitled 1.canvas"

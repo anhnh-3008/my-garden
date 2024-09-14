@@ -14,9 +14,9 @@ draft: false
 
 Thật tiếc khi mình cứ chần chừ không đọc tác phẩm này sớm hơn. Thoả mãn, cảm thấy có chút gì đó ấm ấm trong tim là cảm xúc của mình sau khi đọc những dòng cuối cùng của Không gia đình.
 
-Tác phẩm là lời thuật lại của nhân vật chính Rémi trên hành trình tìm lại gia đình thật sự của cậu. Tuy cuộc hành trình có gian nan, khó nhọc, khổ cực đến cùng cực nhưng với sự chân thành, tấm lòng bao dung cùng những đức tính tuyệt vời do cụ Vitalis chỉ dạy, Rémi đã tới được với những người không chung một dòng máu nhưng yêu thương cậu không thua kém một ai.
+Tác phẩm là lời thuật lại của nhân vật chính Rémi trên hành trình tìm lại gia đình thật sự của cậu. Tuy cuộc hành trình có gian nan, khó nhọc, khổ cực đến cùng cực nhưng với sự chân thành, tấm lòng bao dung cùng những đức tính tuyệt vời do cụ Vitalis chỉ dạy, Rémi đã tới được với những người không chung một dòng máu nhưng luôn yêu thương cậu vô điều kiện.
 
-> [!note] Đúc kết
+> [!note] Quote
 > Chân thành, tự trọng, thương người, ngay thẳng, gan dạ, ham lao động, nhớ ơn nghĩa. Dù trong hoàn cảnh nào, hãy giữ lại cho bản thân những phẩm chất, giá trị tốt đẹp ấy.
 
 Rate: ⭐⭐⭐⭐⭐

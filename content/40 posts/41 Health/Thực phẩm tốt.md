@@ -1,7 +1,7 @@
 ---
 title: 🌱 Thực phẩm tốt
 tags:
-  - til
+  - health
 date: 2025-03-03
 aliases: 
 draft: false

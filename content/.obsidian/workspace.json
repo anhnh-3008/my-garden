@@ -8,132 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5330ad755255f8c6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "70 Work/01 Personal/Insida/Checklist.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Checklist"
-            }
-          },
-          {
-            "id": "f61affa2e99592af",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 2 - Tạo class có một trách nhiệm duy nhất.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Chap 2 - Tạo class có một trách nhiệm duy nhất"
-            }
-          },
-          {
-            "id": "d00bcba769271a60",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40 posts/41 Health/Thực phẩm tốt.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Thực phẩm tốt"
-            }
-          },
-          {
-            "id": "ca55d27f1e81c96c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40 posts/41 Health/Nhịn ăn gián đoạn.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Nhịn ăn gián đoạn"
-            }
-          },
-          {
-            "id": "d1e89850368b99a3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40 posts/41 Health/Đường huyết.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Đường huyết"
-            }
-          },
-          {
-            "id": "05014e5b8e367eaf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "70 Work/01 Personal/SQL Injection.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "SQL Injection"
-            }
-          },
-          {
             "id": "d985e8e5acdc0ac7",
             "type": "leaf",
             "state": {
@@ -142,9 +16,33 @@
               "icon": "lucide-git-fork",
               "title": "Graph view"
             }
+          },
+          {
+            "id": "8251ab255fc7e48e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "50 til/51 Code/13 Antidetect/Antidetect là gì?.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Antidetect là gì?"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -177,7 +75,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:til",
+                "query": "tag:#🌿",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -221,7 +119,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "70 Work/01 Personal/SQL Injection.md",
+                "file": "50 til/51 Code/13 Antidetect/Antidetect là gì?.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -249,7 +147,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of SQL Injection"
+              "title": "Graph of Antidetect là gì?"
             }
           }
         ]
@@ -329,7 +227,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "40 posts/41 Health/Đường huyết.md",
+                "file": "50 til/51 Code/13 Antidetect/Antidetect là gì?.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -339,7 +237,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Đường huyết"
+              "title": "Backlinks for Antidetect là gì?"
             }
           },
           {
@@ -348,12 +246,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "70 Work/01 Personal/SQL Injection.md",
+                "file": "50 til/51 Code/13 Antidetect/Antidetect là gì?.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from SQL Injection"
+              "title": "Outgoing links from Antidetect là gì?"
             }
           }
         ],
@@ -375,16 +273,29 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "05014e5b8e367eaf",
+  "active": "8251ab255fc7e48e",
   "lastOpenFiles": [
-    "70 Work/01 Personal/SQL Injection.md",
-    "40 posts/41 Health/Nhịn ăn gián đoạn.md",
-    "40 posts/41 Health/Đường huyết.md",
+    "50 til/51 Code/13 Antidetect/Browser Fingerprint - Canvas.md",
+    "50 til/51 Code/13 Antidetect/Browser Fingerprint.md",
+    "50 til/51 Code/13 Antidetect/Antidetect là gì?.md",
+    "50 til/51 Code/07 Utils/How to make Obsidian interesting.md",
+    "50 til/51 Code/07 Utils/Find by Regex in VsCode.md",
+    "50 til/51 Code/07 Utils/Cron job notify drink water.md",
+    "50 til/51 Code/13 Antidetect",
     "40 posts/41 Health/Thực phẩm tốt.md",
+    "70 Work/01 Personal/Insida/Checklist.md",
+    "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 2 - Tạo class có một trách nhiệm duy nhất.md",
+    "40 posts/41 Health/Đường huyết.md",
+    "00 Meta/01 Attachments/Screen Recording 2023-02-22 at 13.20.51-1.mov",
+    "00 Meta/01 Attachments/Pasted image 20250305151039.png",
+    "00 Meta/01 Attachments/Pasted image 20250305151048.png",
+    "00 Meta/01 Attachments/Pasted image 20250312134238.png",
+    "00 Meta/01 Attachments/Screenshot 2024-02-28 at 10.21.01.png",
+    "40 posts/41 Health/Nhịn ăn gián đoạn.md",
+    "70 Work/01 Personal/Untitled.md",
+    "70 Work/01 Personal/SQL Injection.md",
     "40 posts/41 Health/Sức khỏe.md",
     "40 posts/41 Health/Tự thực bào - Autophagy.md",
-    "00 Meta/01 Attachments/Pasted image 20250305151048.png",
-    "00 Meta/01 Attachments/Pasted image 20250305151039.png",
     "00 Meta/01 Attachments/Pasted image 20250305150931.png",
     "00 Meta/01 Attachments/Pasted image 20250305150649.png",
     "00 Meta/01 Attachments/Pasted image 20250305145933.png",
@@ -397,32 +308,19 @@
     "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap1 - Lập trình hướng đối tượng.md",
     "40 posts/46 Book/01 Sách/Fiction/Đứa trẻ hư.md",
     "10 Daily/2024-09-11.md",
-    "00 Meta/01 Attachments/Pasted image 20240915003104.png",
-    "00 Meta/01 Attachments/Pasted image 20240915003104 1.png",
     "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 3 - Quản lý sự phụ thuộc.md",
     "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 4 - Tạo Interfaces.md",
     "70 Work/01 Personal/Insida/Document of insida dev server.md",
     "20 Excalidraw/Drawing 2024-07-31 15.44.40.excalidraw.md",
     "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 1 - Lập trình hướng đối tượng.md",
-    "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 2 - Tạo class có một trách nhiệm duy nhất.md",
-    "70 Work/01 Personal/Insida/Tìm hiểu Azure AI Moderation API.md",
-    "42 Code/42.03 Refactoring technique/Hướng tiếp cận refactor với một dự án mới.md",
     "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng",
-    "50 til/51 Code/01 Style/SOLID.md",
-    "10 Daily/2024-07-15.md",
     "42 Code/42.03 Refactoring technique",
-    "40 posts/46 Book/01 Sách/Non-fiction/Tư duy ngược.md",
-    "10 Daily/2024-04-26.md",
-    "40 posts/46 Book/01 Sách/Non-fiction/Economix.md",
-    "50 til/51 Code/05 Ruby/Split array by an value.md",
     "70 Work/01 Personal/Translate realtime game for PS5",
     "70 Work/02 Company/Zeal",
     "70 Work/02 Company/Queue",
     "70 Work/01 Personal/Insida",
     "70 Work/01 Personal/BuyBuyMotors",
     "70 Work/01 Personal/Asset Statistic Project",
-    "70 Work/02 Company",
-    "70 Work/01 Personal",
     "50 til/51 Code/51.03 Operating System/Untitled.canvas",
     "50 til/51 Code/51.01 Style/Untitled.canvas",
     "Untitled 1.canvas"

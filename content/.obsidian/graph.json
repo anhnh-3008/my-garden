@@ -60,6 +60,10 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
+<<<<<<< HEAD
   "scale": 0.1371217294871139,
+=======
+  "scale": 0.16339505852751185,
+>>>>>>> fb5a8100 (Add some note 2025-04-02)
   "close": true
 }

@@ -51,7 +51,7 @@ Hiện tại mình đang dùng [Obsidian](https://obsidian.md/) để ghi chú.
 > [!summary] Duy trì thói quen đọc và ghi chú lại những kiến thức, trải nghiệm của bản thân theo cách tự nhiên nhất, không cần quá chỉn chu, tránh tạo áp lực cho bản thân trong việc xây dựng Digital Garden. Hãy tận hưởng quá trình phát triển khu vườn của chính mình.
 
 > [!quote]
-> Hạnh phúc là một cuộc hành trình, không phải là đích đến.
+> Hạnh phúc là hành trình, không phải là đích đến.
 
 
 ## 📋 Reference

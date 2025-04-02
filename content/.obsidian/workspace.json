@@ -11,10 +11,60 @@
             "id": "d985e8e5acdc0ac7",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "40 posts/46 Book/01 Sách/Fiction/Trúng số độc đắc.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Trúng số độc đắc"
+            }
+          },
+          {
+            "id": "8251ab255fc7e48e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "40 posts/46 Book/01 Sách/Fiction/Trúng số độc đắc.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Trúng số độc đắc"
+            }
+          },
+          {
+            "id": "cec8ee1f649b88f8",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.10"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.10"
             }
           },
           {
@@ -119,7 +169,11 @@
             "state": {
               "type": "localgraph",
               "state": {
+<<<<<<< HEAD
                 "file": "50 til/51 Code/13 Antidetect/Antidetect là gì?.md",
+=======
+                "file": "40 posts/46 Book/01 Sách/Fiction/Trúng số độc đắc.md",
+>>>>>>> fb5a8100 (Add some note 2025-04-02)
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -147,7 +201,11 @@
                 }
               },
               "icon": "lucide-git-fork",
+<<<<<<< HEAD
               "title": "Graph of Antidetect là gì?"
+=======
+              "title": "Graph of Trúng số độc đắc"
+>>>>>>> fb5a8100 (Add some note 2025-04-02)
             }
           }
         ]
@@ -246,12 +304,20 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+<<<<<<< HEAD
                 "file": "50 til/51 Code/13 Antidetect/Antidetect là gì?.md",
+=======
+                "file": "40 posts/46 Book/01 Sách/Fiction/Trúng số độc đắc.md",
+>>>>>>> fb5a8100 (Add some note 2025-04-02)
                 "linksCollapsed": true,
                 "unlinkedCollapsed": false
               },
               "icon": "links-going-out",
+<<<<<<< HEAD
               "title": "Outgoing links from Antidetect là gì?"
+=======
+              "title": "Outgoing links from Trúng số độc đắc"
+>>>>>>> fb5a8100 (Add some note 2025-04-02)
             }
           }
         ],
@@ -275,9 +341,32 @@
   },
   "active": "8251ab255fc7e48e",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "50 til/51 Code/13 Antidetect/Browser Fingerprint - Canvas.md",
     "50 til/51 Code/13 Antidetect/Browser Fingerprint.md",
     "50 til/51 Code/13 Antidetect/Antidetect là gì?.md",
+=======
+    "40 posts/46 Book/01 Sách/Fiction/Số đỏ.md",
+    "40 posts/46 Book/01 Sách/Fiction/Trúng số độc đắc.md",
+    "00 Meta/01 Attachments/Pasted image 20250710143056.png",
+    "40 posts/46 Book/01 Sách/Fiction/Người phát ngôn của thần chết.md",
+    "40 posts/46 Book/01 Sách/Fiction/Tắt đèn.md",
+    "40 posts/46 Book/02 Tác giả/Vũ Trọng Phụng.md",
+    "40 posts/44 Finance/03 Stock Market/Cách định giá một Doanh nghiệp bất động sản.md",
+    "40 posts/44 Finance/03 Stock Market/Các chủ thể trong Thị trường Chứng khoán.md",
+    "40 posts/44 Finance/03 Stock Market/Các bước lựa chọn một cổ phiếu.md",
+    "40 posts/44 Finance/03 Stock Market/Báo cáo triển vọng của VCBS cho 2024.md",
+    "40 posts/44 Finance/03 Stock Market/Nguyên tắc đầu tư cá nhân.md",
+    "40 posts/44 Finance/03 Stock Market/Mô hình chuyển dịch các lớp tài sản.md",
+    "40 posts/44 Finance/03 Stock Market/Kiểm định cung cầu.md",
+    "50 til/52 Journey/52.02 Other/Cách phân biệt rượu giả.md",
+    "50 til/54 Mindset/Lùi lại một bước.md",
+    "50 til/55 Math/Hàm số đường thẳng y=ax+b.md",
+    "50 til/55 Math/Đạo hàm để làm gì.md",
+    "50 til/51 Code/13 Antidetect/Antidetect là gì?.md",
+    "50 til/51 Code/13 Antidetect/Browser Fingerprint - Canvas.md",
+    "50 til/51 Code/13 Antidetect/Browser Fingerprint.md",
+>>>>>>> fb5a8100 (Add some note 2025-04-02)
     "50 til/51 Code/07 Utils/How to make Obsidian interesting.md",
     "50 til/51 Code/07 Utils/Find by Regex in VsCode.md",
     "50 til/51 Code/07 Utils/Cron job notify drink water.md",
@@ -285,22 +374,29 @@
     "40 posts/41 Health/Thực phẩm tốt.md",
     "70 Work/01 Personal/Insida/Checklist.md",
     "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 2 - Tạo class có một trách nhiệm duy nhất.md",
+<<<<<<< HEAD
     "40 posts/41 Health/Đường huyết.md",
+=======
+>>>>>>> fb5a8100 (Add some note 2025-04-02)
     "00 Meta/01 Attachments/Screen Recording 2023-02-22 at 13.20.51-1.mov",
     "00 Meta/01 Attachments/Pasted image 20250305151039.png",
     "00 Meta/01 Attachments/Pasted image 20250305151048.png",
     "00 Meta/01 Attachments/Pasted image 20250312134238.png",
     "00 Meta/01 Attachments/Screenshot 2024-02-28 at 10.21.01.png",
+<<<<<<< HEAD
     "40 posts/41 Health/Nhịn ăn gián đoạn.md",
     "70 Work/01 Personal/Untitled.md",
     "70 Work/01 Personal/SQL Injection.md",
     "40 posts/41 Health/Sức khỏe.md",
     "40 posts/41 Health/Tự thực bào - Autophagy.md",
+=======
+>>>>>>> fb5a8100 (Add some note 2025-04-02)
     "00 Meta/01 Attachments/Pasted image 20250305150931.png",
     "00 Meta/01 Attachments/Pasted image 20250305150649.png",
     "00 Meta/01 Attachments/Pasted image 20250305145933.png",
     "00 Meta/01 Attachments/Pasted image 20250305145914.png",
     "00 Meta/01 Attachments/Pasted image 20250305145846.png",
+<<<<<<< HEAD
     "20 Excalidraw/Drawing 2025-03-05 13.49.52.excalidraw.md",
     "00 Meta/01 Attachments/Pasted image 20250303152021.png",
     "70 Work/02 Company/Zeal/Tìm hiểu pilates-kasane.hacomono.md",
@@ -313,6 +409,8 @@
     "70 Work/01 Personal/Insida/Document of insida dev server.md",
     "20 Excalidraw/Drawing 2024-07-31 15.44.40.excalidraw.md",
     "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng/Chap 1 - Lập trình hướng đối tượng.md",
+=======
+>>>>>>> fb5a8100 (Add some note 2025-04-02)
     "42 Code/42.03 Refactoring technique/OOD - Thiết kế hướng đối tượng",
     "42 Code/42.03 Refactoring technique",
     "70 Work/01 Personal/Translate realtime game for PS5",

@@ -7,7 +7,7 @@ date: 2023-12-18
 aliases: 
 draft: false
 ---
-Trong thị trường tài chính, dòng tiền chủ yếu sẽ đến từ các nhà tạo lập(BigBoy, đội lái, các quỹ ...) và rổ giá thì đương nhiên là phụ thuộc vào mấy ông này rồi, chứ nhỏ lẻ như mình thì chỉ đi sau anh theo thôi.
+Trong thị trường tài chính, dòng tiền chủ yếu sẽ đến từ các nhà tạo lập(BigBoy, đội lái, các quỹ ...) và rổ giá thì đương nhiên là phụ thuộc vào mấy ông này rồi, chứ nhỏ lẻ như mình thì chỉ đi sau ăn theo thôi.
 
 Vậy nên hiểu cách tư duy của nhà tạo lập là điều thiết yếu để khi tham gia bất kỳ một thị trường tài chính nào(vàng, chứng khoán, coin, ...)
 
